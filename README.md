@@ -1,2 +1,2 @@
-# coronavirus-analysis
-Repository of covid-19 analysis only
+# jonathanwmo.github.io-coronaproject
+coronavirus website
