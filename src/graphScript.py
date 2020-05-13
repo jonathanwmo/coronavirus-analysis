@@ -161,7 +161,7 @@ def plot_single(country, graph_type):
     my_graph.grid(True)
     myStr = str(cases_aot) + " " + graph_type.title()
     my_graph.annotate((str(date_aot)+":").center(len(myStr)) + "\n" + myStr, xy=(date_aot, cases_aot), xycoords='data', xytext=(dates_list[-15],1.1*highest_cases), textcoords='data', arrowprops=dict(arrowstyle='->', color='black', lw = 2)) # label last point on graph
-    my_graph.title('Covid-19 ' + graph_type.title() + ' Across ' + country.title())      #label things
+    my_graph.title('Covid-19 ' + graph_type.title() + ' Across ' + country.title() + " as of " + date_aot)      #label things
     my_graph.xlabel('Date')
     my_graph.ylabel('Number of Cases')
     graph_type = graph_type.replace(" ", "_")                               # change graph name to replace spaces with underscores
@@ -170,9 +170,9 @@ def plot_single(country, graph_type):
     dir_path = os.path.dirname(os.path.realpath(__file__))                  # get working directory
     if not os.path.exists(dir_path +"/graphs/"+ country):                   # if directory for that country is not yet made, make it
         os.makedirs(dir_path + "/graphs/" + country)
-    plt.savefig(dir_path + "/graphs/" + country + "/" + country + "_" + graph_type + "_" + date_aot + ".png") # save to that directory
+    plt.savefig(dir_path + "/graphs/" + country + "/" + country + "_" + graph_type + "_" + date_aot + ".png", dpi=500) # save to that directory
 
-    my_graph.show()
+    # my_graph.show()
 
 
 def plot_four(country):
@@ -182,7 +182,7 @@ def plot_four(country):
     :return: void
     '''
     my_graph = plt
-    my_graph.figure(figsize=(15, 7.5))                                      # set figure size
+    my_graph.figure(figsize=(14, 8))                                      # set figure size
 
 
     total_cases = "total_cases.csv"
@@ -328,11 +328,25 @@ def plot_four(country):
     my_graph.xlabel('Date')
     my_graph.ylabel('Number of Cases')
     my_graph.legend(loc="upper left")
-    plt.savefig("/Users/jonathanmo/Desktop/Jomoswork/jonathanwmo.github.io/src/graphs/" + country +"/" + country.replace(" ","_").title() + "_" + "allfour_"+ date_aot + ".png")
+    graph_type = graph_type.replace(" ", "_")  # change graph name to replace spaces with underscores
+    country = country.lower().replace(" ", "_")
 
-    my_graph.show()
+    dir_path = os.path.dirname(os.path.realpath(__file__))  # get working directory
+    if not os.path.exists(dir_path + "/graphs/" + country):  # if directory for that country is not yet made, make it
+        os.makedirs(dir_path + "/graphs/" + country)
+    plt.savefig(dir_path + "/graphs/" + country + "/" + country + "_allfour_" + date_aot + ".png", dpi=500)  # save to that directory
 
-country = input("Input a country: ").title()
-graph_type = input("Choose graph (total confirmed cases, total deaths, new confirmed cases, or new deaths): ").lower()
-plot_single(country, graph_type)
+    # my_graph.show()
+
+# country = input("Input a country: ").title()
+# graph_type = input("Choose graph (total confirmed cases, total deaths, new confirmed cases, or new deaths): ").lower()
+# plot_single(country, graph_type)
 # plot_four(country)
+
+# ########## update the folders
+country = input("Input a country: ").title()
+graph_types = ["total confirmed cases", "total deaths", "new confirmed cases", "new deaths"]
+for graph_type in graph_types:
+    print(graph_type)
+    plot_single(country, graph_type)
+plot_four(country)
