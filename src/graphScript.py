@@ -167,7 +167,10 @@ def plot_single(country, graph_type):
     my_graph.annotate((myStr).center(len(myStr)) + "\n" + graph_type.title(), xy=(date_aot, cases_aot), xycoords='data', xytext=(dates_list[-2],1.1*highest_cases), textcoords='data', arrowprops=dict(arrowstyle='->', color='black', lw = 2)) # label last point on graph
     my_graph.title('Covid-19 ' + graph_type.title() + ' Across ' + country.title() + " as of " + date_aot, fontsize=14, weight='bold')      #label things
     my_graph.xlabel('Date', fontsize=12, weight='bold')
-    my_graph.ylabel('Number of Cases', fontsize=12, weight='bold')
+    if "death" in graph_type.lower():
+        my_graph.ylabel('Number of Deaths', fontsize=12, weight='bold')
+    else:
+        my_graph.ylabel('Number of Cases', fontsize=12, weight='bold')
     graph_type = graph_type.replace(" ", "_")                               # change graph name to replace spaces with underscores
     country = country.lower().replace(" ", "_")
 
