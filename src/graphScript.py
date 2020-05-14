@@ -79,8 +79,8 @@ def plot_single(country, graph_type):
     dates_list = find_dates(csv)                        # get full list of dates in csv file
     cases_strs = find_cases(index, csv)                 # get full list of cases in csv file
     if (country.lower() == "china"):
-        cases_strs = cases_strs[1:]
-        dates_list = dates_list[1:]
+        cases_strs = cases_strs[15:]
+        dates_list = dates_list[15:]
     else:
         cases_strs = cases_strs[64:]                               # get rid of first column
         dates_list = dates_list[64:]
@@ -103,7 +103,6 @@ def plot_single(country, graph_type):
 
     my_graph.xticks(np.arange(1, len(dates_list), 7))   # show ticks on xaxis spaced out by week (7 days)
     my_graph.xticks(rotation=30)                        # angle labels to show better
-    print(highest_cases)
     ystepsize = 0
     if highest_cases <= 10:
         ystepsize = 1
@@ -164,13 +163,14 @@ def plot_single(country, graph_type):
 
     my_graph.autoscale(enable=True, axis='x', tight=True)                   # tight bound it
     my_graph.grid(True)
-    myStr = str(cases_aot) + " " + graph_type.title()
-    my_graph.annotate((str(date_aot)+":").center(len(myStr)) + "\n" + myStr, xy=(date_aot, cases_aot), xycoords='data', xytext=(dates_list[-15],1.1*highest_cases), textcoords='data', arrowprops=dict(arrowstyle='->', color='black', lw = 2)) # label last point on graph
-    my_graph.title('Covid-19 ' + graph_type.title() + ' Across ' + country.title() + " as of " + date_aot)      #label things
-    my_graph.xlabel('Date')
-    my_graph.ylabel('Number of Cases')
+    myStr = str(date_aot) + ": " + str(cases_aot)
+    my_graph.annotate((myStr).center(len(myStr)) + "\n" + graph_type.title(), xy=(date_aot, cases_aot), xycoords='data', xytext=(dates_list[-2],1.1*highest_cases), textcoords='data', arrowprops=dict(arrowstyle='->', color='black', lw = 2)) # label last point on graph
+    my_graph.title('Covid-19 ' + graph_type.title() + ' Across ' + country.title() + " as of " + date_aot, fontsize=14, weight='bold')      #label things
+    my_graph.xlabel('Date', fontsize=12, weight='bold')
+    my_graph.ylabel('Number of Cases', fontsize=12, weight='bold')
     graph_type = graph_type.replace(" ", "_")                               # change graph name to replace spaces with underscores
     country = country.lower().replace(" ", "_")
+
 
     dir_path = os.path.dirname(os.path.realpath(__file__)) + "/graphs/" + country                # get working directory
     if not os.path.exists(dir_path):                   # if directory for that country is not yet made, make it
@@ -185,6 +185,7 @@ def plot_single(country, graph_type):
             os.remove(f)
 
     # my_graph.show()
+    my_graph.clf()
     my_graph.close('all')
 
 
@@ -208,8 +209,8 @@ def plot_four(country):
     total_cases_dates_list = find_dates(total_cases)                        # get full list of dates in total cases csv file
     total_cases_strs = find_cases(total_cases_index, total_cases)           # get full list of cases in total cases csv file
     if (country.lower() == "china"):
-        total_cases_strs = total_cases_strs[1:]
-        total_cases_dates_list = total_cases_dates_list[1:]
+        total_cases_strs = total_cases_strs[15:]
+        total_cases_dates_list = total_cases_dates_list[15:]
     else:
         total_cases_strs = total_cases_strs[64:]                               # get rid of first column
         total_cases_dates_list = total_cases_dates_list[64:]
@@ -229,8 +230,8 @@ def plot_four(country):
     total_deaths_dates_list = find_dates(total_deaths)                      # get full list of dates in total deaths csv file
     total_deaths_strs = find_cases(total_deaths_index, total_deaths)        # get full list of cases in total deaths csv file
     if (country.lower() == "china"):
-        total_deaths_strs = total_deaths_strs[1:]
-        total_deaths_dates_list = total_deaths_dates_list[1:]
+        total_deaths_strs = total_deaths_strs[15:]
+        total_deaths_dates_list = total_deaths_dates_list[15:]
     else:
         total_deaths_strs = total_deaths_strs[64:]                               # get rid of first column
         total_deaths_dates_list = total_deaths_dates_list[64:]                   # get rid of first row
@@ -249,8 +250,8 @@ def plot_four(country):
     new_cases_dates_list = find_dates(new_cases)                            # get full list of dates in new cases csv file
     new_cases_strs = find_cases(new_cases_index, new_cases)                 # get full list of cases in new cases csv file
     if (country.lower() == "china"):
-        new_cases_strs = new_cases_strs[1:]
-        new_cases_dates_list = new_cases_dates_list[1:]
+        new_cases_strs = new_cases_strs[15:]
+        new_cases_dates_list = new_cases_dates_list[15:]
     else:
         new_cases_strs = new_cases_strs[64:]                               # get rid of first column
         new_cases_dates_list = new_cases_dates_list[64:]
@@ -269,8 +270,8 @@ def plot_four(country):
     new_deaths_dates_list = find_dates(new_deaths)                          # get full list of dates in new deaths csv file
     new_deaths_strs = find_cases(new_deaths_index, new_deaths)              # get full list of cases in new deaths csv file
     if (country.lower() == "china"):
-        new_deaths_strs = new_deaths_strs[1:]
-        new_deaths_dates_list = new_deaths_dates_list[1:]
+        new_deaths_strs = new_deaths_strs[15:]
+        new_deaths_dates_list = new_deaths_dates_list[15:]
     else:
         new_deaths_strs = new_deaths_strs[64:]                               # get rid of first column
         new_deaths_dates_list = new_deaths_dates_list[64:]
@@ -353,9 +354,9 @@ def plot_four(country):
     my_graph.grid(True)
 
 
-    my_graph.title('Covid-19 ' + graph_type.title() + ' Across ' + country.title() + ' as of ' + date_aot)  # label things
-    my_graph.xlabel('Date')
-    my_graph.ylabel('Number of Cases')
+    my_graph.title('Covid-19 ' + graph_type.title() + ' Across ' + country.title() + ' as of ' + date_aot, fontsize=14, weight='bold')  # label things
+    my_graph.xlabel('Date', fontsize='12', weight='bold')
+    my_graph.ylabel('Number of Cases',fontsize='12', weight='bold')
     my_graph.legend(loc="upper left")
     graph_type = graph_type.replace(" ", "_")  # change graph name to replace spaces with underscores
     country = country.lower().replace(" ", "_")
@@ -373,8 +374,24 @@ def plot_four(country):
             os.remove(f)
 
     # my_graph.show()
+    my_graph.clf()
     my_graph.close('all')
 
+# if __name__ == "__main__":
+#     country = str(sys.argv[1])
+#     graph_types = ["total confirmed cases", "total deaths", "new confirmed cases", "new deaths"]
+#     for graph_type in graph_types:
+#         print(graph_type)
+#         plot_single(country, graph_type)
+#     plot_four(country)
+
+########## update single country
+# country = input("Input a country: ").title()
+# graph_types = ["total confirmed cases", "total deaths", "new confirmed cases", "new deaths"]
+# for graph_type in graph_types:
+#     print(graph_type)
+#     plot_single(country, graph_type)
+# plot_four(country)
 countries = ['World', 'Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Anguilla', 'Antigua and Barbuda',
              'Argentina', 'Armenia', 'Aruba', 'Australia', 'Austria', 'Azerbaijan', 'Bahamas', 'Bahrain', 'Bangladesh',
              'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bermuda', 'Bhutan', 'Bolivia',
@@ -402,28 +419,12 @@ countries = ['World', 'Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 
              'Turks and Caicos Islands', 'Uganda', 'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States',
              'United States Virgin Islands', 'Uruguay', 'Uzbekistan', 'Vatican', 'Venezuela', 'Vietnam', 'Western Sahara',
              'Yemen', 'Zambia', 'Zimbabwe']
-
-# if __name__ == "__main__":
-#     country = str(sys.argv[1])
-#     graph_types = ["total confirmed cases", "total deaths", "new confirmed cases", "new deaths"]
-#     for graph_type in graph_types:
-#         print(graph_type)
-#         plot_single(country, graph_type)
-#     plot_four(country)
-
-# ########## update single country
-# country = input("Input a country: ").title()
-# graph_types = ["total confirmed cases", "total deaths", "new confirmed cases", "new deaths"]
-# for graph_type in graph_types:
-#     print(graph_type)
-#     plot_single(country, graph_type)
-# plot_four(country)
-
 mycountries = ['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
 for country in mycountries:
-    plot_single(country, "total confirmed cases")
-    plot_single(country, "total deaths")
-    plot_single(country, "new confirmed cases")
-    plot_single(country, "new deaths")
-    plot_four(country)
-    print(country)
+    plot_single(country.title(), "total confirmed cases")
+    plot_single(country.title(), "total deaths")
+    plot_single(country.title(), "new confirmed cases")
+    plot_single(country.title(), "new deaths")
+    plot_four(country.title())
+    index = mycountries.index(country) + 1
+    print(country + ": " + str(index) + "/" + str(len(mycountries)))

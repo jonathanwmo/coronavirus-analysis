@@ -3,7 +3,8 @@ body {
     width: 90%;
     text-align: center;
     /* background-image: url('kindpng_68423.png'); */
-    background-color: rgb(211, 231, 248);
+    background-color: rgb(230, 239, 252); 
+    /* background-color: rgb(250, 239, 216); */
 
 }
 nav ul, footer ul {

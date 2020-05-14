@@ -39,5 +39,6 @@ def update_date(country):
 # while 1:
 #     schedule.run_pending()
 #     time.sleep(1)
-
-update_date("World")
+mycountries = ['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
+for country in mycountries:
+    update_date(country)
