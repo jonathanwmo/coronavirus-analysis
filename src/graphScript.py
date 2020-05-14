@@ -5,16 +5,14 @@ __email__ = "jonathanwm8@gmail.com"
 import urllib.request
 import numpy as np
 import matplotlib.pyplot as plt
-import math
 import os
+import sys
+import time
+# from io import BytesIO
+# import base64
+# import date
 
-def roundup(x):
-    '''
-    rounds values for y axis up to nearest 100
-    :param x: int y tick value
-    :return: int y tick value rounded up to closest 100
-    '''
-    return int(math.ceil(x / 100.0)) * 100
+
 
 def find_dates(graph_type):
     '''
@@ -171,6 +169,13 @@ def plot_single(country, graph_type):
     if not os.path.exists(dir_path +"/graphs/"+ country):                   # if directory for that country is not yet made, make it
         os.makedirs(dir_path + "/graphs/" + country)
     plt.savefig(dir_path + "/graphs/" + country + "/" + country + "_" + graph_type + "_" + date_aot + ".png", dpi=500) # save to that directory
+
+    # current_time = time.time()
+    # for f in os.listdir():
+    #     creation_time = os.path.getctime(f)
+    #     if ((current_time - creation_time) / (86400)) >= 0.5:
+    #         os.remove(f)
+
 
     # my_graph.show()
 
@@ -338,15 +343,25 @@ def plot_four(country):
 
     # my_graph.show()
 
+if __name__ == "__main__":
+    country = str(sys.argv[1])
+    graph_types = ["total confirmed cases", "total deaths", "new confirmed cases", "new deaths"]
+    for graph_type in graph_types:
+        print(graph_type)
+        plot_single(country, graph_type)
+    plot_four(country)
+
+
+
 # country = input("Input a country: ").title()
 # graph_type = input("Choose graph (total confirmed cases, total deaths, new confirmed cases, or new deaths): ").lower()
 # plot_single(country, graph_type)
 # plot_four(country)
 
-# ########## update the folders
-country = input("Input a country: ").title()
-graph_types = ["total confirmed cases", "total deaths", "new confirmed cases", "new deaths"]
-for graph_type in graph_types:
-    print(graph_type)
-    plot_single(country, graph_type)
-plot_four(country)
+# # ########## update the folders
+# country = input("Input a country: ").title()
+# graph_types = ["total confirmed cases", "total deaths", "new confirmed cases", "new deaths"]
+# for graph_type in graph_types:
+#     print(graph_type)
+#     plot_single(country, graph_type)
+# plot_four(country)
