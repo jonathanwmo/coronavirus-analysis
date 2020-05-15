@@ -1,7 +1,7 @@
 #!/bin/bash
 
-usr/bin/python graphScript.py 
-usr/bin/python write_to_html.py  
+usr/bin/python3 graphScript.py 
+usr/bin/python3 write_to_html.py  
 
 date=$(date +%F)
 git add .
