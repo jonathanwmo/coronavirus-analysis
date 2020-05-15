@@ -1,14 +1,11 @@
 #!/bin/bash
 
-./src/graphScript.py
-./src/write_to_html.py
-# python3 /src/graphScript.py
-# python3 /src/write_to_html.py
+./src/graphScript.py &
+./src/write_to_html.py & 
 
+date=$(date +%F)
 git add .
-echo "Enter commit message: "
-read commitMessage
 
-git commit -m "$commitMessage"
+git commit -m "Updated htmls and graphs as of $date"
 
 git push
