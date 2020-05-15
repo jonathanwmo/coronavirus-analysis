@@ -1,5 +1,7 @@
 #!/bin/bash
 
+
+
 git add .
 echo "Enter commit message: "
 read commitMessage

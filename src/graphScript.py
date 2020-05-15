@@ -1,6 +1,6 @@
 __author__ = "Jonathan Mo"
 __credits__ = ["Jonathan Mo"]
-__email__ = "jonathanwm8@gmail.com"
+__email__ = "jm9hx@virginia.edu"
 
 import urllib.request
 import numpy as np
@@ -389,12 +389,12 @@ def plot_four(country):
 #     plot_four(country)
 
 ########## update single country
-# country = input("Input a country: ").title()
-# graph_types = ["total confirmed cases", "total deaths", "new confirmed cases", "new deaths"]
-# for graph_type in graph_types:
-#     print(graph_type)
-#     plot_single(country, graph_type)
-# plot_four(country)
+country = input("Input a country: ").title()
+graph_types = ["total confirmed cases", "total deaths", "new confirmed cases", "new deaths"]
+for graph_type in graph_types:
+    print(graph_type)
+    plot_single(country, graph_type)
+plot_four(country)
 countries = ['World', 'Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Anguilla', 'Antigua and Barbuda',
              'Argentina', 'Armenia', 'Aruba', 'Australia', 'Austria', 'Azerbaijan', 'Bahamas', 'Bahrain', 'Bangladesh',
              'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bermuda', 'Bhutan', 'Bolivia',
@@ -422,12 +422,13 @@ countries = ['World', 'Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 
              'Turks and Caicos Islands', 'Uganda', 'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States',
              'United States Virgin Islands', 'Uruguay', 'Uzbekistan', 'Vatican', 'Venezuela', 'Vietnam', 'Western Sahara',
              'Yemen', 'Zambia', 'Zimbabwe']
-mycountries = ['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
-for country in mycountries:
-    plot_single(country.title(), "total confirmed cases")
-    plot_single(country.title(), "total deaths")
-    plot_single(country.title(), "new confirmed cases")
-    plot_single(country.title(), "new deaths")
-    plot_four(country.title())
-    index = mycountries.index(country) + 1
-    print(country + ": " + str(index) + "/" + str(len(mycountries)))
+# mycountries = ['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
+#
+# for country in mycountries:
+#     plot_single(country.title(), "total confirmed cases")
+#     plot_single(country.title(), "total deaths")
+#     plot_single(country.title(), "new confirmed cases")
+#     plot_single(country.title(), "new deaths")
+#     plot_four(country.title())
+#     index = mycountries.index(country) + 1
+#     print(country + ": " + str(index) + "/" + str(len(mycountries)))
