@@ -1,7 +1,7 @@
 #!/bin/bash
 
-python3 graphScript.py 
-python3 write_to_html.py  
+./graphScript.py 
+./write_to_html.py  
 
 date=$(date +%F)
 # declare -a mycountries=['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
