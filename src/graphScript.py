@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 import os
 import time
 import gc
+import sys
 
 
 
@@ -420,18 +421,18 @@ countries = ['World', 'Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 
 
 if __name__ == "__main__":
     country = str(sys.argv[1])
-    graph_types = ["total confirmed cases", "total deaths", "new confirmed cases", "new deaths"]
-    for graph_type in graph_types:
-        print(graph_type)
-        plot_single(country, graph_type)
-    plot_four(country)
-
-mycountries = ['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
-for country in mycountries:
     plot_single(country.title(), "total confirmed cases")
     plot_single(country.title(), "total deaths")
     plot_single(country.title(), "new confirmed cases")
     plot_single(country.title(), "new deaths")
-    plot_four(country.title())
-    index = mycountries.index(country) + 1
-    print(country + ": " + str(index) + "/" + str(len(mycountries)))
+    plot_four(country.title(), plot_four(country))
+
+# mycountries = ['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
+# for country in mycountries:
+#     plot_single(country.title(), "total confirmed cases")
+#     plot_single(country.title(), "total deaths")
+#     plot_single(country.title(), "new confirmed cases")
+#     plot_single(country.title(), "new deaths")
+#     plot_four(country.title())
+#     index = mycountries.index(country) + 1
+#     print(country + ": " + str(index) + "/" + str(len(mycountries)))
