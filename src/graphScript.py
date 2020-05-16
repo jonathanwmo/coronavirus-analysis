@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 
 __author__ = "Jonathan Mo"
 __credits__ = ["Jonathan Mo"]
