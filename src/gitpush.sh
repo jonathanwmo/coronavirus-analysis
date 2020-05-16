@@ -8,6 +8,7 @@ declare -a mycountries=('World' 'United States' 'United Kingdom' 'Italy' 'Spain'
 for i in "${arr[@]}"
 do 
     ./graphScript.py $i
+    ./write_to_html.py $i
 done
 
 git add -A
