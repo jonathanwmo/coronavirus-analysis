@@ -4,7 +4,7 @@
 # ./write_to_html.py  
 
 date=$(date +%F)
-declare -a mycountries=['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
+declare -a mycountries=["World", "United States", 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
 for i in "${arr[@]}"
 do 
     ./graphScript.py $i
