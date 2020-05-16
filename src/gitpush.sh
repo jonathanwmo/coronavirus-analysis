@@ -1,9 +1,14 @@
 #!/bin/bash
 
-./graphScript.py 
-./write_to_html.py  
+python3 graphScript.py 
+python3 write_to_html.py  
 
 date=$(date +%F)
+# declare -a mycountries=['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
+# for i in "${arr[@]}"
+# do 
+#     ./ 
+# done
 
 git add -A
 

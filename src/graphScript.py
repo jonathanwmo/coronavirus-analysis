@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 
 __author__ = "Jonathan Mo"
 __credits__ = ["Jonathan Mo"]
@@ -9,7 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 import time
-
+import gc
 
 
 
@@ -382,14 +381,6 @@ def plot_four(country):
     my_graph.clf()
     my_graph.close('all')
 
-# if __name__ == "__main__":
-#     country = str(sys.argv[1])
-#     graph_types = ["total confirmed cases", "total deaths", "new confirmed cases", "new deaths"]
-#     for graph_type in graph_types:
-#         print(graph_type)
-#         plot_single(country, graph_type)
-#     plot_four(country)
-
 ########## update single country
 # country = input("Input a country: ").title()
 # graph_types = ["total confirmed cases", "total deaths", "new confirmed cases", "new deaths"]
@@ -425,6 +416,14 @@ countries = ['World', 'Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 
              'Turks and Caicos Islands', 'Uganda', 'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States',
              'United States Virgin Islands', 'Uruguay', 'Uzbekistan', 'Vatican', 'Venezuela', 'Vietnam', 'Western Sahara',
              'Yemen', 'Zambia', 'Zimbabwe']
+
+if __name__ == "__main__":
+    country = str(sys.argv[1])
+    graph_types = ["total confirmed cases", "total deaths", "new confirmed cases", "new deaths"]
+    for graph_type in graph_types:
+        print(graph_type)
+        plot_single(country, graph_type)
+    plot_four(country)
 
 mycountries = ['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
 for country in mycountries:
