@@ -34,13 +34,6 @@ def update_date(country):
     with open(dir_path, 'w') as f:
         f.write(newstr)
 
-# schedule.every(1).minutes.do(update_date()) #continue with the rest of the program
-# schedule.every(1).hour.do(update_date())
-# schedule.every().day.at("18:36").do(job)
-
-# while 1:
-#     schedule.run_pending()
-#     time.sleep(1)
 mycountries = ['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
 for country in mycountries:
     update_date(country)
