@@ -1,10 +1,11 @@
 #!/bin/bash
 
-python3 graphScript.py 
-python3 write_to_html.py  
+./graphScript.py 
+./write_to_html.py  
 
 date=$(date +%F)
-git add .
+cd ..
+git add -A
 
 git commit -m "Updated htmls and graphs as of $date"
 
