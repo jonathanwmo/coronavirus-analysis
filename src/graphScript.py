@@ -193,7 +193,7 @@ def plot_single(country, graph_type):
     # my_graph.show()
     my_graph.clf()
     my_graph.close('all')
-    gc.collet()
+    gc.collect()
 
 
 def plot_four(country):
