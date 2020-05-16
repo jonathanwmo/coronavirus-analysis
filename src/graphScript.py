@@ -193,6 +193,7 @@ def plot_single(country, graph_type):
     # my_graph.show()
     my_graph.clf()
     my_graph.close('all')
+    gc.collet()
 
 
 def plot_four(country):
@@ -382,6 +383,7 @@ def plot_four(country):
     # my_graph.show()
     my_graph.clf()
     my_graph.close('all')
+    gc.collect()
 
 ########## update single country
 # country = input("Input a country: ").title()
@@ -419,20 +421,20 @@ countries = ['World', 'Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 
              'United States Virgin Islands', 'Uruguay', 'Uzbekistan', 'Vatican', 'Venezuela', 'Vietnam', 'Western Sahara',
              'Yemen', 'Zambia', 'Zimbabwe']
 
-if __name__ == "__main__":
-    country = str(sys.argv[1])
-    plot_single(country.title(), "total confirmed cases")
-    plot_single(country.title(), "total deaths")
-    plot_single(country.title(), "new confirmed cases")
-    plot_single(country.title(), "new deaths")
-    plot_four(country.title(), plot_four(country))
-
-# mycountries = ['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
-# for country in mycountries:
+# if __name__ == "__main__":
+#     country = str(sys.argv[1])
 #     plot_single(country.title(), "total confirmed cases")
 #     plot_single(country.title(), "total deaths")
 #     plot_single(country.title(), "new confirmed cases")
 #     plot_single(country.title(), "new deaths")
-#     plot_four(country.title())
-#     index = mycountries.index(country) + 1
-#     print(country + ": " + str(index) + "/" + str(len(mycountries)))
+#     plot_four(country.title(), plot_four(country))
+
+mycountries = ['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
+for country in mycountries:
+    plot_single(country.title(), "total confirmed cases")
+    plot_single(country.title(), "total deaths")
+    plot_single(country.title(), "new confirmed cases")
+    plot_single(country.title(), "new deaths")
+    plot_four(country.title())
+    index = mycountries.index(country) + 1
+    print(country + ": " + str(index) + "/" + str(len(mycountries)))

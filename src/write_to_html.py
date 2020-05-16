@@ -34,9 +34,10 @@ def update_date(country):
     with open(dir_path, 'w') as f:
         f.write(newstr)
 
-# mycountries = ['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
-# for country in mycountries:
+# if __name__ == "__main__":
+#     country = str(sys.argv[1])
 #     update_date(country)
-if __name__ == "__main__":
-    country = str(sys.argv[1])
+
+mycountries = ['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
+for country in mycountries:
     update_date(country)
