@@ -33,6 +33,7 @@ def update_date(country):
 
     with open(dir_path, 'w') as f:
         f.write(newstr)
+    f.close()
 
 # if __name__ == "__main__":
 #     country = str(sys.argv[1])

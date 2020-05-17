@@ -10,7 +10,6 @@ import matplotlib.pyplot as plt
 import os
 import time
 import gc
-import sys
 
 
 
@@ -183,12 +182,13 @@ def plot_single(country, graph_type):
         os.makedirs(dir_path)
     plt.savefig(dir_path + "/" + country + "_" + graph_type + "_" + date_aot + ".png", dpi=500, transparent=True) # save to that directory
 
-    current_time = time.time()
-    for f in os.listdir(dir_path):
-        f = dir_path + "/" + f
-        creation_time = os.path.getmtime(f)
-        if ((current_time - creation_time) / (86400)) >= 1:
-            os.remove(f)
+    # dir_path = os.path.dirname(os.path.realpath(__file__)) + "/graphs/" + country                # get working directory
+    # current_time = time.time()
+    # for f in os.listdir(dir_path):
+    #     f = dir_path + "/" + f
+    #     creation_time = os.path.getmtime(f)
+    #     if ((current_time - creation_time) / (86400)) >= 1:
+    #         os.remove(f)
 
     # my_graph.show()
     my_graph.clf()
@@ -373,12 +373,12 @@ def plot_four(country):
         os.makedirs(dir_path + "/graphs/" + country)
     plt.savefig(dir_path + "/graphs/" + country + "/" + country + "_allfour_" + date_aot + ".png", dpi=500, transparent=True)  # save to that directory
 
-    current_time = time.time()
-    for f in os.listdir(dir_path):
-        f = dir_path + "/" + f
-        creation_time = os.path.getmtime(f)
-        if ((current_time - creation_time) / (86400)) >= 1:
-            os.remove(f)
+    # current_time = time.time()
+    # for f in os.listdir(dir_path):
+    #     f = dir_path + "/" + f
+    #     creation_time = os.path.getmtime(f)
+    #     if ((current_time - creation_time) / (86400)) >= 1:
+    #         os.remove(f)
 
     # my_graph.show()
     my_graph.clf()
@@ -430,11 +430,20 @@ countries = ['World', 'Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 
 #     plot_four(country.title(), plot_four(country))
 
 mycountries = ['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
+# mycountries = ['New Zealand', 'Mexico']
 for country in mycountries:
+    dir_path = os.path.dirname(os.path.realpath(__file__)) + "/graphs/" + country.lower().replace(" ", "_")  # get working directory
+    current_time = time.time()
+    for f in os.listdir(dir_path):
+        f = dir_path + "/" + f
+        creation_time = os.path.getmtime(f)
+        if ((current_time - creation_time) / (86400)) >= 1:
+            os.remove(f)
+
     plot_single(country.title(), "total confirmed cases")
     plot_single(country.title(), "total deaths")
     plot_single(country.title(), "new confirmed cases")
     plot_single(country.title(), "new deaths")
-    plot_four(country.title())
+    plot_four(country)
     index = mycountries.index(country) + 1
     print(country + ": " + str(index) + "/" + str(len(mycountries)))
