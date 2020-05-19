@@ -67,12 +67,45 @@ def update_index():
     with open(dir_path, 'w') as f:
         f.write(newstr)
     f.close()
-# update_index()
+
+def update_html(country):
+    country = country.lower().replace(" ", "")
+    if country == "unitedstates":
+        country = "us"
+
+    req = Request('https://www.worldometers.info/coronavirus/', headers={'User-Agent': 'Mozilla/5.0'})
+    page = urlopen(req).read()
+    page = BeautifulSoup(page, 'html.parser')
+
+    page_list = str(page).split("\n")
+
+    country_numbers_html = []
+    inlines = False
+
+    print("country/" + country)
+    for line in page_list:
+        if ("country/" + country) in str(line):
+            inlines = True
+        if inlines == True:
+          country_numbers_html.append(line)
+        if ('a href="/world-population/' + country) in str(line):
+            break
+
+
+    country_numbers = []
+    for line in country_numbers_html:
+        finder = re.compile(r'(\d{0,3},)(\d{3},)?\d{0,3}')
+        for match in finder.finditer(str(line)):
+            country_numbers.append(match.group())
+
+    print(country_numbers)
+
+update_html("Spain")
 
 # if __name__ == "__main__":
 #     country = str(sys.argv[1])
 #     update_date(country)
 
-mycountries = ['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
-for country in mycountries:
-    update_date(country)
+# mycountries = ['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
+# for country in mycountries:
+#     update_date(country)

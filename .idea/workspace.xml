@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bec8ad0a-3246-4716-8029-47badc959d22" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/htmls/china.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/china.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/france.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/france.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/italy.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/italy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/spain.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/spain.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/unitedkingdom.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/unitedkingdom.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/unitedstates.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/unitedstates.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/world.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/world.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/write_to_html.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/write_to_html.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,8 +43,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/write_to_html.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="75" selection-start-line="75" selection-end-line="78" />
+            <state relative-caret-position="230">
+              <caret line="88" selection-start-line="88" selection-end-line="88" />
               <folding>
                 <element signature="e#20#35#0" expanded="true" />
               </folding>
@@ -81,6 +75,8 @@
       <find>title</find>
       <find>print</find>
       <find>os.remove</find>
+      <find>True</find>
+      <find>true</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -103,8 +99,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-113" />
-    <option name="y" value="-889" />
+    <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="808" />
   </component>
@@ -255,7 +250,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-274" y="-1057" width="1920" height="1057" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="808" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.23185341" />
@@ -263,7 +258,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.14300518" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19273743" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -367,8 +362,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/write_to_html.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="75" selection-start-line="75" selection-end-line="78" />
+        <state relative-caret-position="230">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
           <folding>
             <element signature="e#20#35#0" expanded="true" />
           </folding>
