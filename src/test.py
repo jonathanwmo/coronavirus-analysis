@@ -27,5 +27,11 @@ countries = ['World', 'Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 
              'Yemen', 'Zambia', 'Zimbabwe']
 
 mystring = """"""
+old = """<li class="nav-item"><a href="#">Home</a></li>"""
+temp = ""
 for country in countries:
-    
+    temp = old
+    temp = temp.replace("#", "src/htmls/" + country.lower().replace(" ", "") + ".html")
+    mystring += temp.replace("Home", country)
+    mystring += "\n"
+print(mystring)

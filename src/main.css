@@ -1,29 +1,41 @@
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
+    padding: 5px;
     list-style: none;
     font-weight: bold;
 }
+
 nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
 }
+
 a {
     text-decoration: none;
     color: rgb(75, 74, 74);
 }
+
 a:hover {
     text-decoration: underline;
 }
+
 h1 {
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
+
+h3 {
+    font-size: 30px;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+
+}
+
 p {
     font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
 }
+
 footer {
     position: relative;
     border-top: 2px solid #d5d5d5;
@@ -34,8 +46,8 @@ footer {
 #search {
     border-radius: 5px;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    height: 40px;
-    width: 160px;
+    height: 35px;
+    width: 300px;
     font-size: 16px;
 }
 
@@ -54,7 +66,7 @@ footer {
     position: fixed;
     background-color: rgb(230, 239, 252); 
     text-align: center;
-    width: 100%;
+    width: 2000px;
     height: 10px;
     top: 10px;
     right: 0;
@@ -66,7 +78,7 @@ footer {
 /* Navigation Menu - List items */
 .nav-item {
     /* non-critical appearance styles */
-    width: 200px;
+    width: 2000px;
     height: 40px;
     border-top: 1px solid #111;
     border-bottom: 1px solid #000;
@@ -84,6 +96,7 @@ footer {
     text-decoration: none;
     transition: color 0.2s, background 0.5s;
     text-align: middle;
+    width: 2000px;
 
 }
   
@@ -129,11 +142,11 @@ label[for="nav-trigger"] {
 }
 
 .nav-trigger:checked + label {
-    left: 215px;
+    left: 375px;
 }
 
 .nav-trigger:checked ~ .site-wrap {
-    left: 200px;
+    left: 360px;
 }
 
 body {
@@ -143,7 +156,7 @@ body {
 
 div.scroll { 
     width: 500px; 
-    height: 1000px;
+    height: 700px;
     overflow-x: hidden; 
     overflow-x: auto; 
     text-align: justify; 
