@@ -67,12 +67,12 @@ def update_index():
     with open(dir_path, 'w') as f:
         f.write(newstr)
     f.close()
-update_index()
+# update_index()
 
 # if __name__ == "__main__":
 #     country = str(sys.argv[1])
 #     update_date(country)
 
-# mycountries = ['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
-# for country in mycountries:
-#     update_date(country)
+mycountries = ['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
+for country in mycountries:
+    update_date(country)

@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bec8ad0a-3246-4716-8029-47badc959d22" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphScript.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphScript.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/htmls/china.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/china.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/htmls/france.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/france.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/htmls/italy.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/italy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/sourcecode.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/sourcecode.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/htmls/spain.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/spain.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/htmls/unitedkingdom.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/unitedkingdom.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/htmls/unitedstates.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/unitedstates.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/htmls/world.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/world.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/write_to_html.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/write_to_html.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/graphScript.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
+            <state relative-caret-position="541">
               <caret line="185" column="120" selection-start-line="185" selection-start-column="120" selection-end-line="185" selection-end-column="120" />
               <folding>
                 <element signature="e#111#132#0" expanded="true" />
@@ -51,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/write_to_html.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="59" column="120" lean-forward="true" selection-start-line="59" selection-start-column="120" selection-end-line="59" selection-end-column="120" />
+            <state relative-caret-position="645">
+              <caret line="75" selection-start-line="75" selection-end-line="78" />
               <folding>
                 <element signature="e#20#35#0" expanded="true" />
               </folding>
@@ -102,8 +97,8 @@
         <option value="$PROJECT_DIR$/world.html" />
         <option value="$PROJECT_DIR$/src/test.py" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/src/write_to_html.py" />
         <option value="$PROJECT_DIR$/src/graphScript.py" />
+        <option value="$PROJECT_DIR$/src/write_to_html.py" />
       </list>
     </option>
   </component>
@@ -360,22 +355,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/write_to_html.py">
+    <entry file="file://$PROJECT_DIR$/src/graphScript.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="59" column="120" lean-forward="true" selection-start-line="59" selection-start-column="120" selection-end-line="59" selection-end-column="120" />
+        <state relative-caret-position="541">
+          <caret line="185" column="120" selection-start-line="185" selection-start-column="120" selection-end-line="185" selection-end-column="120" />
           <folding>
-            <element signature="e#20#35#0" expanded="true" />
+            <element signature="e#111#132#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/graphScript.py">
+    <entry file="file://$PROJECT_DIR$/src/write_to_html.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="185" column="120" selection-start-line="185" selection-start-column="120" selection-end-line="185" selection-end-column="120" />
+        <state relative-caret-position="645">
+          <caret line="75" selection-start-line="75" selection-end-line="78" />
           <folding>
-            <element signature="e#111#132#0" expanded="true" />
+            <element signature="e#20#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
