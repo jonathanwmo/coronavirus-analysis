@@ -172,8 +172,8 @@ table {
 .tg  {
     border-collapse:collapse;
     border-spacing:0;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 7%;
+    margin-right: 7%;
 }
 .tg td {
     border-color:black;
@@ -202,12 +202,14 @@ table {
 }
 
 .tg .tg-0pky{
+    font-family:Arial, sans-serif;
     text-align:left;
     vertical-align:top
 }
 
 .tg .tg-0lax{
-    text-align:left;
+    font-family:Arial, sans-serif;
+    text-align:center;
     vertical-align:top
 }
 
@@ -216,6 +218,49 @@ table {
     margin-right: auto;
 }
 
-#green {
+#totalcases {
+    color: blue
+}
+
+#newcases {
+
+}
+
+#totaldeaths {
+}
+
+#newdeaths {
+    color: rgb(255, 30, 0)
+}
+
+#totalrecovered {
     color: green
+}
+
+#activecases {
+
+}
+
+#serious {
+    
+}
+
+#casespermil {
+    
+}
+
+#deathspermil {
+    
+}
+
+#totaltests {
+    
+}
+
+#testspermil {
+    
+}
+
+#population {
+    
 }

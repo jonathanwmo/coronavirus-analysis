@@ -80,6 +80,7 @@ def get_country_data(country):
     #                 "Tests per 1 Million People": country_numbers[11], "Population": country_numbers[12]}
 
 def update_index(country):
+    titled_country = country.title()
     req = Request('https://www.worldometers.info/coronavirus/', headers={'User-Agent': 'Mozilla/5.0'})
     page = urlopen(req).read()
     page = BeautifulSoup(page, 'html.parser')
@@ -122,7 +123,34 @@ def update_index(country):
             if count == 12:
                 inlines = False
             if inlines == True:
-                newstr += line.replace('x">','x">' + country_numbers[count])
+                if count == -1:
+                    newstr += '							<td class="tg-0pky"><b>' + titled_country + '</b></td>\n'
+                elif count == 0:
+                    newstr += '							<td class="tg-0lax" id="totalcases">' + country_numbers[count] + '</td>' +'\n'
+                elif count == 1:
+                    newstr += '							<td class="tg-0lax" id="newcases">+' + country_numbers[count] + '</td>' +'\n'
+                elif count == 2:
+                    newstr += '							<td class="tg-0lax" id="totaldeaths">' + country_numbers[count] + '</td>' +'\n'
+                elif count == 3:
+                    newstr += '							<td class="tg-0lax" id="newdeaths">+' + country_numbers[count] + '</td>' +'\n'
+                elif count == 4:
+                    newstr += '							<td class="tg-0lax" id="totalrecovered">' + country_numbers[count] + '</td>' +'\n'
+                elif count == 5:
+                    newstr += '							<td class="tg-0lax" id="activecases">' + country_numbers[count] + '</td>' +'\n'
+                elif count == 6:
+                    newstr += '							<td class="tg-0lax" id="serious">' + country_numbers[count] + '</td>' +'\n'
+                elif count == 7:
+                    newstr += '							<td class="tg-0lax" id="casespermil">' + country_numbers[count] + '</td>' +'\n'
+                elif count == 8:
+                    newstr += '							<td class="tg-0lax" id="deathspermil">' + country_numbers[count] + '</td>' +'\n'
+                elif count == 9:
+                    newstr += '							<td class="tg-0lax" id="totaltests">' + country_numbers[count] + '</td>' +'\n'
+                elif count == 10:
+                    newstr += '							<td class="tg-0lax" id="testspermil">' + country_numbers[count] + '</td>' +'\n'
+                elif count == 11:
+                    newstr += '							<td class="tg-0lax" id="population">' + country_numbers[count] + '</td>' +'\n'
+                else:
+                    newstr += '							<td class="tg-0lax">' + country_numbers[count] + '</td>' +'\n'
                 count += 1
             else:
                 newstr += line
@@ -131,8 +159,11 @@ def update_index(country):
     with open(dir_path, 'w') as f:
         f.write(newstr)
     f.close()
-    print(newstr)
-update_index("United States")
+
+    print(country + str(country_numbers))
+top10 = ["United States", "Russia", "Spain", "Brazil", "United Kingdom", "Italy", "France", "Germany", "Turkey"]
+for country in top10:
+    update_index(country)
 # print(get_country_data("United States"))
 # print(get_country_data("United States"))
 # if __name__ == "__main__":
