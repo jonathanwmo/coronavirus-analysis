@@ -183,7 +183,7 @@ def update_index(country):
     f.close()
 
     print(country + str(country_numbers))
-top10 = ["World", "United States", "Russia", "Spain", "Brazil", "United Kingdom", "Italy", "France", "Germany", "Turkey"]
+top10 = ["World", "United States", "Russia", "Spain", "Brazil", "United Kingdom", "Italy", "France", "Germany", "Turkey", "Iran", "India", "Peru", "China", "Canada", "Saudi Arabia", "Belgium", "Mexico", "Chile", "Pakistan", "Netherlands", "Qatar", "Ecuador", "Belarus", "Sweden", "Switzerland"]
 for country in top10:
     update_index(country)
     # print(get_country_data(country))

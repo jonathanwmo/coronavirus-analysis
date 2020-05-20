@@ -180,6 +180,7 @@ table {
     border-spacing:0;
     margin-left: 13%;
     margin-right: 13%;
+    height: 500px;
 }
 .tg td {
     border-color:black;
@@ -217,6 +218,14 @@ table {
     font-family:Arial, sans-serif;
     text-align:center;
     vertical-align:top
+}
+
+.tg .tg-0lax1{
+    
+    font-family:Arial, sans-serif;
+    text-align:center;
+    vertical-align:top
+    
 }
 
 table {
