@@ -161,15 +161,15 @@ def update_index(country):
     f.close()
 
     print(country + str(country_numbers))
-top10 = ["United States", "Russia", "Spain", "Brazil", "United Kingdom", "Italy", "France", "Germany", "Turkey"]
-for country in top10:
-    update_index(country)
+# top10 = ["United States", "Russia", "Spain", "Brazil", "United Kingdom", "Italy", "France", "Germany", "Turkey"]
+# for country in top10:
+#     update_index(country)
 # print(get_country_data("United States"))
 # print(get_country_data("United States"))
 # if __name__ == "__main__":
 #     country = str(sys.argv[1])
 #     update_date(country)
 
-# mycountries = ['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
-# for country in mycountries:
-#     update_date(country)
+mycountries = ['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
+for country in mycountries:
+    update_date(country)
