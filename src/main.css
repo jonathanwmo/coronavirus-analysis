@@ -30,7 +30,13 @@ h3 {
 
 }
 
+caption {
+    font-size: 25px;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+
 p {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
     font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
@@ -172,8 +178,8 @@ table {
 .tg  {
     border-collapse:collapse;
     border-spacing:0;
-    margin-left: 7%;
-    margin-right: 7%;
+    margin-left: 13%;
+    margin-right: 13%;
 }
 .tg td {
     border-color:black;
@@ -237,20 +243,14 @@ table {
     color: green
 }
 
-#activecases {
-
-}
-
-#serious {
-    
-}
-
 #casespermil {
-    
+    font-style: italic;
+    font-size: 14.5px;
 }
 
 #deathspermil {
-    
+    font-style: italic;
+    font-size: 14.5px;
 }
 
 #totaltests {
@@ -258,7 +258,8 @@ table {
 }
 
 #testspermil {
-    
+    font-style: italic;
+    font-size: 14.5px;
 }
 
 #population {

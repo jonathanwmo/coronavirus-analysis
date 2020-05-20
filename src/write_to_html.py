@@ -52,25 +52,51 @@ def get_country_data(country):
     country_numbers_html = []
     inlines = False
 
-    for line in page_list:
-        if ("country/" + country + "/") in str(line.strip()):
-            inlines = True
-        if inlines == True:
-          country_numbers_html.append(line)
-        if ('a href="/world-population/' + country + "-population/") in str(line):
-            break
+    if country == "world":
+        for line in page_list:
+            if ('">World') in str(line.strip()):
+                inlines = True
+            if inlines == True:
+                country_numbers_html.append(line)
+            if ('data-continent="all"') in str(line):
+                break
 
-    country_numbers_html = country_numbers_html[1:]
-    country_numbers = []
-    for i in range(len(country_numbers_html)):
-        myList = [country_numbers_html[i]]
-        for line in myList:
-            finder = re.compile(r'(\d{0,3},)?((\d{3},)?)(\d{1,3})')
-            if re.search(finder, line) is not None:
-                country_numbers.append(re.search(finder, line).group())
-            else:
-                country_numbers.append("")
-    country_numbers.pop(3)
+        country_numbers_html = country_numbers_html[1:]
+        country_numbers = []
+
+        for i in range(len(country_numbers_html)):
+            myList = [country_numbers_html[i]]
+            for line in myList:
+                finder = re.compile(r'\b\d[\d,.]*\b')
+                if re.search(finder, line) is not None:
+                    country_numbers.append(re.search(finder, line).group())
+                else:
+                    country_numbers.append("")
+        country_numbers.pop(5)
+        country_numbers.pop(5)
+    else:
+        for line in page_list:
+            if ("country/" + country + "/") in str(line.strip()):
+                inlines = True
+            if inlines == True:
+              country_numbers_html.append(line)
+            if ('a href="/world-population/' + country + "-population/") in str(line):
+                break
+
+        country_numbers_html = country_numbers_html[1:]
+        country_numbers = []
+
+        for i in range(len(country_numbers_html)):
+            myList = [country_numbers_html[i]]
+            for line in myList:
+                finder = re.compile(r'(\d{0,3},)?((\d{3},)?)(\d{1,3})')
+                if re.search(finder, line) is not None:
+                    country_numbers.append(re.search(finder, line).group())
+                else:
+                    country_numbers.append("")
+        country_numbers.pop(3)
+        country_numbers.pop(5)
+        country_numbers.pop(5)
     return country_numbers
     # # print(country_numbers)
     # country_dict = {"Total Cases": country_numbers[0], "New Cases": country_numbers[1], "Total Deahts": country_numbers[2],
@@ -120,7 +146,7 @@ def update_index(country):
         for line in f.readlines():
             if ('<td class="tg-0pky"><b>' + country) in str(line):
                 inlines = True
-            if count == 12:
+            if count == 10:
                 inlines = False
             if inlines == True:
                 if count == -1:
@@ -130,24 +156,20 @@ def update_index(country):
                 elif count == 1:
                     newstr += '							<td class="tg-0lax" id="newcases">+' + country_numbers[count] + '</td>' +'\n'
                 elif count == 2:
-                    newstr += '							<td class="tg-0lax" id="totaldeaths">' + country_numbers[count] + '</td>' +'\n'
+                    newstr += '							<td class="tg-0lax" id="casespermil">' + country_numbers[5] + '</td>' + '\n'
                 elif count == 3:
-                    newstr += '							<td class="tg-0lax" id="newdeaths">+' + country_numbers[count] + '</td>' +'\n'
+                    newstr += '							<td class="tg-0lax" id="totaldeaths">' + country_numbers[2] + '</td>' +'\n'
                 elif count == 4:
-                    newstr += '							<td class="tg-0lax" id="totalrecovered">' + country_numbers[count] + '</td>' +'\n'
+                    newstr += '							<td class="tg-0lax" id="newdeaths">+' + country_numbers[3] + '</td>' +'\n'
                 elif count == 5:
-                    newstr += '							<td class="tg-0lax" id="activecases">' + country_numbers[count] + '</td>' +'\n'
+                    newstr += '							<td class="tg-0lax" id="deathspermil">' + country_numbers[6] + '</td>' +'\n'
                 elif count == 6:
-                    newstr += '							<td class="tg-0lax" id="serious">' + country_numbers[count] + '</td>' +'\n'
+                    newstr += '							<td class="tg-0lax" id="totalrecovered">' + country_numbers[4] + '</td>' +'\n'
                 elif count == 7:
-                    newstr += '							<td class="tg-0lax" id="casespermil">' + country_numbers[count] + '</td>' +'\n'
-                elif count == 8:
-                    newstr += '							<td class="tg-0lax" id="deathspermil">' + country_numbers[count] + '</td>' +'\n'
-                elif count == 9:
                     newstr += '							<td class="tg-0lax" id="totaltests">' + country_numbers[count] + '</td>' +'\n'
-                elif count == 10:
+                elif count == 8:
                     newstr += '							<td class="tg-0lax" id="testspermil">' + country_numbers[count] + '</td>' +'\n'
-                elif count == 11:
+                elif count == 9:
                     newstr += '							<td class="tg-0lax" id="population">' + country_numbers[count] + '</td>' +'\n'
                 else:
                     newstr += '							<td class="tg-0lax">' + country_numbers[count] + '</td>' +'\n'
@@ -161,14 +183,12 @@ def update_index(country):
     f.close()
 
     print(country + str(country_numbers))
-# top10 = ["United States", "Russia", "Spain", "Brazil", "United Kingdom", "Italy", "France", "Germany", "Turkey"]
-# for country in top10:
-#     update_index(country)
+top10 = ["World", "United States", "Russia", "Spain", "Brazil", "United Kingdom", "Italy", "France", "Germany", "Turkey"]
+for country in top10:
+    update_index(country)
+    # print(get_country_data(country))
 # print(get_country_data("United States"))
 # print(get_country_data("United States"))
-# if __name__ == "__main__":
-#     country = str(sys.argv[1])
-#     update_date(country)
 
 mycountries = ['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
 for country in mycountries:

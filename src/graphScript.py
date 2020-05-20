@@ -357,6 +357,7 @@ def plot_four(country):
     else:
         ystepsize = 500000
 
+
     ylabel = (np.arange(0, int(highest_cases*1.1), ystepsize)).tolist()
     my_graph.yticks(ylabel, ylabel, rotation=30)                            # rotate ticks to show numbers better
 
@@ -435,14 +436,6 @@ countries = ['World', 'Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 
 mycountries = ['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
 # mycountries = ['New Zealand', 'Mexico']
 for country in mycountries:
-    dir_path = os.path.dirname(os.path.realpath(__file__)) + "/graphs/" + country.lower().replace(" ", "_")  # get working directory
-    current_time = time.time()
-    for f in os.listdir(dir_path):
-        f = dir_path + "/" + f
-        creation_time = os.path.getmtime(f)
-        if ((current_time - creation_time) / (86400)) >= 1:
-            os.remove(f)
-
     plot_single(country.title(), "total confirmed cases")
     plot_single(country.title(), "total deaths")
     plot_single(country.title(), "new confirmed cases")
@@ -450,3 +443,12 @@ for country in mycountries:
     plot_four(country)
     index = mycountries.index(country) + 1
     print(country + ": " + str(index) + "/" + str(len(mycountries)))
+
+    dir_path = os.path.dirname(os.path.realpath(__file__)) + "/graphs/" + country.lower().replace(" ",
+                                                                                                  "_")  # get working directory
+    current_time = time.time()
+    for f in os.listdir(dir_path):
+        f = dir_path + "/" + f
+        creation_time = os.path.getmtime(f)
+        if ((current_time - creation_time) / (86400)) >= 1:
+            os.remove(f)
