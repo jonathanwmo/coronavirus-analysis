@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bec8ad0a-3246-4716-8029-47badc959d22" name="Default Changelist" comment="" />
+    <list default="true" id="bec8ad0a-3246-4716-8029-47badc959d22" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/graphs/france/france_allfour_2020-05-18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/france/france_new_confirmed_cases_2020-05-18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/france/france_new_deaths_2020-05-18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/france/france_total_confirmed_cases_2020-05-18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/france/france_total_deaths_2020-05-18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/italy/italy_allfour_2020-05-18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/italy/italy_new_deaths_2020-05-18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/spain/spain_allfour_2020-05-18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/spain/spain_new_confirmed_cases_2020-05-18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/spain/spain_new_deaths_2020-05-18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/united_kingdom/united_kingdom_allfour_2020-05-18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/united_states/united_states_allfour_2020-05-18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_allfour_2020-05-18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/sourcecode.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/sourcecode.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/graphScript.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-855">
-              <caret line="358" selection-start-line="358" selection-end-line="358" />
+            <state relative-caret-position="570">
+              <caret line="453" column="24" selection-start-line="453" selection-start-column="24" selection-end-line="453" selection-end-column="24" />
               <folding>
                 <element signature="e#111#132#0" expanded="true" />
               </folding>
@@ -98,11 +113,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-239" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-274" />
     <option name="y" value="-1057" />
-    <option name="width" value="1885" />
-    <option name="height" value="1055" />
+    <option name="width" value="1920" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -125,7 +140,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.write_to_html">
+  <component name="RunManager" selected="Python.graphScript">
     <configuration name="graphScript" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="coronavirus-analysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -212,9 +227,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.graphScript" />
         <item itemvalue="Python.write_to_html" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.graphScript" />
         <item itemvalue="Python.runner" />
       </list>
     </recent_temporary>
@@ -233,7 +248,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-274" y="-1057" width="1920" height="1057" extended-state="6" />
+    <frame x="-274" y="-1057" width="1920" height="1057" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.34668073" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -342,8 +357,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/graphScript.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-855">
-          <caret line="358" selection-start-line="358" selection-end-line="358" />
+        <state relative-caret-position="570">
+          <caret line="453" column="24" selection-start-line="453" selection-start-column="24" selection-end-line="453" selection-end-column="24" />
           <folding>
             <element signature="e#111#132#0" expanded="true" />
           </folding>
