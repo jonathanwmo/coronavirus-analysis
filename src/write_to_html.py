@@ -121,6 +121,8 @@ def update_index(country):
 
     # print(total_cases)
 
+    date_aot = str(datetime.today())[0:10]
+
     dir_path = os.path.dirname(os.path.realpath(__file__))[0:56] + "/index.html"
     with open(dir_path, 'r') as f:
         newstr = """"""
@@ -130,6 +132,8 @@ def update_index(country):
                           '</span> &emsp; &emsp; &emsp; World Deaths: <span style="color: red;">' + world_numbers[1] + \
                           '</span> &emsp; &emsp; &emsp; Recovered: <span style="color: rgb(15, 146, 15);">' + \
                           world_numbers[2] + '</span></h3>\n'
+            if '<img src="src/graphs/world/world_allfour_' in line:
+                newstr += '                    <img src="src/graphs/world/world_allfour_' + date_aot + '.png" width="1100"/> <br><br><br>'
             else:
                 newstr += line
     f.close()
@@ -183,6 +187,7 @@ def update_index(country):
     f.close()
 
     print(country + str(country_numbers))
+
 top10 = ["World", "United States", "Russia", "Spain", "Brazil", "United Kingdom", "Italy", "France", "Germany", "Turkey", "Iran", "India", "Peru", "China", "Canada", "Saudi Arabia", "Belgium", "Mexico", "Chile", "Pakistan", "Netherlands", "Qatar", "Ecuador", "Belarus", "Sweden", "Switzerland"]
 for country in top10:
     update_index(country)
