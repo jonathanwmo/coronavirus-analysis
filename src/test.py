@@ -1,3 +1,3 @@
-string = "adslkajsdf"
-x = list(string)
-print(x)
+country = "United States"
+country = country.replace(" ", "-")
+print(country)

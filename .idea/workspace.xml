@@ -4,6 +4,57 @@
     <list default="true" id="bec8ad0a-3246-4716-8029-47badc959d22" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphScript.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphScript.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/china/china_allfour_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/china/china_new_confirmed_cases_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/china/china_new_deaths_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/france/france_allfour_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/france/france_new_confirmed_cases_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/france/france_new_deaths_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/italy/italy_allfour_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/italy/italy_new_confirmed_cases_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/italy/italy_new_deaths_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/italy/italy_total_confirmed_cases_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/italy/italy_total_deaths_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/mexico/mexico_allfour_2020-05-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/mexico/mexico_new_confirmed_cases_2020-05-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/mexico/mexico_new_deaths_2020-05-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/mexico/mexico_total_confirmed_cases_2020-05-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/mexico/mexico_total_deaths_2020-05-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/new_zealand/new_zealand_allfour_2020-05-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/new_zealand/new_zealand_new_confirmed_cases_2020-05-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/new_zealand/new_zealand_new_deaths_2020-05-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/new_zealand/new_zealand_total_confirmed_cases_2020-05-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/new_zealand/new_zealand_total_deaths_2020-05-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/spain/spain_allfour_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/spain/spain_new_confirmed_cases_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/spain/spain_new_deaths_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/spain/spain_total_deaths_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/united_kingdom/united_kingdom_allfour_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/united_kingdom/united_kingdom_new_confirmed_cases_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/united_kingdom/united_kingdom_new_deaths_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/united_kingdom/united_kingdom_total_confirmed_cases_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/united_kingdom/united_kingdom_total_deaths_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/united_states/united_states_allfour_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/united_states/united_states_new_confirmed_cases_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/united_states/united_states_new_deaths_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/united_states/united_states_total_confirmed_cases_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/united_states/united_states_total_deaths_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_allfour_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_new_confirmed_cases_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_new_deaths_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_new_deaths_2020-05-20.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/world/world_new_deaths_2020-05-20.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_total_confirmed_cases_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_total_deaths_2020-05-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/china.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/china.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/france.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/france.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/italy.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/italy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/spain.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/spain.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/unitedkingdom.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/unitedkingdom.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/unitedstates.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/unitedstates.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/world.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/world.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/write_to_html.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/write_to_html.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/graphScript.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6720">
-              <caret line="453" column="24" selection-start-line="453" selection-start-column="24" selection-end-line="453" selection-end-column="24" />
+            <state relative-caret-position="272">
+              <caret line="437" selection-start-line="437" selection-end-line="437" />
               <folding>
                 <element signature="e#111#132#0" expanded="true" />
               </folding>
@@ -35,8 +86,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+            <state relative-caret-position="45">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -44,8 +95,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/write_to_html.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="135" column="22" selection-start-line="135" selection-start-column="22" selection-end-line="135" selection-end-column="22" />
+            <state relative-caret-position="317">
+              <caret line="141" column="140" selection-start-line="141" selection-start-column="140" selection-end-line="141" selection-end-column="140" />
               <folding>
                 <element signature="e#20#35#0" expanded="true" />
               </folding>
@@ -70,13 +121,15 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>title</find>
-      <find>print</find>
       <find>os.remove</find>
       <find>True</find>
       <find>true</find>
       <find>world cases</find>
       <find>&quot;&gt;World</find>
       <find>&lt;td style=&quot;display:none&quot; data-continent=&quot;all&quot;&gt;All&lt;/td&gt;</find>
+      <find>update_index</find>
+      <find>print</find>
+      <find>date_aot</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -99,9 +152,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-274" />
+    <option name="x" value="701" />
     <option name="y" value="-1057" />
-    <option name="width" value="1920" />
+    <option name="width" value="945" />
     <option name="height" value="1057" />
   </component>
   <component name="ProjectView">
@@ -125,7 +178,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.write_to_html">
+  <component name="RunManager" selected="Python.graphScript">
     <configuration name="graphScript" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="coronavirus-analysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -212,8 +265,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.write_to_html" />
         <item itemvalue="Python.graphScript" />
+        <item itemvalue="Python.write_to_html" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.runner" />
       </list>
@@ -233,7 +286,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-274" y="-1057" width="1920" height="1057" extended-state="0" />
+    <frame x="701" y="-1057" width="945" height="1057" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.34668073" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -316,30 +370,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/graphScript.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6720">
-          <caret line="453" column="24" selection-start-line="453" selection-start-column="24" selection-end-line="453" selection-end-column="24" />
+        <state relative-caret-position="272">
+          <caret line="437" selection-start-line="437" selection-end-line="437" />
           <folding>
             <element signature="e#111#132#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/write_to_html.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="135" column="22" selection-start-line="135" selection-start-column="22" selection-end-line="135" selection-end-column="22" />
+        <state relative-caret-position="317">
+          <caret line="141" column="140" selection-start-line="141" selection-start-column="140" selection-end-line="141" selection-end-column="140" />
           <folding>
             <element signature="e#20#35#0" expanded="true" />
           </folding>

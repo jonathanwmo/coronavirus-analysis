@@ -8,6 +8,7 @@ import urllib.request
 import numpy as np
 import matplotlib.pyplot as plt
 import os
+from datetime import datetime, timedelta
 import time
 import gc
 
@@ -96,7 +97,7 @@ def plot_single(country, graph_type):
         total_cases_ints[-1] = total_cases_ints[-2]
 
     cases_aot = total_cases_ints[-1]                          # most recent case number, aot = as of today
-    date_aot = dates_list[-1]                           # most recent date, aot = as of today
+    date_aot = str(datetime.today())[0:10]
     highest_cases = max(total_cases_ints)
 
     my_graph = plt
@@ -297,7 +298,7 @@ def plot_four(country):
     my_graph.plot(new_deaths_dates_list, new_deaths_ints, color='orange', label = "New Deaths " + "in " + country + ": " + str(new_deaths_ints[-1]))  # graph the data as new deaths vs. dates
 
     total_cases_aot = total_cases_ints[-1]                                  # most recent case number, aot = as of today
-    date_aot = total_cases_dates_list[-1]                                   # most recent date, aot = as of today
+    date_aot = str(datetime.today())[0:10]
     highest_cases = max(total_cases_ints)
 
 
@@ -434,7 +435,6 @@ countries = ['World', 'Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 
 #     plot_four(country.title(), plot_four(country))
 
 mycountries = ['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
-# mycountries = ['New Zealand', 'Mexico']
 for country in mycountries:
     plot_single(country.title(), "total confirmed cases")
     plot_single(country.title(), "total deaths")
@@ -452,3 +452,4 @@ for country in mycountries:
         creation_time = os.path.getmtime(f)
         if ((current_time - creation_time) / (86400)) >= 1:
             os.remove(f)
+
