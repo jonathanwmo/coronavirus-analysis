@@ -3,79 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bec8ad0a-3246-4716-8029-47badc959d22" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphScript.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphScript.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/brazil/brazil_allfour_2020-05-14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/brazil/brazil_new_confirmed_cases_2020-05-14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/brazil/brazil_new_deaths_2020-05-14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/brazil/brazil_total_confirmed_cases_2020-05-14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/brazil/brazil_total_deaths_2020-05-14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/canada/canada_allfour_2020-05-13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/canada/canada_new_confirmed_cases_2020-05-13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/canada/canada_new_deaths_2020-05-13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/canada/canada_total_confirmed_cases_2020-05-13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/canada/canada_total_deaths_2020-05-13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/china/china_allfour_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/china/china_allfour_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/china/china_new_confirmed_cases_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/china/china_new_confirmed_cases_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/china/china_new_deaths_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/china/china_new_deaths_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/china/china_total_confirmed_cases_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/china/china_total_confirmed_cases_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/china/china_total_deaths_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/china/china_total_deaths_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/france/france_allfour_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/france/france_allfour_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/france/france_new_confirmed_cases_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/france/france_new_confirmed_cases_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/france/france_new_deaths_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/france/france_new_deaths_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/france/france_total_confirmed_cases_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/france/france_total_confirmed_cases_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/france/france_total_deaths_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/france/france_total_deaths_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/italy/italy_allfour_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/italy/italy_allfour_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/italy/italy_new_confirmed_cases_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/italy/italy_new_confirmed_cases_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/italy/italy_new_deaths_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/italy/italy_new_deaths_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/italy/italy_total_confirmed_cases_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/italy/italy_total_confirmed_cases_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/italy/italy_total_deaths_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/italy/italy_total_deaths_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/japan/japan_allfour_2020-05-14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/japan/japan_new_confirmed_cases_2020-05-14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/japan/japan_new_deaths_2020-05-14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/japan/japan_total_confirmed_cases_2020-05-13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/japan/japan_total_confirmed_cases_2020-05-14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/japan/japan_total_deaths_2020-05-14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/mexico/mexico_allfour_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/mexico/mexico_allfour_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/mexico/mexico_new_confirmed_cases_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/mexico/mexico_new_confirmed_cases_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/mexico/mexico_new_deaths_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/mexico/mexico_new_deaths_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/mexico/mexico_total_confirmed_cases_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/mexico/mexico_total_confirmed_cases_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/mexico/mexico_total_deaths_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/mexico/mexico_total_deaths_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/new_zealand/new_zealand_allfour_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/new_zealand/new_zealand_allfour_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/new_zealand/new_zealand_new_confirmed_cases_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/new_zealand/new_zealand_new_confirmed_cases_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/new_zealand/new_zealand_new_deaths_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/new_zealand/new_zealand_new_deaths_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/new_zealand/new_zealand_total_confirmed_cases_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/new_zealand/new_zealand_total_confirmed_cases_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/new_zealand/new_zealand_total_deaths_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/new_zealand/new_zealand_total_deaths_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/spain/spain_allfour_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/spain/spain_allfour_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/spain/spain_new_confirmed_cases_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/spain/spain_new_confirmed_cases_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/spain/spain_new_deaths_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/spain/spain_new_deaths_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/spain/spain_total_confirmed_cases_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/spain/spain_total_confirmed_cases_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/spain/spain_total_deaths_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/spain/spain_total_deaths_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/united_kingdom/united_kingdom_allfour_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/united_kingdom/united_kingdom_allfour_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/united_kingdom/united_kingdom_new_confirmed_cases_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/united_kingdom/united_kingdom_new_confirmed_cases_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/united_kingdom/united_kingdom_new_deaths_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/united_kingdom/united_kingdom_new_deaths_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/united_kingdom/united_kingdom_total_confirmed_cases_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/united_kingdom/united_kingdom_total_confirmed_cases_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/united_kingdom/united_kingdom_total_deaths_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/united_kingdom/united_kingdom_total_deaths_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/united_states/united_states_allfour_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/united_states/united_states_allfour_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/united_states/united_states_new_confirmed_cases_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/united_states/united_states_new_confirmed_cases_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/united_states/united_states_new_deaths_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/united_states/united_states_new_deaths_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/united_states/united_states_total_confirmed_cases_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/united_states/united_states_total_confirmed_cases_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/united_states/united_states_total_deaths_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/united_states/united_states_total_deaths_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_allfour_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/world/world_allfour_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_new_confirmed_cases_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/world/world_new_confirmed_cases_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_new_deaths_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/world/world_new_deaths_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_total_confirmed_cases_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/world/world_total_confirmed_cases_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_total_deaths_2020-05-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/world/world_total_deaths_2020-05-21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/china.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/china.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/france.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/france.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/italy.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/italy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/sourcecode.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/sourcecode.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/spain.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/spain.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/unitedkingdom.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/unitedkingdom.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/unitedstates.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/unitedstates.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/world.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/world.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/write_to_html.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/write_to_html.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/graphScript.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="470" column="66" lean-forward="true" selection-start-line="469" selection-start-column="4" selection-end-line="470" selection-end-column="66" />
+            <state relative-caret-position="558">
+              <caret line="463" column="25" lean-forward="true" selection-start-line="463" selection-start-column="25" selection-end-line="463" selection-end-column="25" />
               <folding>
                 <element signature="e#111#132#0" expanded="true" />
               </folding>
@@ -103,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/write_to_html.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1348">
-              <caret line="156" column="26" selection-start-line="156" selection-start-column="26" selection-end-line="156" selection-end-column="26" />
+            <state relative-caret-position="528">
+              <caret line="262" column="36" selection-start-line="262" selection-start-column="36" selection-end-line="262" selection-end-column="36" />
               <folding>
                 <element signature="e#20#35#0" expanded="true" />
               </folding>
@@ -156,8 +84,8 @@
         <option value="$PROJECT_DIR$/world.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/test.py" />
-        <option value="$PROJECT_DIR$/src/graphScript.py" />
         <option value="$PROJECT_DIR$/src/write_to_html.py" />
+        <option value="$PROJECT_DIR$/src/graphScript.py" />
       </list>
     </option>
   </component>
@@ -348,9 +276,7 @@
     <entry file="file://$PROJECT_DIR$/src/graphs/world/world_new_confirmed_cases_2020-05-12.png" />
     <entry file="file://$PROJECT_DIR$/templates/index.html" />
     <entry file="file://$PROJECT_DIR$/runner.py" />
-    <entry file="file://$PROJECT_DIR$/src/graphs/canada/canada_total_confirmed_cases_2020-05-13.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graphs/canada/canada_total_confirmed_cases_2020-05-13.png" />
     <entry file="file://$PROJECT_DIR$/src/graphs/mexico/mexico_total_confirmed_cases_2020-05-13.png" />
     <entry file="file://$PROJECT_DIR$/srctest.html" />
     <entry file="file://$PROJECT_DIR$/src/world.html" />
@@ -367,9 +293,7 @@
     <entry file="file://$PROJECT_DIR$/src/graphs/china/china_allfour_2020-05-13.png" />
     <entry file="file://$PROJECT_DIR$/src/graphs/china/china_allfour_2020-05-14.png" />
     <entry file="file://$PROJECT_DIR$/src/graphs/world/world_allfour_2020-05-14.png" />
-    <entry file="file://$PROJECT_DIR$/src/graphs/brazil/brazil_allfour_2020-05-14.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graphs/brazil/brazil_allfour_2020-05-14.png" />
     <entry file="file://$PROJECT_DIR$/src/graphs/world/world_allfour_2020-05-15.png" />
     <entry file="file://$PROJECT_DIR$/world.html" />
     <entry file="file://$PROJECT_DIR$/unitedstates.html" />
@@ -401,22 +325,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/graphScript.py">
+    <entry file="file://$PROJECT_DIR$/src/write_to_html.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="470" column="66" lean-forward="true" selection-start-line="469" selection-start-column="4" selection-end-line="470" selection-end-column="66" />
+        <state relative-caret-position="528">
+          <caret line="262" column="36" selection-start-line="262" selection-start-column="36" selection-end-line="262" selection-end-column="36" />
           <folding>
-            <element signature="e#111#132#0" expanded="true" />
+            <element signature="e#20#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/write_to_html.py">
+    <entry file="file://$PROJECT_DIR$/src/graphScript.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1348">
-          <caret line="156" column="26" selection-start-line="156" selection-start-column="26" selection-end-line="156" selection-end-column="26" />
+        <state relative-caret-position="558">
+          <caret line="463" column="25" lean-forward="true" selection-start-line="463" selection-start-column="25" selection-end-line="463" selection-end-column="25" />
           <folding>
-            <element signature="e#20#35#0" expanded="true" />
+            <element signature="e#111#132#0" expanded="true" />
           </folding>
         </state>
       </provider>
