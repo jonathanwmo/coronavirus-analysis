@@ -44,7 +44,7 @@ def get_country_data(country):
                     country_numbers.append("")
         country_numbers.pop(5)
         country_numbers.pop(5)
-        country_numbers[-1] = '7,785,879,495'
+        country_numbers[-2] = '7,785,879,495'
 
     else:
         for line in page_list:
@@ -54,7 +54,6 @@ def get_country_data(country):
               country_numbers_html.append(line)
             if ('a href="/world-population/' + country + "-population/") in str(line):
                 break
-
         country_numbers_html = country_numbers_html[1:]
 
         for i in range(len(country_numbers_html)):
@@ -77,7 +76,33 @@ def get_country_data(country):
     #                 "Tests per 1 Million People": country_numbers[11], "Population": country_numbers[12]}
 
 def update_country_html(country):
-    country_numbers = get_country_data(country)
+    if country == 'Bonaire Sint Eustatius and Saba':
+        country_numbers = get_country_data('caribbean-netherlands')
+    elif country == 'Brunei':
+        country_numbers = get_country_data('brunei-darussalam')
+    elif country == 'Cape Verde':
+        country_numbers = get_country_data('cabo-verde')
+    elif country == "Cote d'Ivoire":
+        country_numbers = get_country_data('cote-d-ivoire')
+    elif country == 'Democratic Republic of Congo':
+        country_numbers = get_country_data('democratic-republic-of-the-congo')
+    elif country == 'Falkland Islands':
+        country_numbers = get_country_data('falkland-islands-malvinas')
+    elif country == 'Guernsey':
+        country_numbers = get_country_data('channel-islands')
+    elif country == 'Palestine':
+        country_numbers = get_country_data('state-of-palestine')
+    elif country == 'Sint Maarten (Dutch part)':
+        country_numbers = get_country_data('sint-maarten')
+    elif country == 'Timor':
+        country_numbers = get_country_data('timor-leste')
+    elif country == 'Vatican':
+        country_numbers = get_country_data('holy-see')
+    elif country == 'Vietnam':
+        country_numbers = get_country_data('viet-nam')
+    else:
+        country_numbers = get_country_data(country)
+
     _country_ = country.lower().replace(" ", "_")
     country = country.lower().replace(" ", "")
 
@@ -87,7 +112,6 @@ def update_country_html(country):
     date_aoy = str(datetime.today() - timedelta(days=1))[0:10]
     date_ao2 = str(str(datetime.today() - timedelta(days=2))[0:10])
     date_ao3 = str(str(datetime.today() - timedelta(days=2))[0:10])
-
     for i in range(len(country_numbers)):
         if country_numbers[i] == "":
             country_numbers[i] = "n/a"
@@ -100,15 +124,28 @@ def update_country_html(country):
                 newstr += line.replace(date_ao2, date_aot)
             elif date_ao3 in line:
                 newstr += line.replace(date_ao3, date_aot)
-            elif '<p>Total Cases:' in line:
-                newstr += '                <p>Total Cases: ' + country_numbers[0] + ' &emsp; &emsp; &emsp; New Cases: ' + country_numbers[1] + ' &emsp; &emsp; &emsp; Total Cases/1 Million Population: ' + country_numbers[5] +'</p>\n'
-            elif '<p>Total Deaths' in line:
-                newstr += '                <p>Total Deaths: ' + country_numbers[2] + ' &emsp; &emsp; &emsp; New Deaths: ' + country_numbers[3] + ' &emsp; &emsp; &emsp; Deaths/1 Million Population: ' + country_numbers[6] + '</p>\n'
-            elif '<p>Total Recovered' in line:
-                newstr += '                <p>Total Recovered: ' + country_numbers[4] + ' &emsp; &emsp; &emsp; Total Tests: ' + country_numbers[7] + ' &emsp; &emsp; &emsp; Tests/1 Million Population: ' + country_numbers[8] + '</p>\n'
-            elif '<p>Population' in line:
-                newstr +='                <p>Population: ' + country_numbers[9] + '</p>\n'
-
+            elif '                <li class="nav-item"><a href="cotedivoire.html">Cote dIvoire</a></li>' in line:
+                newstr +='                 <li class="nav-item"><a href="coted' +"'"+'ivoire.html">Cote dIvoire</a></li>\n'
+            elif '<p><b><u>Total Cases</u></b><br><br> ' in line:
+                newstr += '                    <p><b><u>Total Cases</u></b><br><br> ' + country_numbers[0] + '</p>\n'
+            elif '<p><b><u>New Cases </u></b><br><br>' in line:
+                newstr += '                    <p><b><u>New Cases </u></b><br><br>' + country_numbers[1] + '</p>\n'
+            elif '<p><b><u>Cases/1 Million </u></b><b' in line:
+                newstr += '                    <p><b><u>Cases/1 Million </u></b><br><br>' + country_numbers[5] + '</p>\n'
+            elif '<p><b><u>Total Deaths </u></b><br><' in line:
+                newstr += '                    <p><b><u>Total Deaths </u></b><br><br>' + country_numbers[2] + '</p>\n'
+            elif '<p><b><u>New Deaths </u></b><br><br' in line:
+                newstr += '                    <p><b><u>New Deaths </u></b><br><br>' + country_numbers[3] + '</p>\n'
+            elif '<p><b><u>Deaths/1 Million</u></b><b' in line:
+                newstr += '                    <p><b><u>Deaths/1 Million</u></b><br><br>' + country_numbers[6] + '</p>\n'
+            elif '<p><b><u>Total Recovered </u></b><b' in line:
+                newstr += '                    <p><b><u>Total Recovered </u></b><br><br>' + country_numbers[4] + '</p>\n'
+            elif '<p><b><u>Total Tests </u></b><br><b' in line:
+                newstr += '                    <p><b><u>Total Tests </u></b><br><br>' + country_numbers[7] + '</p>\n'
+            elif '<p><b><u>Tests/1 Million</u></b><br' in line:
+                newstr += '                    <p><b><u>Tests/1 Million</u></b><br><br>' + country_numbers[8] + '</p>\n'
+            elif '<p><b><u>Population</u></b><br><br>' in line:
+                newstr += '                    <p><b><u>Population</u></b><br><br>' + country_numbers[9] + '</p>\n'
             else:
                 newstr += line
     f.close()
@@ -116,6 +153,8 @@ def update_country_html(country):
     with open(dir_path, 'w') as f:
         f.write(newstr)
     f.close()
+
+    return country_numbers
 
 def update_index_html(country):
     titled_country = country.title()
@@ -195,20 +234,50 @@ def update_index_html(country):
 
     print(country + str(country_numbers))
 
-# top25 = ["World", "United States", "Russia", "Spain", "Brazil", "United Kingdom", "Italy", "France", "Germany", "Turkey", "Iran", "India", "Peru", "China", "Canada", "Saudi Arabia", "Belgium", "Mexico", "Chile", "Pakistan", "Netherlands", "Qatar", "Ecuador", "Belarus", "Sweden", "Switzerland"]
-# for country in top25:
-#     update_index_html(country)
-    # print(get_country_data(country))
-# print(get_country_data("United States"))
-# print(get_country_data("United States"))
+
+top25 = ["World", "United States", "Russia", "Spain", "Brazil", "United Kingdom", "Italy", "France", "Germany", "Turkey", "Iran", "India", "Peru", "China", "Canada", "Saudi Arabia", "Belgium", "Mexico", "Chile", "Pakistan", "Netherlands", "Qatar", "Ecuador", "Belarus", "Sweden", "Switzerland"]
+for country in top25:
+    update_index_html(country)
 
 mycountries = ['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
-for country in mycountries:
-    print(country)
-    update_country_html(country)
-    print("Finished")
 
-# print(get_country_data("United States"))
+countries = ['World', 'Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Anguilla', 'Antigua and Barbuda',
+             'Argentina', 'Armenia', 'Aruba', 'Australia', 'Austria', 'Azerbaijan', 'Bahamas', 'Bahrain', 'Bangladesh',
+             'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bermuda', 'Bhutan', 'Bolivia',
+             'Bonaire Sint Eustatius and Saba', 'Bosnia and Herzegovina', 'Botswana', 'Brazil', 'British Virgin Islands',
+             'Brunei', 'Bulgaria', 'Burkina Faso', 'Burundi', 'Cambodia', 'Cameroon', 'Canada', 'Cape Verde',
+             'Cayman Islands', 'Central African Republic', 'Chad', 'Chile', 'China', 'Colombia', 'Comoros', 'Congo',
+             'Costa Rica', "Cote d'Ivoire", 'Croatia', 'Cuba', 'Curacao', 'Cyprus', 'Czech Republic',
+             'Democratic Republic of Congo', 'Denmark', 'Djibouti', 'Dominica', 'Dominican Republic', 'Ecuador', 'Egypt',
+             'El Salvador', 'Equatorial Guinea', 'Eritrea', 'Estonia', 'Ethiopia', 'Faeroe Islands', 'Falkland Islands',
+             'Fiji', 'Finland', 'France', 'French Polynesia', 'Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana', 'Gibraltar',
+             'Greece', 'Greenland', 'Grenada', 'Guam', 'Guatemala', 'Guernsey', 'Guinea', 'Guinea-Bissau', 'Guyana',
+             'Haiti', 'Honduras', 'Hungary', 'Iceland', 'India', 'Indonesia', 'International', 'Iran', 'Iraq', 'Ireland',
+             'Isle of Man', 'Israel', 'Italy', 'Jamaica', 'Japan', 'Jersey', 'Jordan', 'Kazakhstan', 'Kenya', 'Kosovo',
+             'Kuwait', 'Kyrgyzstan', 'Laos', 'Latvia', 'Lebanon', 'Liberia', 'Libya', 'Liechtenstein', 'Lithuania',
+             'Luxembourg', 'Macedonia', 'Madagascar', 'Malawi', 'Malaysia', 'Maldives', 'Mali', 'Malta', 'Mauritania',
+             'Mauritius', 'Mexico', 'Moldova', 'Monaco', 'Mongolia', 'Montenegro', 'Montserrat', 'Morocco', 'Mozambique',
+             'Myanmar', 'Namibia', 'Nepal', 'Netherlands', 'New Caledonia', 'New Zealand', 'Nicaragua', 'Niger', 'Nigeria',
+             'Northern Mariana Islands', 'Norway', 'Oman', 'Pakistan', 'Palestine', 'Panama', 'Papua New Guinea',
+             'Paraguay', 'Peru', 'Philippines', 'Poland', 'Portugal', 'Puerto Rico', 'Qatar', 'Romania', 'Russia',
+             'Rwanda', 'Saint Kitts and Nevis', 'Saint Lucia', 'Saint Vincent and the Grenadines', 'San Marino',
+             'Sao Tome and Principe', 'Saudi Arabia', 'Senegal', 'Serbia', 'Seychelles', 'Sierra Leone', 'Singapore',
+             'Sint Maarten (Dutch part)', 'Slovakia', 'Slovenia', 'Somalia', 'South Africa', 'South Korea', 'South Sudan',
+             'Spain', 'Sri Lanka', 'Sudan', 'Suriname', 'Swaziland', 'Sweden', 'Switzerland', 'Syria', 'Taiwan',
+             'Tajikistan', 'Tanzania', 'Thailand', 'Timor', 'Togo', 'Trinidad and Tobago', 'Tunisia', 'Turkey',
+             'Turks and Caicos Islands', 'Uganda', 'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States',
+             'United States Virgin Islands', 'Uruguay', 'Uzbekistan', 'Vatican', 'Venezuela', 'Vietnam', 'Western Sahara',
+             'Yemen', 'Zambia', 'Zimbabwe']
+mycountries = ['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
+for country in countries:
+    if country == "Guam" or country == "International" or country == "Jersey" or country == "Kosovo" or country == "Northern Mariana Islands" or country == "Puerto Rico" or country == "United States Virgin Islands":
+        pass
+    else:
+        index = countries.index(country) + 1
+        print(country + ": " + str(index) + "/" + str(len(countries)), update_country_html(country))
+        print("Finished")
+
+# update_country_html("Democratic Republic of Congo")
 
 
-# update_country_html("China")
+# update_country_html("Venezuela")

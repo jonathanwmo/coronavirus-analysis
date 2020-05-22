@@ -69,6 +69,16 @@ def plot_single(country, graph_type):
     :return: void
     '''
     csv = ''
+    if " And" in country:
+        country = country.replace("And", "and")
+    if "Cote D'Ivoire" in country:
+        country = "Cote d'Ivoire"
+    if " Of" in country:
+        country = country.replace("Of", "of")
+    if " The" in country:
+        country = country.replace("The", "the")
+    if "Sint Maarten (Dutch Part)" in country:
+        country = "Sint Maarten (Dutch part)"
     if (graph_type == "total confirmed cases"):
         csv = "total_cases.csv"
     if (graph_type == "total deaths"):
@@ -209,6 +219,16 @@ def plot_four(country):
     my_graph = plt
     my_graph.figure(figsize=(14, 8))                                      # set figure size
 
+    if " And" in country:
+        country = country.replace("And", "and")
+    if "Cote D'Ivoire" in country:
+        country = "Cote d'Ivoire"
+    if " Of" in country:
+        country = country.replace("Of", "of")
+    if " The" in country:
+        country = country.replace("The", "the")
+    if "Sint Maarten (Dutch Part)" in country:
+        country = "Sint Maarten (Dutch part)"
 
     total_cases = "total_cases.csv"
     total_deaths = "total_deaths.csv"
@@ -398,51 +418,57 @@ def plot_four(country):
 #     plot_single(country, graph_type)
 # plot_four(country)
 
-countries = ['World', 'Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Anguilla', 'Antigua and Barbuda',
-             'Argentina', 'Armenia', 'Aruba', 'Australia', 'Austria', 'Azerbaijan', 'Bahamas', 'Bahrain', 'Bangladesh',
-             'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bermuda', 'Bhutan', 'Bolivia',
-             'Bonaire Sint Eustatius and Saba', 'Bosnia and Herzegovina', 'Botswana', 'Brazil', 'British Virgin Islands',
-             'Brunei', 'Bulgaria', 'Burkina Faso', 'Burundi', 'Cambodia', 'Cameroon', 'Canada', 'Cape Verde',
-             'Cayman Islands', 'Central African Republic', 'Chad', 'Chile', 'China', 'Colombia', 'Comoros', 'Congo',
-             'Costa Rica', 'Cote dIvoire', 'Croatia', 'Cuba', 'Curacao', 'Cyprus', 'Czech Republic',
-             'Democratic Republic of Congo', 'Denmark', 'Djibouti', 'Dominica', 'Dominican Republic', 'Ecuador', 'Egypt',
-             'El Salvador', 'Equatorial Guinea', 'Eritrea', 'Estonia', 'Ethiopia', 'Faeroe Islands', 'Falkland Islands',
-             'Fiji', 'Finland', 'France', 'French Polynesia', 'Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana', 'Gibraltar',
-             'Greece', 'Greenland', 'Grenada', 'Guam', 'Guatemala', 'Guernsey', 'Guinea', 'Guinea-Bissau', 'Guyana',
-             'Haiti', 'Honduras', 'Hungary', 'Iceland', 'India', 'Indonesia', 'International', 'Iran', 'Iraq', 'Ireland',
-             'Isle of Man', 'Israel', 'Italy', 'Jamaica', 'Japan', 'Jersey', 'Jordan', 'Kazakhstan', 'Kenya', 'Kosovo',
-             'Kuwait', 'Kyrgyzstan', 'Laos', 'Latvia', 'Lebanon', 'Liberia', 'Libya', 'Liechtenstein', 'Lithuania',
-             'Luxembourg', 'Macedonia', 'Madagascar', 'Malawi', 'Malaysia', 'Maldives', 'Mali', 'Malta', 'Mauritania',
-             'Mauritius', 'Mexico', 'Moldova', 'Monaco', 'Mongolia', 'Montenegro', 'Montserrat', 'Morocco', 'Mozambique',
-             'Myanmar', 'Namibia', 'Nepal', 'Netherlands', 'New Caledonia', 'New Zealand', 'Nicaragua', 'Niger', 'Nigeria',
-             'Northern Mariana Islands', 'Norway', 'Oman', 'Pakistan', 'Palestine', 'Panama', 'Papua New Guinea',
-             'Paraguay', 'Peru', 'Philippines', 'Poland', 'Portugal', 'Puerto Rico', 'Qatar', 'Romania', 'Russia',
-             'Rwanda', 'Saint Kitts and Nevis', 'Saint Lucia', 'Saint Vincent and the Grenadines', 'San Marino',
-             'Sao Tome and Principe', 'Saudi Arabia', 'Senegal', 'Serbia', 'Seychelles', 'Sierra Leone', 'Singapore',
-             'Sint Maarten (Dutch part)', 'Slovakia', 'Slovenia', 'Somalia', 'South Africa', 'South Korea', 'South Sudan',
+#
+# dir_path = os.path.dirname(os.path.realpath(__file__))  # get working directory
+# for country in countries:
+#     country = country.lower().replace(" ", "")
+#     if not os.path.exists(dir_path + "/htmls/" + country + '.html'):  # if directory for that country is not yet made, make it
+#         f = open(dir_path + "/htmls/" + country + '.html', 'a+')
+#         # os.mknod(dir_path + "/htmls/" + country + '.html')# if __name__ == "__main__":
+#         print(country)
+# #     country = str(sys.argv[1])
+# #     plot_single(country.title(), "total confirmed cases")
+# #     plot_single(country.title(), "total deaths")
+# #     plot_single(country.title(), "new confirmed cases")
+# #     plot_single(country.title(), "new deaths")
+# #     plot_four(country.title(), plot_four(country))
+
+mycountries = ['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
+# countries = ['World', 'Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Anguilla', 'Antigua and Barbuda',
+#              'Argentina', 'Armenia', 'Aruba', 'Australia', 'Austria', 'Azerbaijan', 'Bahamas', 'Bahrain', 'Bangladesh',
+#              'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bermuda', 'Bhutan', 'Bolivia',
+#              'Bonaire Sint Eustatius and Saba', 'Bosnia and Herzegovina', 'Botswana', 'Brazil', 'British Virgin Islands',
+#              'Brunei', 'Bulgaria', 'Burkina Faso', 'Burundi', 'Cambodia', 'Cameroon', 'Canada', 'Cape Verde',
+#              'Cayman Islands', 'Central African Republic', 'Chad', 'Chile', 'China', 'Colombia', 'Comoros', 'Congo',
+#              'Costa Rica', "Cote d'Ivoire", 'Croatia', 'Cuba', 'Curacao', 'Cyprus', 'Czech Republic',
+#              'Democratic Republic of Congo', 'Denmark', 'Djibouti', 'Dominica', 'Dominican Republic', 'Ecuador', 'Egypt',
+#              'El Salvador', 'Equatorial Guinea', 'Eritrea', 'Estonia', 'Ethiopia', 'Faeroe Islands', 'Falkland Islands',
+#              'Fiji', 'Finland', 'France', 'French Polynesia', 'Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana', 'Gibraltar',
+#              'Greece', 'Greenland', 'Grenada', 'Guam', 'Guatemala', 'Guernsey', 'Guinea', 'Guinea-Bissau', 'Guyana',
+#              'Haiti', 'Honduras', 'Hungary', 'Iceland', 'India', 'Indonesia', 'International', 'Iran', 'Iraq', 'Ireland',
+#              'Isle of Man', 'Israel', 'Italy', 'Jamaica', 'Japan', 'Jersey', 'Jordan', 'Kazakhstan', 'Kenya', 'Kosovo',
+#              'Kuwait', 'Kyrgyzstan', 'Laos', 'Latvia', 'Lebanon', 'Liberia', 'Libya', 'Liechtenstein', 'Lithuania',
+#              'Luxembourg', 'Macedonia', 'Madagascar', 'Malawi', 'Malaysia', 'Maldives', 'Mali', 'Malta', 'Mauritania',
+#              'Mauritius', 'Mexico', 'Moldova', 'Monaco', 'Mongolia', 'Montenegro', 'Montserrat', 'Morocco', 'Mozambique',
+#              'Myanmar', 'Namibia', 'Nepal', 'Netherlands', 'New Caledonia', 'New Zealand', 'Nicaragua', 'Niger', 'Nigeria',
+#              'Northern Mariana Islands', 'Norway', 'Oman', 'Pakistan', 'Palestine', 'Panama', 'Papua New Guinea',
+#              'Paraguay', 'Peru', 'Philippines', 'Poland', 'Portugal', 'Puerto Rico', 'Qatar', 'Romania', 'Russia',
+#              'Rwanda', 'Saint Kitts and Nevis', 'Saint Lucia', 'Saint Vincent and the Grenadines', 'San Marino',
+#              'Sao Tome and Principe', 'Saudi Arabia', 'Senegal', 'Serbia', 'Seychelles', 'Sierra Leone', 'Singapore',
+countries = ['Sint Maarten (Dutch part)', 'Slovakia', 'Slovenia', 'Somalia', 'South Africa', 'South Korea', 'South Sudan',
              'Spain', 'Sri Lanka', 'Sudan', 'Suriname', 'Swaziland', 'Sweden', 'Switzerland', 'Syria', 'Taiwan',
              'Tajikistan', 'Tanzania', 'Thailand', 'Timor', 'Togo', 'Trinidad and Tobago', 'Tunisia', 'Turkey',
              'Turks and Caicos Islands', 'Uganda', 'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States',
              'United States Virgin Islands', 'Uruguay', 'Uzbekistan', 'Vatican', 'Venezuela', 'Vietnam', 'Western Sahara',
              'Yemen', 'Zambia', 'Zimbabwe']
-
-# if __name__ == "__main__":
-#     country = str(sys.argv[1])
-#     plot_single(country.title(), "total confirmed cases")
-#     plot_single(country.title(), "total deaths")
-#     plot_single(country.title(), "new confirmed cases")
-#     plot_single(country.title(), "new deaths")
-#     plot_four(country.title(), plot_four(country))
-
-mycountries = ['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
-for country in mycountries:
+for country in countries:
     plot_single(country.title(), "total confirmed cases")
     plot_single(country.title(), "total deaths")
     plot_single(country.title(), "new confirmed cases")
     plot_single(country.title(), "new deaths")
     plot_four(country)
-    index = mycountries.index(country) + 1
-    print(country + ": " + str(index) + "/" + str(len(mycountries)))
+    index = countries.index(country) + 1
+    print(country + ": " + str(index) + "/" + str(len(countries)))
 
     dir_path = os.path.dirname(os.path.realpath(__file__)) + "/graphs/" + country.lower().replace(" ",
                                                                                                   "_")  # get working directory
