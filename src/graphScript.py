@@ -13,62 +13,69 @@ import time
 import gc
 
 
-
-def find_dates(graph_type):
+def find_dates(graph_type: str):
     '''
     finds the dates in ourworldindata.org csv file
     :param graph_type: string of graph type
-    :return: a list of dates
+    :return: a list of dates as strings
     '''
-    datafile = urllib.request.urlopen('https://covid.ourworldindata.org/data/ecdc/' + graph_type)
+    datafile = urllib.request.urlopen(
+        'https://covid.ourworldindata.org/data/ecdc/' + graph_type)
     dates_list = []
+
     for line in datafile.readlines():
         line = line.decode('utf-8').strip()
         row = line.split(",")
-
         dates_list.append(row[0])
     datafile.close()
     return dates_list
 
-def find_cases(column, graph_type):
+
+def find_cases(column: int, graph_type: str):
     '''
     finds total cases for given population (world or country)
     :param column: the column number for csv file
     :param graph_type: string of graph type
-    :return: a list of total cases for inputted location
+    :return: a list of total cases (or deaths) for inputted location
     '''
-    datafile = urllib.request.urlopen('https://covid.ourworldindata.org/data/ecdc/' + graph_type)
+    datafile = urllib.request.urlopen(
+        'https://covid.ourworldindata.org/data/ecdc/' + graph_type)
     num_cases = []
+
     for line in datafile.readlines():
         line = line.decode('utf-8').strip()
         row = line.split(",")
-
         num_cases.append(row[column])
     datafile.close()
     return num_cases
 
-def find_index(country, graph_type):
+
+def find_index(country: str, graph_type: str):
     '''
     finds index of country in csv file
     :param country: string of inputted country
     :param graph_type: string of graph type
     :return: index (column) that the country is located in the csv file
     '''
-    datafile = urllib.request.urlopen('https://covid.ourworldindata.org/data/ecdc/' + graph_type)
+    datafile = urllib.request.urlopen(
+        'https://covid.ourworldindata.org/data/ecdc/' + graph_type)
     line = datafile.readline()
     line = line.decode('utf-8').strip()
     countries_list = line.split(",")
     index = countries_list.index(country)
+    datafile.close()
     return index
 
-def plot_single(country, graph_type):
+
+def plot_single(country: str, graph_type: str):
     '''
-    plot total cases vs. dates starting from 2020-01-01
+    plot total/new cases or total/new deaths vs. dates starting from 2020-01-01
     :param country: string of inputted country
     :param graph_type: string of graph type
     :return: void
     '''
     csv = ''
+
     if " And" in country:
         country = country.replace("And", "and")
     if "Cote D'Ivoire" in country:
@@ -79,6 +86,7 @@ def plot_single(country, graph_type):
         country = country.replace("The", "the")
     if "Sint Maarten (Dutch Part)" in country:
         country = "Sint Maarten (Dutch part)"
+
     if (graph_type == "total confirmed cases"):
         csv = "total_cases.csv"
     if (graph_type == "total deaths"):
@@ -88,34 +96,44 @@ def plot_single(country, graph_type):
     if (graph_type == "new deaths"):
         csv = "new_deaths.csv"
 
-    index = find_index(country, csv)                    # find index of country in csv file
-    dates_list = find_dates(csv)                        # get full list of dates in csv file
-    cases_strs = find_cases(index, csv)                 # get full list of cases in csv file
+    # find index of country in csv file
+    index = find_index(country, csv)
+    # get full list of dates in csv file
+    dates_list = find_dates(csv)
+    # get full list of cases in csv file
+    cases_strs = find_cases(index, csv)
     if (country.lower() == "china"):
         cases_strs = cases_strs[15:]
         dates_list = dates_list[15:]
     else:
-        cases_strs = cases_strs[64:]                               # get rid of first column
+        # get rid of first column
+        cases_strs = cases_strs[64:]
         dates_list = dates_list[64:]
 
     total_cases_ints = []
-    for i in cases_strs:                                # convert elements in list to int
-        if (i == ""):                                   # check for when csv file has empty string instead of 0
+    for i in cases_strs:                                        # convert elements in list to int
+        # check for when csv file has empty string instead of 0
+        if (i == ""):
             i = 0
         total_cases_ints.append(int(i))
-    if (total_cases_ints[-1] == 0):                           # check if today's (most recent) data was not published
+    # check if today's (most recent) data was not published
+    if (total_cases_ints[-1] == 0):
         total_cases_ints[-1] = total_cases_ints[-2]
 
-    cases_aot = total_cases_ints[-1]                          # most recent case number, aot = as of today
+    # most recent case number, aot = as of today
+    cases_aot = total_cases_ints[-1]
     date_aot = str(datetime.today())[0:10]
     highest_cases = max(total_cases_ints)
 
     my_graph = plt
     my_graph.figure(figsize=(15, 7.5))                  # set figure size
-    my_graph.plot(dates_list, total_cases_ints, color = 'red')               # graph the data as cases vs. dates
+    # graph the data as cases vs. dates
+    my_graph.plot(dates_list, total_cases_ints, color='red')
 
-    my_graph.xticks(np.arange(1, len(dates_list), 7))   # show ticks on xaxis spaced out by week (7 days)
-    my_graph.xticks(rotation=30)                        # angle labels to show better
+    # show ticks on xaxis spaced out by week (7 days)
+    my_graph.xticks(np.arange(1, len(dates_list), 7))
+    # angle labels to show better
+    my_graph.xticks(rotation=30)
     ystepsize = 0
     if highest_cases <= 10:
         ystepsize = 1
@@ -170,54 +188,76 @@ def plot_single(country, graph_type):
     else:
         ystepsize = 500000
 
-    ylabel = np.arange(0, int(highest_cases*1.1), ystepsize)
-                                                                            # have yticks go 1.1 times above highest data point,
-    my_graph.yticks(ylabel, ylabel, rotation=30)                            # rotate ticks to show numbers better
+    ylabel = np.arange(0, int(highest_cases * 1.1), ystepsize)
+    # have yticks go 1.1 times above highest data point,
+    # rotate ticks to show numbers better
+    my_graph.yticks(ylabel, ylabel, rotation=30)
 
-    my_graph.autoscale(enable=True, axis='x', tight=True)                   # tight bound it
+    my_graph.autoscale(
+        enable=True,
+        axis='x',
+        tight=True)                   # tight bound it
     my_graph.grid(True)
     myStr = str(date_aot) + ": " + str(cases_aot)
-    my_graph.annotate((myStr).center(len(myStr)) + "\n" + graph_type.title(), xy=(date_aot, cases_aot), xycoords='data',
-                      xytext=(dates_list[-2],1.1*highest_cases), textcoords='data', arrowprops=dict(arrowstyle='->',
-                                                                                                    color='black',
-                                                                                                    lw = 2)) # label last point on graph
-    my_graph.title('Covid-19 ' + graph_type.title() + ' Across ' + country.title() + " as of " + date_aot, fontsize=14, weight='bold')      #label things
+    my_graph.annotate((myStr).center(len(myStr)) + "\n" + graph_type.title(),
+                      xy=(date_aot,
+                          cases_aot),
+                      xycoords='data',
+                      xytext=(dates_list[-2],
+                              1.1 * highest_cases),
+                      textcoords='data',
+                      arrowprops=dict(arrowstyle='->',
+                                      color='black',
+                                      lw=2))  # label last point on graph
+    my_graph.title(
+        'Covid-19 ' +
+        graph_type.title() +
+        ' Across ' +
+        country.title() +
+        " as of " +
+        date_aot,
+        fontsize=14,
+        weight='bold')  # label things
     my_graph.xlabel('Date', fontsize=12, weight='bold')
     if "death" in graph_type.lower() or "deaths" in graph_type.lower():
         my_graph.ylabel('Number of Deaths', fontsize=12, weight='bold')
     else:
         my_graph.ylabel('Number of Cases', fontsize=12, weight='bold')
-    graph_type = graph_type.replace(" ", "_")                               # change graph name to replace spaces with underscores
+    # change graph name to replace spaces with underscores
+    graph_type = graph_type.replace(" ", "_")
     country = country.lower().replace(" ", "_")
 
-
-    dir_path = os.path.dirname(os.path.realpath(__file__)) + "/graphs/" + country                # get working directory
-    if not os.path.exists(dir_path):                   # if directory for that country is not yet made, make it
+    dir_path = os.path.dirname(os.path.realpath(
+        __file__)) + "/graphs/" + country                # get working directory
+    if not os.path.exists(
+            dir_path):                   # if directory for that country is not yet made, make it
         os.makedirs(dir_path)
-    plt.savefig(dir_path + "/" + country + "_" + graph_type + "_" + date_aot + ".png", dpi=500, transparent=True) # save to that directory
+    plt.savefig(
+        dir_path +
+        "/" +
+        country +
+        "_" +
+        graph_type +
+        "_" +
+        date_aot +
+        ".png",
+        dpi=500,
+        transparent=True)  # save to that directory
 
-    # dir_path = os.path.dirname(os.path.realpath(__file__)) + "/graphs/" + country                # get working directory
-    # current_time = time.time()
-    # for f in os.listdir(dir_path):
-    #     f = dir_path + "/" + f
-    #     creation_time = os.path.getmtime(f)
-    #     if ((current_time - creation_time) / (86400)) >= 1:
-    #         os.remove(f)
-
-    # my_graph.show()
     my_graph.clf()
     my_graph.close('all')
     gc.collect()
 
 
-def plot_four(country):
+def plot_four(country: str):
     '''
     plot total cases, total deaths, new cases, new deaths starting from 2020-01-01
     :param country: string of inputted country
     :return: void
     '''
     my_graph = plt
-    my_graph.figure(figsize=(14, 8))                                      # set figure size
+    # set figure size
+    my_graph.figure(figsize=(14, 8))
 
     if " And" in country:
         country = country.replace("And", "and")
@@ -236,94 +276,124 @@ def plot_four(country):
     new_deaths = "new_deaths.csv"
     graph_type = "Total Cases, Total Deaths, New Cases, and New Deaths"
 
-    total_cases_index = find_index(country, total_cases)                    # find index of country in total cases csv file
-    total_cases_dates_list = find_dates(total_cases)                        # get full list of dates in total cases csv file
-    total_cases_strs = find_cases(total_cases_index, total_cases)           # get full list of cases in total cases csv file
+    # find index of country in total cases csv file
+    total_cases_index = find_index(country, total_cases)
+    # get full list of dates in total cases csv file
+    total_cases_dates_list = find_dates(total_cases)
+    # get full list of cases in total cases csv file
+    total_cases_strs = find_cases(total_cases_index, total_cases)
     if (country.lower() == "china"):
         total_cases_strs = total_cases_strs[15:]
         total_cases_dates_list = total_cases_dates_list[15:]
     else:
-        total_cases_strs = total_cases_strs[64:]                               # get rid of first column
+        # get rid of first column
+        total_cases_strs = total_cases_strs[64:]
         total_cases_dates_list = total_cases_dates_list[64:]
 
     total_cases_ints = []
     for i in total_cases_strs:                                              # convert elements in list to int
-        if (i == ""):                                                       # check for when csv file has empty string instead of 0
+        # check for when csv file has empty string instead of 0
+        if (i == ""):
             i = 0
         total_cases_ints.append(int(i))
-    if (total_cases_ints[-1] == 0):                                         # check if today's (most recent) data was not published
+    # check if today's (most recent) data was not published
+    if (total_cases_ints[-1] == 0):
         total_cases_ints[-1] = total_cases_ints[-2]
 
-    my_graph.plot(total_cases_dates_list, total_cases_ints, color = 'blue', label = "Total Cases " + "in " + country + ": " + str(total_cases_ints[-1]))  # graph the data as total cases vs. dates
+    my_graph.plot(total_cases_dates_list, total_cases_ints, color='blue', label="Total Cases " +
+                  "in " + country + ": " + str(total_cases_ints[-1]))  # graph the data as total cases vs. dates
 
-
-    total_deaths_index = find_index(country, total_deaths)                  # find index of country in total deaths csv file
-    total_deaths_dates_list = find_dates(total_deaths)                      # get full list of dates in total deaths csv file
-    total_deaths_strs = find_cases(total_deaths_index, total_deaths)        # get full list of cases in total deaths csv file
+    # find index of country in total deaths csv file
+    total_deaths_index = find_index(country, total_deaths)
+    # get full list of dates in total deaths csv file
+    total_deaths_dates_list = find_dates(total_deaths)
+    # get full list of cases in total deaths csv file
+    total_deaths_strs = find_cases(total_deaths_index, total_deaths)
     if (country.lower() == "china"):
         total_deaths_strs = total_deaths_strs[15:]
         total_deaths_dates_list = total_deaths_dates_list[15:]
     else:
-        total_deaths_strs = total_deaths_strs[64:]                               # get rid of first column
-        total_deaths_dates_list = total_deaths_dates_list[64:]                   # get rid of first row
+        # get rid of first column
+        total_deaths_strs = total_deaths_strs[64:]
+        # get rid of first row
+        total_deaths_dates_list = total_deaths_dates_list[64:]
 
     total_deaths_ints = []
     for i in total_deaths_strs:                                             # convert elements in list to int
-        if (i == ""):                                                       # check for when csv file has empty string instead of 0
+        # check for when csv file has empty string instead of 0
+        if (i == ""):
             i = 0
         total_deaths_ints.append(int(i))
-    if (total_deaths_ints[-1] == 0):                                        # check if today's (most recent) data was not published
+    # check if today's (most recent) data was not published
+    if (total_deaths_ints[-1] == 0):
         total_deaths_ints[-1] = total_deaths_ints[-2]
 
-    my_graph.plot(total_deaths_dates_list, total_deaths_ints, color='red', label = "Total Deaths " + "in " + country + ": " + str(total_deaths_ints[-1]))  # graph the data as total deaths vs. dates
+    my_graph.plot(total_deaths_dates_list, total_deaths_ints, color='red', label="Total Deaths " +
+                  "in " + country + ": " + str(total_deaths_ints[-1]))  # graph the data as total deaths vs. dates
 
-    new_cases_index = find_index(country, new_cases)                        # find index of country in new cases csv file
-    new_cases_dates_list = find_dates(new_cases)                            # get full list of dates in new cases csv file
-    new_cases_strs = find_cases(new_cases_index, new_cases)                 # get full list of cases in new cases csv file
+    # find index of country in new cases csv file
+    new_cases_index = find_index(country, new_cases)
+    # get full list of dates in new cases csv file
+    new_cases_dates_list = find_dates(new_cases)
+    # get full list of cases in new cases csv file
+    new_cases_strs = find_cases(new_cases_index, new_cases)
     if (country.lower() == "china"):
         new_cases_strs = new_cases_strs[15:]
         new_cases_dates_list = new_cases_dates_list[15:]
     else:
-        new_cases_strs = new_cases_strs[64:]                               # get rid of first column
+        # get rid of first column
+        new_cases_strs = new_cases_strs[64:]
         new_cases_dates_list = new_cases_dates_list[64:]
 
     new_cases_ints = []
     for i in new_cases_strs:                                                # convert elements in list to int
-        if (i == ""):                                                       # check for when csv file has empty string instead of 0
+        # check for when csv file has empty string instead of 0
+        if (i == ""):
             i = 0
         new_cases_ints.append(int(i))
-    if (new_cases_ints[-1] == 0):                                           # check if today's (most recent) data was not published
+    # check if today's (most recent) data was not published
+    if (new_cases_ints[-1] == 0):
         new_cases_ints[-1] = new_cases_ints[-2]
 
-    my_graph.plot(new_cases_dates_list, new_cases_ints, color='green', label = "New Cases " + "in " + country + ": " + str(new_cases_ints[-1]))  # graph the data as new cases vs. dates
+    my_graph.plot(new_cases_dates_list, new_cases_ints, color='green', label="New Cases " +
+                  "in " + country + ": " + str(new_cases_ints[-1]))  # graph the data as new cases vs. dates
 
-    new_deaths_index = find_index(country, new_deaths)                      # find index of country in new deaths csv file
-    new_deaths_dates_list = find_dates(new_deaths)                          # get full list of dates in new deaths csv file
-    new_deaths_strs = find_cases(new_deaths_index, new_deaths)              # get full list of cases in new deaths csv file
+    # find index of country in new deaths csv file
+    new_deaths_index = find_index(country, new_deaths)
+    # get full list of dates in new deaths csv file
+    new_deaths_dates_list = find_dates(new_deaths)
+    # get full list of cases in new deaths csv file
+    new_deaths_strs = find_cases(new_deaths_index, new_deaths)
     if (country.lower() == "china"):
         new_deaths_strs = new_deaths_strs[15:]
         new_deaths_dates_list = new_deaths_dates_list[15:]
     else:
-        new_deaths_strs = new_deaths_strs[64:]                               # get rid of first column
+        # get rid of first column
+        new_deaths_strs = new_deaths_strs[64:]
         new_deaths_dates_list = new_deaths_dates_list[64:]
 
     new_deaths_ints = []
     for i in new_deaths_strs:                                               # convert elements in list to int
-        if (i == ""):                                                       # check for when csv file has empty string instead of 0
+        # check for when csv file has empty string instead of 0
+        if (i == ""):
             i = 0
         new_deaths_ints.append(int(i))
-    if (new_deaths_ints[-1] == 0):                                          # check if today's (most recent) data was not published
+    # check if today's (most recent) data was not published
+    if (new_deaths_ints[-1] == 0):
         new_deaths_ints[-1] = new_deaths_ints[-2]
 
-    my_graph.plot(new_deaths_dates_list, new_deaths_ints, color='orange', label = "New Deaths " + "in " + country + ": " + str(new_deaths_ints[-1]))  # graph the data as new deaths vs. dates
+    my_graph.plot(new_deaths_dates_list, new_deaths_ints, color='orange', label="New Deaths " +
+                  "in " + country + ": " + str(new_deaths_ints[-1]))  # graph the data as new deaths vs. dates
 
-    total_cases_aot = total_cases_ints[-1]                                  # most recent case number, aot = as of today
+    # most recent case number, aot = as of today
+    total_cases_aot = total_cases_ints[-1]
     date_aot = str(datetime.today())[0:10]
     highest_cases = max(total_cases_ints)
 
-
-    my_graph.xticks(np.arange(1, len(total_cases_dates_list), 7))           # show ticks on xaxis spaced out by week (7 days)
-    my_graph.xticks(rotation=30)                                            # angle labels to show better
+    # show ticks on xaxis spaced out by week (7 days)
+    my_graph.xticks(np.arange(1, len(total_cases_dates_list), 7))
+    # angle labels to show better
+    my_graph.xticks(rotation=30)
     ystepsize = 0
     if highest_cases <= 10:
         ystepsize = 1
@@ -378,104 +448,290 @@ def plot_four(country):
     else:
         ystepsize = 500000
 
+    ylabel = (np.arange(0, int(highest_cases * 1.1), ystepsize)).tolist()
+    # rotate ticks to show numbers better
+    my_graph.yticks(ylabel, ylabel, rotation=30)
 
-    ylabel = (np.arange(0, int(highest_cases*1.1), ystepsize)).tolist()
-    my_graph.yticks(ylabel, ylabel, rotation=30)                            # rotate ticks to show numbers better
-
-    my_graph.autoscale(enable=True, axis='x', tight=True)                   # tight bound it
+    my_graph.autoscale(
+        enable=True,
+        axis='x',
+        tight=True)                   # tight bound it
     my_graph.grid(True)
 
-
-    my_graph.title('Covid-19 ' + graph_type.title() + ' Across ' + country.title() + ' as of ' + date_aot, fontsize=14, weight='bold')  # label things
+    my_graph.title(
+        'Covid-19 ' +
+        graph_type.title() +
+        ' Across ' +
+        country.title() +
+        ' as of ' +
+        date_aot,
+        fontsize=14,
+        weight='bold')  # label things
     my_graph.xlabel('Date', fontsize='12', weight='bold')
-    my_graph.ylabel('Number of Cases',fontsize='12', weight='bold')
+    my_graph.ylabel('Number of Cases', fontsize='12', weight='bold')
     my_graph.legend(loc="upper left")
-    graph_type = graph_type.replace(" ", "_")  # change graph name to replace spaces with underscores
+    # change graph name to replace spaces with underscores
+    graph_type = graph_type.replace(" ", "_")
     country = country.lower().replace(" ", "_")
 
-    dir_path = os.path.dirname(os.path.realpath(__file__))  # get working directory
-    if not os.path.exists(dir_path + "/graphs/" + country):  # if directory for that country is not yet made, make it
+    dir_path = os.path.dirname(
+        os.path.realpath(__file__))  # get working directory
+    if not os.path.exists(
+        dir_path +
+        "/graphs/" +
+            country):  # if directory for that country is not yet made, make it
         os.makedirs(dir_path + "/graphs/" + country)
-    plt.savefig(dir_path + "/graphs/" + country + "/" + country + "_allfour_" + date_aot + ".png", dpi=500, transparent=True)  # save to that directory
+    plt.savefig(
+        dir_path +
+        "/graphs/" +
+        country +
+        "/" +
+        country +
+        "_allfour_" +
+        date_aot +
+        ".png",
+        dpi=500,
+        transparent=True)  # save to that directory
 
-    # current_time = time.time()
-    # for f in os.listdir(dir_path):
-    #     f = dir_path + "/" + f
-    #     creation_time = os.path.getmtime(f)
-    #     if ((current_time - creation_time) / (86400)) >= 1:
-    #         os.remove(f)
-
-    # my_graph.show()
     my_graph.clf()
     my_graph.close('all')
     gc.collect()
 
-########## update single country
-# country = input("Input a country: ").title()
-# graph_types = ["total confirmed cases", "total deaths", "new confirmed cases", "new deaths"]
-# for graph_type in graph_types:
-#     print(graph_type)
-#     plot_single(country, graph_type)
-# plot_four(country)
 
-#
-# dir_path = os.path.dirname(os.path.realpath(__file__))  # get working directory
-# for country in countries:
-#     country = country.lower().replace(" ", "")
-#     if not os.path.exists(dir_path + "/htmls/" + country + '.html'):  # if directory for that country is not yet made, make it
-#         f = open(dir_path + "/htmls/" + country + '.html', 'a+')
-#         # os.mknod(dir_path + "/htmls/" + country + '.html')# if __name__ == "__main__":
-#         print(country)
-# #     country = str(sys.argv[1])
-# #     plot_single(country.title(), "total confirmed cases")
-# #     plot_single(country.title(), "total deaths")
-# #     plot_single(country.title(), "new confirmed cases")
-# #     plot_single(country.title(), "new deaths")
-# #     plot_four(country.title(), plot_four(country))
+mycountries = [
+    'World',
+    'United States',
+    'United Kingdom',
+    'Italy',
+    'Spain',
+    'France',
+    'China']
+countries = [
+    'World',
+    'Afghanistan',
+    'Albania',
+    'Algeria',
+    'Andorra',
+    'Angola',
+    'Anguilla',
+    'Antigua and Barbuda',
+    'Argentina',
+    'Armenia',
+    'Aruba',
+    'Australia',
+    'Austria',
+    'Azerbaijan',
+    'Bahamas',
+    'Bahrain',
+    'Bangladesh',
+    'Barbados',
+    'Belarus',
+    'Belgium',
+    'Belize',
+    'Benin',
+    'Bermuda',
+    'Bhutan',
+    'Bolivia',
+    'Bonaire Sint Eustatius and Saba',
+    'Bosnia and Herzegovina',
+    'Botswana',
+    'Brazil',
+    'British Virgin Islands',
+    'Brunei',
+    'Bulgaria',
+    'Burkina Faso',
+    'Burundi',
+    'Cambodia',
+    'Cameroon',
+    'Canada',
+    'Cape Verde',
+    'Cayman Islands',
+    'Central African Republic',
+    'Chad',
+    'Chile',
+    'China',
+    'Colombia',
+    'Comoros',
+    'Congo',
+    'Costa Rica',
+    "Cote d'Ivoire",
+    'Croatia',
+    'Cuba',
+    'Curacao',
+    'Cyprus',
+    'Czech Republic',
+    'Democratic Republic of Congo',
+    'Denmark',
+    'Djibouti',
+    'Dominica',
+    'Dominican Republic',
+    'Ecuador',
+    'Egypt',
+    'El Salvador',
+    'Equatorial Guinea',
+    'Eritrea',
+    'Estonia',
+    'Ethiopia',
+    'Faeroe Islands',
+    'Falkland Islands',
+    'Fiji',
+    'Finland',
+    'France',
+    'French Polynesia',
+    'Gabon',
+    'Gambia',
+    'Georgia',
+    'Germany',
+    'Ghana',
+    'Gibraltar',
+    'Greece',
+    'Greenland',
+    'Grenada',
+    'Guam',
+    'Guatemala',
+    'Guernsey',
+    'Guinea',
+    'Guinea-Bissau',
+    'Guyana',
+    'Haiti',
+    'Honduras',
+    'Hungary',
+    'Iceland',
+    'India',
+    'Indonesia',
+    'International',
+    'Iran',
+    'Iraq',
+    'Ireland',
+    'Isle of Man',
+    'Israel',
+    'Italy',
+    'Jamaica',
+    'Japan',
+    'Jersey',
+    'Jordan',
+    'Kazakhstan',
+    'Kenya',
+    'Kosovo',
+    'Kuwait',
+    'Kyrgyzstan',
+    'Laos',
+    'Latvia',
+    'Lebanon',
+    'Liberia',
+    'Libya',
+    'Liechtenstein',
+    'Lithuania',
+    'Luxembourg',
+    'Macedonia',
+    'Madagascar',
+    'Malawi',
+    'Malaysia',
+    'Maldives',
+    'Mali',
+    'Malta',
+    'Mauritania',
+    'Mauritius',
+    'Mexico',
+    'Moldova',
+    'Monaco',
+    'Mongolia',
+    'Montenegro',
+    'Montserrat',
+    'Morocco',
+    'Mozambique',
+    'Myanmar',
+    'Namibia',
+    'Nepal',
+    'Netherlands',
+    'New Caledonia',
+    'New Zealand',
+    'Nicaragua',
+    'Niger',
+    'Nigeria',
+    'Northern Mariana Islands',
+    'Norway',
+    'Oman',
+    'Pakistan',
+    'Palestine',
+    'Panama',
+    'Papua New Guinea',
+    'Paraguay',
+    'Peru',
+    'Philippines',
+    'Poland',
+    'Portugal',
+    'Puerto Rico',
+    'Qatar',
+    'Romania',
+    'Russia',
+    'Rwanda',
+    'Saint Kitts and Nevis',
+    'Saint Lucia',
+    'Saint Vincent and the Grenadines',
+    'San Marino',
+    'Sao Tome and Principe',
+    'Saudi Arabia',
+    'Senegal',
+    'Serbia',
+    'Seychelles',
+    'Sierra Leone',
+    'Singapore',
+    'Sint Maarten (Dutch part)',
+    'Slovakia',
+    'Slovenia',
+    'Somalia',
+    'South Africa',
+    'South Korea',
+    'South Sudan',
+    'Spain',
+    'Sri Lanka',
+    'Sudan',
+    'Suriname',
+    'Swaziland',
+    'Sweden',
+    'Switzerland',
+    'Syria',
+    'Taiwan',
+    'Tajikistan',
+    'Tanzania',
+    'Thailand',
+    'Timor',
+    'Togo',
+    'Trinidad and Tobago',
+    'Tunisia',
+    'Turkey',
+    'Turks and Caicos Islands',
+    'Uganda',
+    'Ukraine',
+    'United Arab Emirates',
+    'United Kingdom',
+    'United States',
+    'United States Virgin Islands',
+    'Uruguay',
+    'Uzbekistan',
+    'Vatican',
+    'Venezuela',
+    'Vietnam',
+    'Western Sahara',
+    'Yemen',
+    'Zambia',
+    'Zimbabwe']
 
-mycountries = ['World', 'United States', 'United Kingdom', 'Italy', 'Spain', 'France', 'China']
-countries = ['World', 'Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Anguilla', 'Antigua and Barbuda',
-             'Argentina', 'Armenia', 'Aruba', 'Australia', 'Austria', 'Azerbaijan', 'Bahamas', 'Bahrain', 'Bangladesh',
-             'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bermuda', 'Bhutan', 'Bolivia',
-             'Bonaire Sint Eustatius and Saba', 'Bosnia and Herzegovina', 'Botswana', 'Brazil', 'British Virgin Islands',
-             'Brunei', 'Bulgaria', 'Burkina Faso', 'Burundi', 'Cambodia', 'Cameroon', 'Canada', 'Cape Verde',
-             'Cayman Islands', 'Central African Republic', 'Chad', 'Chile', 'China', 'Colombia', 'Comoros', 'Congo',
-             'Costa Rica', "Cote d'Ivoire", 'Croatia', 'Cuba', 'Curacao', 'Cyprus', 'Czech Republic',
-             'Democratic Republic of Congo', 'Denmark', 'Djibouti', 'Dominica', 'Dominican Republic', 'Ecuador', 'Egypt',
-             'El Salvador', 'Equatorial Guinea', 'Eritrea', 'Estonia', 'Ethiopia', 'Faeroe Islands', 'Falkland Islands',
-             'Fiji', 'Finland', 'France', 'French Polynesia', 'Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana', 'Gibraltar',
-             'Greece', 'Greenland', 'Grenada', 'Guam', 'Guatemala', 'Guernsey', 'Guinea', 'Guinea-Bissau', 'Guyana',
-             'Haiti', 'Honduras', 'Hungary', 'Iceland', 'India', 'Indonesia', 'International', 'Iran', 'Iraq', 'Ireland',
-             'Isle of Man', 'Israel', 'Italy', 'Jamaica', 'Japan', 'Jersey', 'Jordan', 'Kazakhstan', 'Kenya', 'Kosovo',
-             'Kuwait', 'Kyrgyzstan', 'Laos', 'Latvia', 'Lebanon', 'Liberia', 'Libya', 'Liechtenstein', 'Lithuania',
-             'Luxembourg', 'Macedonia', 'Madagascar', 'Malawi', 'Malaysia', 'Maldives', 'Mali', 'Malta', 'Mauritania',
-             'Mauritius', 'Mexico', 'Moldova', 'Monaco', 'Mongolia', 'Montenegro', 'Montserrat', 'Morocco', 'Mozambique',
-             'Myanmar', 'Namibia', 'Nepal', 'Netherlands', 'New Caledonia', 'New Zealand', 'Nicaragua', 'Niger', 'Nigeria',
-             'Northern Mariana Islands', 'Norway', 'Oman', 'Pakistan', 'Palestine', 'Panama', 'Papua New Guinea',
-             'Paraguay', 'Peru', 'Philippines', 'Poland', 'Portugal', 'Puerto Rico', 'Qatar', 'Romania', 'Russia',
-             'Rwanda', 'Saint Kitts and Nevis', 'Saint Lucia', 'Saint Vincent and the Grenadines', 'San Marino',
-             'Sao Tome and Principe', 'Saudi Arabia', 'Senegal', 'Serbia', 'Seychelles', 'Sierra Leone', 'Singapore',
-             'Sint Maarten (Dutch part)', 'Slovakia', 'Slovenia', 'Somalia', 'South Africa', 'South Korea', 'South Sudan',
-             'Spain', 'Sri Lanka', 'Sudan', 'Suriname', 'Swaziland', 'Sweden', 'Switzerland', 'Syria', 'Taiwan',
-             'Tajikistan', 'Tanzania', 'Thailand', 'Timor', 'Togo', 'Trinidad and Tobago', 'Tunisia', 'Turkey',
-             'Turks and Caicos Islands', 'Uganda', 'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States',
-             'United States Virgin Islands', 'Uruguay', 'Uzbekistan', 'Vatican', 'Venezuela', 'Vietnam', 'Western Sahara',
-             'Yemen', 'Zambia', 'Zimbabwe']
 for country in countries:
     plot_single(country.title(), "total confirmed cases")
     plot_single(country.title(), "total deaths")
     plot_single(country.title(), "new confirmed cases")
     plot_single(country.title(), "new deaths")
     plot_four(country)
-    index = countries.index(country) + 1
-    print(country + ": " + str(index) + "/" + str(len(countries)))
+    index = str(countries.index(country) + 1)
+    print(country + ": " + index + "/" + str(len(countries)))
 
-    dir_path = os.path.dirname(os.path.realpath(__file__)) + "/graphs/" + country.lower().replace(" ",
-                                                                                                  "_")  # get working directory
+    dir_path = os.path.dirname(os.path.realpath(
+        __file__)) + "/graphs/" + country.lower().replace(" ", "_")  # get working directory
     current_time = time.time()
     for f in os.listdir(dir_path):
         f = dir_path + "/" + f
         creation_time = os.path.getmtime(f)
         if ((current_time - creation_time) / (86400)) >= 1:
             os.remove(f)
-
