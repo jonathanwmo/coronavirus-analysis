@@ -75,7 +75,16 @@ def plot_single(country: str, graph_type: str):
     :return: void
     '''
     csv = ''
+    if (graph_type == "total confirmed cases"):
+        csv = "total_cases.csv"
+    if (graph_type == "total deaths"):
+        csv = "total_deaths.csv"
+    if (graph_type == "new confirmed cases"):
+        csv = "new_cases.csv"
+    if (graph_type == "new deaths"):
+        csv = "new_deaths.csv"
 
+    # handle edge cases for when country name is different between websites
     if " And" in country:
         country = country.replace("And", "and")
     if "Cote D'Ivoire" in country:
@@ -87,54 +96,51 @@ def plot_single(country: str, graph_type: str):
     if "Sint Maarten (Dutch Part)" in country:
         country = "Sint Maarten (Dutch part)"
 
-    if (graph_type == "total confirmed cases"):
-        csv = "total_cases.csv"
-    if (graph_type == "total deaths"):
-        csv = "total_deaths.csv"
-    if (graph_type == "new confirmed cases"):
-        csv = "new_cases.csv"
-    if (graph_type == "new deaths"):
-        csv = "new_deaths.csv"
-
     # find index of country in csv file
     index = find_index(country, csv)
     # get full list of dates in csv file
     dates_list = find_dates(csv)
-    # get full list of cases in csv file
+    # get full list of cases/deaths in csv file
     cases_strs = find_cases(index, csv)
+
+    # if country is china, set x-axis dates to be earlier for they're data occurring earlier
     if (country.lower() == "china"):
+        # make China graph start from Jan 15
         cases_strs = cases_strs[15:]
         dates_list = dates_list[15:]
     else:
-        # get rid of first column
+        # make all other country graphs start on ~march 4
         cases_strs = cases_strs[64:]
         dates_list = dates_list[64:]
 
     total_cases_ints = []
-    for i in cases_strs:                                        # convert elements in list to int
+    for i in cases_strs:
         # check for when csv file has empty string instead of 0
         if (i == ""):
             i = 0
         total_cases_ints.append(int(i))
+
     # check if today's (most recent) data was not published
     if (total_cases_ints[-1] == 0):
         total_cases_ints[-1] = total_cases_ints[-2]
 
-    # most recent case number, aot = as of today
+    # most recent case/death/date number, aot = as of today
     cases_aot = total_cases_ints[-1]
+    # imported datetime to get str and sliced string to only show date, no hours/minutes
     date_aot = str(datetime.today())[0:10]
     highest_cases = max(total_cases_ints)
 
     my_graph = plt
-    my_graph.figure(figsize=(15, 7.5))                  # set figure size
-    # graph the data as cases vs. dates
+    my_graph.figure(figsize=(15, 7.5))
+    # graph the data as cases (or deaths) vs. dates in red
     my_graph.plot(dates_list, total_cases_ints, color='red')
 
     # show ticks on xaxis spaced out by week (7 days)
     my_graph.xticks(np.arange(1, len(dates_list), 7))
     # angle labels to show better
     my_graph.xticks(rotation=30)
-    ystepsize = 0
+
+    # manually space out the y-axis spacings
     if highest_cases <= 10:
         ystepsize = 1
     elif highest_cases <= 20:
@@ -188,62 +194,56 @@ def plot_single(country: str, graph_type: str):
     else:
         ystepsize = 500000
 
+    # use np.arange to make y-axis slightly larger (1.1 times) than highest y-value on graph
     ylabel = np.arange(0, int(highest_cases * 1.1), ystepsize)
-    # have yticks go 1.1 times above highest data point,
     # rotate ticks to show numbers better
     my_graph.yticks(ylabel, ylabel, rotation=30)
 
     my_graph.autoscale(
         enable=True,
         axis='x',
-        tight=True)                   # tight bound it
+        tight=True)
     my_graph.grid(True)
     myStr = str(date_aot) + ": " + str(cases_aot)
-    my_graph.annotate((myStr).center(len(myStr)) + "\n" + graph_type.title(),
-                      xy=(date_aot,
-                          cases_aot),
+
+    # annotate graph to show date and value of most recent date along with an arrow pointing to said value
+    my_graph.annotate(
+                      (myStr).center(len(myStr)) + "\n" + graph_type.title(),
+                      xy=(date_aot, cases_aot),
                       xycoords='data',
-                      xytext=(dates_list[-2],
-                              1.1 * highest_cases),
+                      xytext=(dates_list[-2], 1.1 * highest_cases),
                       textcoords='data',
                       arrowprops=dict(arrowstyle='->',
                                       color='black',
-                                      lw=2))  # label last point on graph
-    my_graph.title(
-        'Covid-19 ' +
-        graph_type.title() +
-        ' Across ' +
-        country.title() +
-        " as of " +
-        date_aot,
+                                      lw=2))  # label last point on graph with an arrow
+    # set title of graph
+    my_graph.title('Covid-19 ' + graph_type.title() + ' Across ' + country.title() + " as of " + date_aot,
         fontsize=14,
         weight='bold')  # label things
     my_graph.xlabel('Date', fontsize=12, weight='bold')
+
+    # set y-axis label of graph depending on graph type
     if "death" in graph_type.lower() or "deaths" in graph_type.lower():
         my_graph.ylabel('Number of Deaths', fontsize=12, weight='bold')
     else:
         my_graph.ylabel('Number of Cases', fontsize=12, weight='bold')
-    # change graph name to replace spaces with underscores
+
+    # change graph name to replace spaces with underscores for purpose of saving as a .png file
     graph_type = graph_type.replace(" ", "_")
     country = country.lower().replace(" ", "_")
 
-    dir_path = os.path.dirname(os.path.realpath(
-        __file__)) + "/graphs/" + country                # get working directory
-    if not os.path.exists(
-            dir_path):                   # if directory for that country is not yet made, make it
-        os.makedirs(dir_path)
-    plt.savefig(
-        dir_path +
-        "/" +
-        country +
-        "_" +
-        graph_type +
-        "_" +
-        date_aot +
-        ".png",
-        dpi=500,
-        transparent=True)  # save to that directory
+    # get working directory
+    dir_path = os.path.dirname(os.path.realpath(__file__)) + "/graphs/" + country
 
+    # if directory for that country is not yet made, make it
+    if not os.path.exists(dir_path):
+        os.makedirs(dir_path)
+    # save to that directory
+    plt.savefig(dir_path + "/" + country + "_" + graph_type + "_" + date_aot + ".png",
+        dpi=500,
+        transparent=True)
+
+    # to reclaim memory after each function call
     my_graph.clf()
     my_graph.close('all')
     gc.collect()
@@ -256,9 +256,9 @@ def plot_four(country: str):
     :return: void
     '''
     my_graph = plt
-    # set figure size
-    my_graph.figure(figsize=(14, 8))
+    my_graph.figure(figsize=(15, 7.5))
 
+    # handle edge cases for when countries are named differently between websites
     if " And" in country:
         country = country.replace("And", "and")
     if "Cote D'Ivoire" in country:
@@ -276,22 +276,26 @@ def plot_four(country: str):
     new_deaths = "new_deaths.csv"
     graph_type = "Total Cases, Total Deaths, New Cases, and New Deaths"
 
+    ############################################### GRAPH TOTAL CASES ###############################################
     # find index of country in total cases csv file
     total_cases_index = find_index(country, total_cases)
     # get full list of dates in total cases csv file
     total_cases_dates_list = find_dates(total_cases)
     # get full list of cases in total cases csv file
     total_cases_strs = find_cases(total_cases_index, total_cases)
+
+    # if country is china, set x-axis dates to be earlier for they're data occurring earlier
     if (country.lower() == "china"):
+        # make china start on jan 15
         total_cases_strs = total_cases_strs[15:]
         total_cases_dates_list = total_cases_dates_list[15:]
     else:
-        # get rid of first column
+        # otherwise country starts on ~march 3
         total_cases_strs = total_cases_strs[64:]
         total_cases_dates_list = total_cases_dates_list[64:]
 
     total_cases_ints = []
-    for i in total_cases_strs:                                              # convert elements in list to int
+    for i in total_cases_strs:
         # check for when csv file has empty string instead of 0
         if (i == ""):
             i = 0
@@ -300,26 +304,31 @@ def plot_four(country: str):
     if (total_cases_ints[-1] == 0):
         total_cases_ints[-1] = total_cases_ints[-2]
 
+    # graph the data as total cases vs. dates, label in blue
     my_graph.plot(total_cases_dates_list, total_cases_ints, color='blue', label="Total Cases " +
-                  "in " + country + ": " + str(total_cases_ints[-1]))  # graph the data as total cases vs. dates
+                  "in " + country + ": " + str(total_cases_ints[-1]))
 
+
+    ############################################### GRAPH TOTAL DEATHS ###############################################
     # find index of country in total deaths csv file
     total_deaths_index = find_index(country, total_deaths)
     # get full list of dates in total deaths csv file
     total_deaths_dates_list = find_dates(total_deaths)
     # get full list of cases in total deaths csv file
     total_deaths_strs = find_cases(total_deaths_index, total_deaths)
+
+    # if country is china, set x-axis dates to be earlier for they're data occurring earlier
     if (country.lower() == "china"):
+        # make china start on jan 15
         total_deaths_strs = total_deaths_strs[15:]
         total_deaths_dates_list = total_deaths_dates_list[15:]
     else:
-        # get rid of first column
+        # otherwise country starts on ~march 3
         total_deaths_strs = total_deaths_strs[64:]
-        # get rid of first row
         total_deaths_dates_list = total_deaths_dates_list[64:]
 
     total_deaths_ints = []
-    for i in total_deaths_strs:                                             # convert elements in list to int
+    for i in total_deaths_strs:
         # check for when csv file has empty string instead of 0
         if (i == ""):
             i = 0
@@ -328,25 +337,31 @@ def plot_four(country: str):
     if (total_deaths_ints[-1] == 0):
         total_deaths_ints[-1] = total_deaths_ints[-2]
 
+    # graph the data as total deaths vs. dates, label in red
     my_graph.plot(total_deaths_dates_list, total_deaths_ints, color='red', label="Total Deaths " +
-                  "in " + country + ": " + str(total_deaths_ints[-1]))  # graph the data as total deaths vs. dates
+                  "in " + country + ": " + str(total_deaths_ints[-1]))
 
+
+    ################################################ GRAPH NEW CASES ################################################
     # find index of country in new cases csv file
     new_cases_index = find_index(country, new_cases)
     # get full list of dates in new cases csv file
     new_cases_dates_list = find_dates(new_cases)
     # get full list of cases in new cases csv file
     new_cases_strs = find_cases(new_cases_index, new_cases)
+
+    # if country is china, set x-axis dates to be earlier for they're data occurring earlier
     if (country.lower() == "china"):
+        # make china start on jan 15
         new_cases_strs = new_cases_strs[15:]
         new_cases_dates_list = new_cases_dates_list[15:]
     else:
-        # get rid of first column
+        # otherwise country starts on ~march 3
         new_cases_strs = new_cases_strs[64:]
         new_cases_dates_list = new_cases_dates_list[64:]
 
     new_cases_ints = []
-    for i in new_cases_strs:                                                # convert elements in list to int
+    for i in new_cases_strs:
         # check for when csv file has empty string instead of 0
         if (i == ""):
             i = 0
@@ -355,25 +370,31 @@ def plot_four(country: str):
     if (new_cases_ints[-1] == 0):
         new_cases_ints[-1] = new_cases_ints[-2]
 
+    # graph the data as new cases vs. dates, label in green
     my_graph.plot(new_cases_dates_list, new_cases_ints, color='green', label="New Cases " +
-                  "in " + country + ": " + str(new_cases_ints[-1]))  # graph the data as new cases vs. dates
+                  "in " + country + ": " + str(new_cases_ints[-1]))
 
+
+    ################################################ GRAPH NEW DEATHS ################################################
     # find index of country in new deaths csv file
     new_deaths_index = find_index(country, new_deaths)
     # get full list of dates in new deaths csv file
     new_deaths_dates_list = find_dates(new_deaths)
     # get full list of cases in new deaths csv file
     new_deaths_strs = find_cases(new_deaths_index, new_deaths)
+
+    # if country is china, set x-axis dates to be earlier for they're data occurring earlier
     if (country.lower() == "china"):
+        # make china start on jan 15
         new_deaths_strs = new_deaths_strs[15:]
         new_deaths_dates_list = new_deaths_dates_list[15:]
     else:
-        # get rid of first column
+        # make all other country graphs start on ~march 3
         new_deaths_strs = new_deaths_strs[64:]
         new_deaths_dates_list = new_deaths_dates_list[64:]
 
     new_deaths_ints = []
-    for i in new_deaths_strs:                                               # convert elements in list to int
+    for i in new_deaths_strs:
         # check for when csv file has empty string instead of 0
         if (i == ""):
             i = 0
@@ -382,11 +403,11 @@ def plot_four(country: str):
     if (new_deaths_ints[-1] == 0):
         new_deaths_ints[-1] = new_deaths_ints[-2]
 
+    # graph the data as new deaths vs. dates, label in orange
     my_graph.plot(new_deaths_dates_list, new_deaths_ints, color='orange', label="New Deaths " +
-                  "in " + country + ": " + str(new_deaths_ints[-1]))  # graph the data as new deaths vs. dates
+                  "in " + country + ": " + str(new_deaths_ints[-1]))
 
-    # most recent case number, aot = as of today
-    total_cases_aot = total_cases_ints[-1]
+    # most recent date, aot = as of today
     date_aot = str(datetime.today())[0:10]
     highest_cases = max(total_cases_ints)
 
@@ -394,7 +415,8 @@ def plot_four(country: str):
     my_graph.xticks(np.arange(1, len(total_cases_dates_list), 7))
     # angle labels to show better
     my_graph.xticks(rotation=30)
-    ystepsize = 0
+
+    # manually space out the y-axis spacings
     if highest_cases <= 10:
         ystepsize = 1
     elif highest_cases <= 20:
@@ -448,6 +470,7 @@ def plot_four(country: str):
     else:
         ystepsize = 500000
 
+    # use np.arange to make y-axis slightly larger (1.1 times) than highest y-value on graph
     ylabel = (np.arange(0, int(highest_cases * 1.1), ystepsize)).tolist()
     # rotate ticks to show numbers better
     my_graph.yticks(ylabel, ylabel, rotation=30)
@@ -470,42 +493,24 @@ def plot_four(country: str):
     my_graph.xlabel('Date', fontsize='12', weight='bold')
     my_graph.ylabel('Number of Cases', fontsize='12', weight='bold')
     my_graph.legend(loc="upper left")
-    # change graph name to replace spaces with underscores
-    graph_type = graph_type.replace(" ", "_")
-    country = country.lower().replace(" ", "_")
 
-    dir_path = os.path.dirname(
-        os.path.realpath(__file__))  # get working directory
-    if not os.path.exists(
-        dir_path +
-        "/graphs/" +
-            country):  # if directory for that country is not yet made, make it
-        os.makedirs(dir_path + "/graphs/" + country)
-    plt.savefig(
-        dir_path +
-        "/graphs/" +
-        country +
-        "/" +
-        country +
-        "_allfour_" +
-        date_aot +
-        ".png",
+    # change graph name to replace spaces with underscores for purpose of saving as png
+    country = country.lower().replace(" ", "_")
+    # get working directory
+    dir_path = os.path.dirname(os.path.realpath(__file__)) + "/graphs/" + country
+
+    # if directory for that country is not yet made, make it
+    if not os.path.exists(dir_path):
+        os.makedirs(dir_path)
+    plt.savefig(dir_path + "/" + country + "_allfour_" + date_aot + ".png",
         dpi=500,
         transparent=True)  # save to that directory
 
+    # to reclaim memory after each function call
     my_graph.clf()
     my_graph.close('all')
     gc.collect()
 
-
-mycountries = [
-    'World',
-    'United States',
-    'United Kingdom',
-    'Italy',
-    'Spain',
-    'France',
-    'China']
 countries = [
     'World',
     'Afghanistan',
@@ -725,8 +730,10 @@ for country in countries:
     plot_single(country.title(), "new deaths")
     plot_four(country)
     index = str(countries.index(country) + 1)
+    # see progress of updating graphs
     print(country + ": " + index + "/" + str(len(countries)))
 
+    # delete png files of graphs older than 1 day in each country folder to avoid overcrowding after updating
     dir_path = os.path.dirname(os.path.realpath(
         __file__)) + "/graphs/" + country.lower().replace(" ", "_")  # get working directory
     current_time = time.time()
