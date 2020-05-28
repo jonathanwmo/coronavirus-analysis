@@ -3,26 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bec8ad0a-3246-4716-8029-47badc959d22" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gitpush.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/gitpush.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/algeria.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/algeria.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/andorra.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/andorra.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/angola.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/angola.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/aruba.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/aruba.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/bahrain.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/bahrain.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/barbados.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/barbados.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/brazil.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/brazil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/burkinafaso.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/burkinafaso.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/canada.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/canada.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/caymanislands.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/caymanislands.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/chad.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/chad.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/costarica.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/costarica.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/coted'ivoire.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/coted'ivoire.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/cuba.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/cuba.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/cyprus.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/cyprus.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/ecuador.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/ecuador.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/egypt.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/egypt.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmls/world.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/world.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,8 +21,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/graphScript.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="810">
+              <caret line="54" column="38" lean-forward="true" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
               <folding>
                 <element signature="e#111#132#0" expanded="true" />
               </folding>
@@ -53,11 +33,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/write_to_html.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
+            <state relative-caret-position="390">
               <caret line="31" column="63" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="63" />
-              <folding>
-                <element signature="e#20#35#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -111,11 +88,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-274" />
-    <option name="y" value="-1054" />
-    <option name="width" value="1886" />
-    <option name="height" value="1040" />
+    <option name="y" value="-1057" />
+    <option name="width" value="1920" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -347,23 +324,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/write_to_html.py">
+    <entry file="file://$PROJECT_DIR$/src/graphScript.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="63" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="63" />
+        <state relative-caret-position="810">
+          <caret line="54" column="38" lean-forward="true" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
           <folding>
-            <element signature="e#20#35#0" expanded="true" />
+            <element signature="e#111#132#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/graphScript.py">
+    <entry file="file://$PROJECT_DIR$/src/write_to_html.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#111#132#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="390">
+          <caret line="31" column="63" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="63" />
         </state>
       </provider>
     </entry>
