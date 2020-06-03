@@ -216,10 +216,11 @@ table {
 
 }
 
-.tg .tg-0pky{
+.tg .country-country{
     font-family:Arial, sans-serif;
     text-align:left;
-    vertical-align:top
+    vertical-align:top;
+    color: rgb(241, 9, 9);
 }
 
 .tg .tg-0lax{
@@ -239,6 +240,10 @@ table {
 table {
     margin-left: auto;
     margin-right: auto;
+}
+
+#country {
+    color: blue;
 }
 
 #totalcases {

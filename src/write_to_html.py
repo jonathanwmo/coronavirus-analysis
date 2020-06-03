@@ -263,19 +263,21 @@ def update_index_html(country: str):
 
     # update data in table on main index.html page
     country_numbers = get_country_data(country)
+    country_lower = country.lower().replace(" ", "")
     with open(dir_path, 'r') as f:
         newstr = """"""
         inlines = False
         count = -1
         for line in f.readlines():
-            if ('<td class="tg-0pky"><b>' + country) in str(line):
+            if ('<td class="tg-0pky" id="country"><b><a href="src/htmls/' + country_lower) in str(line) or ('<td class="tg-0pky"><b>' + titled_country in str(line)):
                 inlines = True
             if count == 10:
                 inlines = False
             # when in desired lines, update value depending on given category
             if inlines:
                 if count == -1:
-                    newstr += '							<td class="tg-0pky"><b>' + titled_country + '</b></td>\n'
+                    newstr += '							<td class="tg-0pky" id="country"><b><a href="src/htmls/' + \
+                              country_lower + '.html">' + titled_country + '</a></b></td>\n'
                 elif count == 0:
                     newstr += '							<td class="tg-0lax" id="totalcases">' + \
                         country_numbers[count] + '</td>' + '\n'
@@ -346,7 +348,7 @@ top25 = [
     "Ecuador",
     "Belarus",
     "Sweden",
-    "Switzerland"]
+    "Singapore"]
 for country in top25:
     update_index_html(country)
 
