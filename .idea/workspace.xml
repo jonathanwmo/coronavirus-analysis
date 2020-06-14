@@ -2,56 +2,274 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bec8ad0a-3246-4716-8029-47badc959d22" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/graphs/afghanistan/afghanistan_allfour_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/afghanistan/afghanistan_new_confirmed_cases_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/afghanistan/afghanistan_new_deaths_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/afghanistan/afghanistan_total_confirmed_cases_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/afghanistan/afghanistan_total_deaths_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/albania/albania_allfour_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/albania/albania_new_confirmed_cases_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/albania/albania_new_deaths_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/albania/albania_total_confirmed_cases_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/albania/albania_total_deaths_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/algeria/algeria_allfour_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/algeria/algeria_new_confirmed_cases_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/algeria/algeria_new_deaths_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/algeria/algeria_total_confirmed_cases_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/algeria/algeria_total_deaths_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/andorra/andorra_allfour_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/andorra/andorra_new_confirmed_cases_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/andorra/andorra_new_deaths_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/andorra/andorra_total_confirmed_cases_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/andorra/andorra_total_deaths_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/angola/angola_allfour_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/angola/angola_new_confirmed_cases_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/angola/angola_new_deaths_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/angola/angola_total_confirmed_cases_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/angola/angola_total_deaths_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/anguilla/anguilla_allfour_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/anguilla/anguilla_new_confirmed_cases_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/anguilla/anguilla_new_deaths_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/anguilla/anguilla_total_confirmed_cases_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/anguilla/anguilla_total_deaths_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/antigua_and_barbuda/antigua_and_barbuda_allfour_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/antigua_and_barbuda/antigua_and_barbuda_new_confirmed_cases_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/antigua_and_barbuda/antigua_and_barbuda_new_deaths_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/antigua_and_barbuda/antigua_and_barbuda_total_confirmed_cases_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/antigua_and_barbuda/antigua_and_barbuda_total_deaths_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/argentina/argentina_allfour_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/argentina/argentina_new_confirmed_cases_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/argentina/argentina_new_deaths_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/argentina/argentina_total_confirmed_cases_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/argentina/argentina_total_deaths_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/armenia/armenia_allfour_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/armenia/armenia_new_confirmed_cases_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/armenia/armenia_new_deaths_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/armenia/armenia_total_confirmed_cases_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/armenia/armenia_total_deaths_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_allfour_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_new_confirmed_cases_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_new_deaths_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_total_confirmed_cases_2020-06-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_total_deaths_2020-06-11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/afghanistan/afghanistan_allfour_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/afghanistan/afghanistan_allfour_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/afghanistan/afghanistan_new_confirmed_cases_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/afghanistan/afghanistan_new_confirmed_cases_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/afghanistan/afghanistan_new_deaths_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/afghanistan/afghanistan_new_deaths_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/afghanistan/afghanistan_total_confirmed_cases_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/afghanistan/afghanistan_total_confirmed_cases_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/afghanistan/afghanistan_total_deaths_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/afghanistan/afghanistan_total_deaths_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/albania/albania_allfour_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/albania/albania_allfour_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/albania/albania_new_confirmed_cases_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/albania/albania_new_confirmed_cases_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/albania/albania_new_deaths_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/albania/albania_new_deaths_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/albania/albania_total_confirmed_cases_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/albania/albania_total_confirmed_cases_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/albania/albania_total_deaths_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/albania/albania_total_deaths_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/algeria/algeria_allfour_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/algeria/algeria_allfour_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/algeria/algeria_new_confirmed_cases_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/algeria/algeria_new_confirmed_cases_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/algeria/algeria_new_deaths_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/algeria/algeria_new_deaths_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/algeria/algeria_total_confirmed_cases_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/algeria/algeria_total_confirmed_cases_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/algeria/algeria_total_deaths_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/algeria/algeria_total_deaths_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/andorra/andorra_allfour_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/andorra/andorra_allfour_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/andorra/andorra_new_confirmed_cases_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/andorra/andorra_new_confirmed_cases_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/andorra/andorra_new_deaths_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/andorra/andorra_new_deaths_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/andorra/andorra_total_confirmed_cases_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/andorra/andorra_total_confirmed_cases_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/andorra/andorra_total_deaths_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/andorra/andorra_total_deaths_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/angola/angola_allfour_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/angola/angola_allfour_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/angola/angola_new_confirmed_cases_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/angola/angola_new_confirmed_cases_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/angola/angola_new_deaths_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/angola/angola_new_deaths_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/angola/angola_total_confirmed_cases_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/angola/angola_total_confirmed_cases_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/angola/angola_total_deaths_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/angola/angola_total_deaths_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/anguilla/anguilla_allfour_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/anguilla/anguilla_allfour_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/anguilla/anguilla_new_confirmed_cases_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/anguilla/anguilla_new_confirmed_cases_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/anguilla/anguilla_new_deaths_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/anguilla/anguilla_new_deaths_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/anguilla/anguilla_total_confirmed_cases_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/anguilla/anguilla_total_confirmed_cases_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/anguilla/anguilla_total_deaths_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/anguilla/anguilla_total_deaths_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/antigua_and_barbuda/antigua_and_barbuda_allfour_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/antigua_and_barbuda/antigua_and_barbuda_allfour_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/antigua_and_barbuda/antigua_and_barbuda_new_confirmed_cases_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/antigua_and_barbuda/antigua_and_barbuda_new_confirmed_cases_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/antigua_and_barbuda/antigua_and_barbuda_new_deaths_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/antigua_and_barbuda/antigua_and_barbuda_new_deaths_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/antigua_and_barbuda/antigua_and_barbuda_total_confirmed_cases_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/antigua_and_barbuda/antigua_and_barbuda_total_confirmed_cases_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/antigua_and_barbuda/antigua_and_barbuda_total_deaths_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/antigua_and_barbuda/antigua_and_barbuda_total_deaths_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/argentina/argentina_allfour_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/argentina/argentina_allfour_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/argentina/argentina_new_confirmed_cases_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/argentina/argentina_new_confirmed_cases_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/argentina/argentina_new_deaths_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/argentina/argentina_new_deaths_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/argentina/argentina_total_confirmed_cases_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/argentina/argentina_total_confirmed_cases_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/argentina/argentina_total_deaths_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/argentina/argentina_total_deaths_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_allfour_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_allfour_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_new_confirmed_cases_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_new_confirmed_cases_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_new_deaths_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_new_deaths_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_total_confirmed_cases_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_total_confirmed_cases_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_total_deaths_2020-06-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_total_deaths_2020-06-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/afghanistan.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/afghanistan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/albania.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/albania.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/algeria.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/algeria.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/andorra.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/andorra.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/angola.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/angola.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/anguilla.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/anguilla.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/antiguaandbarbuda.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/antiguaandbarbuda.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/argentina.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/argentina.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/armenia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/armenia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/aruba.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/aruba.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/australia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/australia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/austria.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/austria.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/azerbaijan.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/azerbaijan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/bahamas.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/bahamas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/bahrain.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/bahrain.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/bangladesh.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/bangladesh.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/barbados.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/barbados.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/belarus.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/belarus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/belgium.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/belgium.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/belize.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/belize.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/benin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/benin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/bermuda.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/bermuda.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/bhutan.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/bhutan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/bolivia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/bolivia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/bonairesinteustatiusandsaba.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/bonairesinteustatiusandsaba.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/bosniaandherzegovina.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/bosniaandherzegovina.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/botswana.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/botswana.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/brazil.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/brazil.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/britishvirginislands.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/britishvirginislands.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/brunei.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/brunei.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/bulgaria.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/bulgaria.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/burkinafaso.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/burkinafaso.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/burundi.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/burundi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/cambodia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/cambodia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/cameroon.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/cameroon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/canada.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/canada.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/capeverde.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/capeverde.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/caymanislands.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/caymanislands.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/centralafricanrepublic.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/centralafricanrepublic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/chad.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/chad.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/chile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/chile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/china.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/china.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/colombia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/colombia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/comoros.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/comoros.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/congo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/congo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/costarica.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/costarica.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/coted'ivoire.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/coted'ivoire.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/croatia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/croatia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/cuba.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/cuba.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/curacao.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/curacao.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/cyprus.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/cyprus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/czechrepublic.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/czechrepublic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/democraticrepublicofcongo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/democraticrepublicofcongo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/denmark.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/denmark.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/djibouti.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/djibouti.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/dominica.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/dominica.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/dominicanrepublic.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/dominicanrepublic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/ecuador.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/ecuador.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/egypt.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/egypt.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/elsalvador.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/elsalvador.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/equatorialguinea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/equatorialguinea.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/eritrea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/eritrea.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/estonia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/estonia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/ethiopia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/ethiopia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/faeroeislands.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/faeroeislands.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/falklandislands.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/falklandislands.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/fiji.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/fiji.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/finland.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/finland.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/france.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/france.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/frenchpolynesia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/frenchpolynesia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/gabon.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/gabon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/gambia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/gambia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/georgia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/georgia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/germany.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/germany.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/ghana.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/ghana.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/gibraltar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/gibraltar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/greece.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/greece.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/greenland.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/greenland.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/grenada.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/grenada.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/guatemala.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/guatemala.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/guernsey.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/guernsey.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/guinea-bissau.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/guinea-bissau.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/guinea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/guinea.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/guyana.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/guyana.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/haiti.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/haiti.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/honduras.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/honduras.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/hungary.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/hungary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/iceland.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/iceland.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/india.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/india.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/indonesia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/indonesia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/iran.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/iran.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/iraq.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/iraq.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/ireland.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/ireland.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/isleofman.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/isleofman.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/israel.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/israel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/italy.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/italy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/jamaica.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/jamaica.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/japan.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/japan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/jordan.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/jordan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/kazakhstan.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/kazakhstan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/kenya.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/kenya.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/kuwait.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/kuwait.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/kyrgyzstan.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/kyrgyzstan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/laos.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/laos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/latvia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/latvia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/lebanon.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/lebanon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/liberia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/liberia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/libya.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/libya.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/liechtenstein.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/liechtenstein.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/lithuania.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/lithuania.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/luxembourg.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/luxembourg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/macedonia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/macedonia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/madagascar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/madagascar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/malawi.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/malawi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/malaysia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/malaysia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/maldives.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/maldives.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/mali.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/mali.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/malta.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/malta.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/mauritania.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/mauritania.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/mauritius.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/mauritius.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/mexico.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/mexico.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/moldova.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/moldova.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/monaco.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/monaco.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/mongolia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/mongolia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/montenegro.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/montenegro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/montserrat.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/montserrat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/morocco.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/morocco.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/mozambique.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/mozambique.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/myanmar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/myanmar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/namibia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/namibia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/nepal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/nepal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/netherlands.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/netherlands.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/newcaledonia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/newcaledonia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/newzealand.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/newzealand.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/nicaragua.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/nicaragua.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/niger.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/niger.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/nigeria.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/nigeria.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/norway.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/norway.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/oman.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/oman.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/pakistan.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/pakistan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/palestine.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/palestine.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/panama.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/panama.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/papuanewguinea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/papuanewguinea.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/paraguay.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/paraguay.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/peru.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/peru.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/philippines.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/philippines.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/poland.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/poland.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/portugal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/portugal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/qatar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/qatar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/romania.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/romania.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/russia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/russia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/rwanda.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/rwanda.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/saintkittsandnevis.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/saintkittsandnevis.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/saintlucia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/saintlucia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/saintvincentandthegrenadines.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/saintvincentandthegrenadines.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/sanmarino.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/sanmarino.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/saotomeandprincipe.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/saotomeandprincipe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/saudiarabia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/saudiarabia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/senegal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/senegal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/serbia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/serbia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/seychelles.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/seychelles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/sierraleone.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/sierraleone.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/singapore.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/singapore.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/sintmaarten(dutchpart).html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/sintmaarten(dutchpart).html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/slovakia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/slovakia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/slovenia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/slovenia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/somalia.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/somalia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/southafrica.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/southafrica.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/southkorea.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/southkorea.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/southsudan.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/southsudan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/spain.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/spain.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/srilanka.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/srilanka.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/sudan.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/sudan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/suriname.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/suriname.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/swaziland.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/swaziland.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/sweden.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/sweden.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/htmls/world.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmls/world.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,8 +288,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/graphScript.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7485">
-              <caret line="499" column="18" selection-start-line="499" selection-end-line="500" />
+            <state relative-caret-position="52">
+              <caret line="41" column="52" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="52" />
               <folding>
                 <element signature="e#111#132#0" expanded="true" />
               </folding>
@@ -82,7 +300,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/write_to_html.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3570">
+            <state relative-caret-position="3495">
               <caret line="238" column="28" selection-start-line="238" selection-end-line="239" />
               <folding>
                 <element signature="e#111#126#0" expanded="true" />
@@ -379,22 +597,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/write_to_html.py">
+    <entry file="file://$PROJECT_DIR$/src/graphScript.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3570">
-          <caret line="238" column="28" selection-start-line="238" selection-end-line="239" />
+        <state relative-caret-position="52">
+          <caret line="41" column="52" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="52" />
           <folding>
-            <element signature="e#111#126#0" expanded="true" />
+            <element signature="e#111#132#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/graphScript.py">
+    <entry file="file://$PROJECT_DIR$/src/write_to_html.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7485">
-          <caret line="499" column="18" selection-start-line="499" selection-end-line="500" />
+        <state relative-caret-position="3495">
+          <caret line="238" column="28" selection-start-line="238" selection-end-line="239" />
           <folding>
-            <element signature="e#111#132#0" expanded="true" />
+            <element signature="e#111#126#0" expanded="true" />
           </folding>
         </state>
       </provider>
