@@ -13,6 +13,7 @@ import time
 import gc
 
 
+
 def find_dates(graph_type: str):
     '''
     finds the dates in ourworldindata.org csv file
@@ -97,7 +98,7 @@ def plot_single(country: str, graph_type: str):
         country = "Sint Maarten (Dutch part)"
 
     # find index of country in csv file
-    index = find_index(country, csv)
+    index = find_index(country, graph_type)
     # get full list of dates in csv file
     dates_list = find_dates(csv)
     # get full list of cases/deaths in csv file
