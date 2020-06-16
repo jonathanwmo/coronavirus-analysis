@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ./graphScript.py 
+./test.py 
 ./write_to_html.py  
 
 date=$(date +%F)
