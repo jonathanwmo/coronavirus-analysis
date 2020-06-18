@@ -149,7 +149,13 @@ def update_country_html(country: str):
     date_aot = str(datetime.today())[0:10]
     date_aoy = str(datetime.today() - timedelta(days=1))[0:10]
     date_ao2 = str(str(datetime.today() - timedelta(days=2))[0:10])
-    date_ao3 = str(str(datetime.today() - timedelta(days=2))[0:10])
+    date_ao3 = str(str(datetime.today() - timedelta(days=3))[0:10])
+    date_ao4 = str(str(datetime.today() - timedelta(days=4))[0:10])
+    date_ao5 = str(str(datetime.today() - timedelta(days=5))[0:10])
+    date_ao6 = str(str(datetime.today() - timedelta(days=6))[0:10])
+
+
+
 
     # replace any empty values with n/a
     for i in range(len(country_numbers)):
@@ -167,6 +173,12 @@ def update_country_html(country: str):
                 newstr += line.replace(date_ao2, date_aot)
             elif date_ao3 in line:
                 newstr += line.replace(date_ao3, date_aot)
+            elif date_ao4 in line:
+                newstr += line.replace(date_ao4, date_aot)
+            elif date_ao5 in line:
+                newstr += line.replace(date_ao5, date_aot)
+            elif date_ao6 in line:
+                newstr += line.replace(date_ao6, date_aot)
             # update the values on html page as scraped from worldometer.info
             # site
             elif '<p><b><u>Total Cases</u></b><br><br> ' in line:
