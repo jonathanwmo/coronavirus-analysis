@@ -66,7 +66,9 @@ def get_country_data(country: str):
                 # if no match, append an empty string to country_numbers list instead
                 country_numbers.append("")
         # won't display 5th and 6th value in my table
+        # print("before pop", country_numbers)
         country_numbers.pop(5)
+        country_numbers.pop(6)
         country_numbers.pop(5)
         country_numbers[-2] = '7,785,879,495'
 
@@ -95,11 +97,14 @@ def get_country_data(country: str):
                 country_numbers.append("")
         # 3rd index is incorrect line spacing on html page so must be taken out
         # of list
+        # print("before pop", country_numbers)
         country_numbers.pop(3)
         # won't display 5th and 6th value in my table
         country_numbers.pop(5)
+        country_numbers.pop(6)
         country_numbers.pop(5)
     country_numbers = country_numbers[0:10]
+    # print("after pop",country_numbers)
     return country_numbers
 
 
@@ -457,7 +462,6 @@ all_countries = [
     'Iceland',
     'India',
     'Indonesia',
-    'International',
     'Iran',
     'Iraq',
     'Ireland',
