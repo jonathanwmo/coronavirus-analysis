@@ -25,8 +25,6 @@ for line in datafile_total_cases.readlines():
     line = line.decode('utf-8').strip()
     row = line.split(",")
     dates_list.append(row[0])
-
-print(dates_list)
 # def find_dates(graph_type: str):
 #     '''
 #     finds the dates in ourworldindata.org csv file
