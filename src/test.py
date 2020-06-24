@@ -695,7 +695,7 @@ countries = [
     'Seychelles',
     'Sierra Leone',
     'Singapore',
-    'Sint Maarten (Dutch part)',
+    # 'Sint Maarten (Dutch part)',
     'Slovakia',
     'Slovenia',
     'Somalia',
@@ -737,23 +737,26 @@ countries = [
     'Zimbabwe']
 
 for country in countries:
-    plot_single(country.title(), "total confirmed cases")
-    plot_single(country.title(), "total deaths")
-    plot_single(country.title(), "new confirmed cases")
-    plot_single(country.title(), "new deaths")
-    plot_four(country)
-    index = str(countries.index(country) + 1)
-    # see progress of updating graphs
-    print(country + ": " + index + "/" + str(len(countries)))
+    try:
+        plot_single(country.title(), "total confirmed cases")
+        plot_single(country.title(), "total deaths")
+        plot_single(country.title(), "new confirmed cases")
+        plot_single(country.title(), "new deaths")
+        plot_four(country)
+        index = str(countries.index(country) + 1)
+        # see progress of updating graphs
+        print(country + ": " + index + "/" + str(len(countries)))
 
-    # delete png files of graphs older than 1 day in each country folder to avoid overcrowding after updating
-    dir_path = os.path.dirname(os.path.realpath(
-        __file__)) + "/graphs/" + country.lower().replace(" ", "_")  # get working directory
-    current_time = time.time()
-    for f in os.listdir(dir_path):
-        f = dir_path + "/" + f
-        creation_time = os.path.getmtime(f)
-        if ((current_time - creation_time) / (86400)) >= 1:
-            os.remove(f)
+        # delete png files of graphs older than 1 day in each country folder to avoid overcrowding after updating
+        dir_path = os.path.dirname(os.path.realpath(
+            __file__)) + "/graphs/" + country.lower().replace(" ", "_")  # get working directory
+        current_time = time.time()
+        for f in os.listdir(dir_path):
+            f = dir_path + "/" + f
+            creation_time = os.path.getmtime(f)
+            if ((current_time - creation_time) / (86400)) >= 1:
+                os.remove(f)
+    except ValueError:
+        print(country, "not in list")
 
 
