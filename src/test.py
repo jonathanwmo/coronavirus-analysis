@@ -759,4 +759,8 @@ for country in countries:
     except ValueError:
         print(country, "not in list")
 
+    except ConnectionResetError:
+        print(country, "connection reset error")
+
+
 

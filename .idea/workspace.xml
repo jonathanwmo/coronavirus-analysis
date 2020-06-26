@@ -3,6 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="bec8ad0a-3246-4716-8029-47badc959d22" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/afghanistan/afghanistan_allfour_2020-06-24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/afghanistan/afghanistan_new_confirmed_cases_2020-06-24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/afghanistan/afghanistan_new_deaths_2020-06-24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/afghanistan/afghanistan_total_confirmed_cases_2020-06-24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/afghanistan/afghanistan_total_deaths_2020-06-24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/albania/albania_allfour_2020-06-24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/albania/albania_new_confirmed_cases_2020-06-24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/albania/albania_new_deaths_2020-06-24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/albania/albania_total_confirmed_cases_2020-06-24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/albania/albania_total_deaths_2020-06-24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_allfour_2020-06-24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_new_confirmed_cases_2020-06-24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_new_deaths_2020-06-24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_total_confirmed_cases_2020-06-24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_total_deaths_2020-06-24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,22 +36,19 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/test.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="521">
-                  <caret line="746" column="41" selection-start-line="746" selection-start-column="41" selection-end-line="746" selection-end-column="41" />
-                  <folding>
-                    <element signature="e#111#132#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="165">
+                  <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/graphScript.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="9060">
+                <state relative-caret-position="9150">
                   <caret line="610" column="18" selection-start-line="610" selection-start-column="18" selection-end-line="610" selection-end-column="18" />
                   <folding>
                     <element signature="e#111#132#0" expanded="true" />
@@ -51,7 +64,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/write_to_html.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="491">
+                <state relative-caret-position="6530">
                   <caret line="574" column="14" selection-start-line="591" selection-start-column="8" selection-end-line="591" selection-end-column="13" />
                   <folding>
                     <element signature="e#111#126#0" expanded="true" />
@@ -177,6 +190,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -380,19 +394,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/graphScript.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9060">
-          <caret line="610" column="18" selection-start-line="610" selection-start-column="18" selection-end-line="610" selection-end-column="18" />
-          <folding>
-            <element signature="e#111#132#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/write_to_html.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
+        <state relative-caret-position="6530">
           <caret line="574" column="14" selection-start-line="591" selection-start-column="8" selection-end-line="591" selection-end-column="13" />
           <folding>
             <element signature="e#111#126#0" expanded="true" />
@@ -402,8 +406,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9300">
-          <caret line="620" selection-start-line="620" selection-end-line="620" />
+        <state relative-caret-position="165">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graphScript.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9150">
+          <caret line="610" column="18" selection-start-line="610" selection-start-column="18" selection-end-line="610" selection-end-column="18" />
           <folding>
             <element signature="e#111#132#0" expanded="true" />
           </folding>
