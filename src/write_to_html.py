@@ -148,7 +148,7 @@ def update_country_html(country: str):
     country = country.lower().replace(" ", "")
 
     dir_path = os.path.dirname(os.path.realpath(__file__))[
-        0:56] + "/src/htmls/" + country + ".html"
+        0:56] + "/htmls/" + country + ".html"
 
     # create the dates of the past 3 days as strings
     date_aot = str(datetime.today())[0:10]
@@ -254,8 +254,7 @@ def update_index_html(country: str):
 
     date_aot = str(datetime.today())[0:10]
     dir_path = os.path.dirname(
-        os.path.realpath(__file__))[
-        0:56] + "/index.html"
+        os.path.realpath(__file__))[:-4] + "/index.html"
     with open(dir_path, 'r') as f:
         newstr = """"""
         for line in f.readlines():
