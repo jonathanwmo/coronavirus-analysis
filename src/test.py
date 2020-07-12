@@ -205,8 +205,10 @@ def plot_single(country: str, graph_type: str):
         ystepsize = 500000
     elif highest_cases <= 6000000:
         ystepsize = 500000
+    elif highest_cases <= 8000000:
+        ystepsize = 1000000
     else:
-        ystepsize = 500000
+        ystepsize = 1000000
 
     # use np.arange to make y-axis slightly larger (1.1 times) than highest y-value on graph
     ylabel = np.arange(0, int(highest_cases * 1.1), ystepsize)
@@ -481,8 +483,10 @@ def plot_four(country: str):
         ystepsize = 500000
     elif highest_cases <= 6000000:
         ystepsize = 500000
+    elif highest_cases <= 8000000:
+        ystepsize = 1000000
     else:
-        ystepsize = 500000
+        ystepsize = 1000000
 
     # use np.arange to make y-axis slightly larger (1.1 times) than highest y-value on graph
     ylabel = (np.arange(0, int(highest_cases * 1.1), ystepsize)).tolist()
