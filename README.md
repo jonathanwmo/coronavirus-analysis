@@ -5,11 +5,6 @@ https://jonathanwmo.github.io/coronavirus-analysis
 1. [Introduction](#introduction-)
 2. [Project Layout](#project-layout-)
 3. [Installation](#installation-)
-4. [API Syncing](#api-syncing-)
-	* [Adding New APIs](#adding-new-apis-)
-	* [Adding New Parsers](#adding-new-parsers-)
-5. [Utilities](#utilities-)
-6. [Testing](#testing-)
 
 Introduction [^](#covid-19-analysis-website)
 ------------

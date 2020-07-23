@@ -3,29 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bec8ad0a-3246-4716-8029-47badc959d22" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gitpush.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/gitpush.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/afghanistan/afghanistan_allfour_2020-07-21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/afghanistan/afghanistan_new_confirmed_cases_2020-07-21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/afghanistan/afghanistan_new_deaths_2020-07-21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/afghanistan/afghanistan_total_confirmed_cases_2020-07-21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/afghanistan/afghanistan_total_deaths_2020-07-21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/albania/albania_allfour_2020-07-21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/albania/albania_new_confirmed_cases_2020-07-21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/albania/albania_new_deaths_2020-07-21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/albania/albania_total_confirmed_cases_2020-07-21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/albania/albania_total_deaths_2020-07-21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/algeria/algeria_allfour_2020-07-21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/algeria/algeria_new_confirmed_cases_2020-07-21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/algeria/algeria_new_deaths_2020-07-21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/algeria/algeria_total_confirmed_cases_2020-07-21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/algeria/algeria_total_deaths_2020-07-21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_allfour_2020-07-21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_new_confirmed_cases_2020-07-21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_new_deaths_2020-07-21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_total_confirmed_cases_2020-07-21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/world/world_total_deaths_2020-07-21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,8 +88,8 @@
             <entry file="file://$PROJECT_DIR$/README.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="-315">
-                    <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+                  <first_editor relative-caret-position="90">
+                    <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
                   </first_editor>
                   <second_editor />
                 </state>
@@ -460,8 +437,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-315">
-            <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+          <first_editor relative-caret-position="90">
+            <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
           </first_editor>
           <second_editor />
         </state>
