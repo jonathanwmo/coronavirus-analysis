@@ -2,19 +2,26 @@
 
 START_TIME=$(date +%s)
 
-./graphScript.py
+if [ $# -eq 0 ]
+then
+   CP=0
+else
+   CP=$1
+fi
+
+python3 graphScript.py $CP
 EXIT_CODE=$?
 while [ $EXIT_CODE != 0 ]
 do
-    ./graphScript.py
+    python3 graphScript.py $CP
     EXIT_CODE=$?
 done
 
-./write_to_html.py
+python3 write_to_html.py
 EXIT_CODE=$?
 while [ $EXIT_CODE != 0 ]
 do
-    ./write_to_html.py
+    python3 write_to_html.py
     EXIT_CODE=$?
 done
 

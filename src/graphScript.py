@@ -4,44 +4,37 @@ __author__ = "Jonathan Mo"
 __credits__ = ["Jonathan Mo"]
 __email__ = "jm9hx@virginia.edu"
 
-import urllib.request
+import requests
 import numpy as np
 import matplotlib.pyplot as plt
 import os
 from datetime import datetime, timedelta
 import time
 import gc
+import sys
 
+BASE_DIR = os.path.dirname(os.path.realpath(__file__))
 
+urls = {
+         'total_cases': 'https://covid.ourworldindata.org/data/ecdc/total_cases.csv',
+         'total_deaths': 'https://covid.ourworldindata.org/data/ecdc/total_deaths.csv',
+         'new_cases': 'https://covid.ourworldindata.org/data/ecdc/new_cases.csv',
+         'new_deaths': 'https://covid.ourworldindata.org/data/ecdc/new_deaths.csv',
+}
 
-datafile_total_cases = urllib.request.urlopen('https://covid.ourworldindata.org/data/ecdc/total_cases.csv')
-datafile_total_deaths = urllib.request.urlopen('https://covid.ourworldindata.org/data/ecdc/total_deaths.csv')
-datafile_new_cases = urllib.request.urlopen('https://covid.ourworldindata.org/data/ecdc/new_cases.csv')
-datafile_new_deaths = urllib.request.urlopen('https://covid.ourworldindata.org/data/ecdc/new_deaths.csv')
+for url in urls.keys():
+    response = requests.get(urls[url])
+    with open(os.path.join(BASE_DIR, "csvs/{}.csv".format(url)), 'wb') as f:
+        f.write(response.content)
+        f.close()
+    response.close()
 
 # get dates list
 dates_list = []
-for line in datafile_total_cases.readlines():
-    line = line.decode('utf-8').strip()
-    row = line.split(",")
-    dates_list.append(row[0])
-# def find_dates(graph_type: str):
-#     '''
-#     finds the dates in ourworldindata.org csv file
-#     :param graph_type: string of graph type
-#     :return: a list of dates as strings
-#     '''
-#     datafile = urllib.request.urlopen(
-#         'https://covid.ourworldindata.org/data/ecdc/' + graph_type)
-#     mydates_list = []
-#
-#     for line in datafile.readlines():
-#         line = line.decode('utf-8').strip()
-#         row = line.split(",")
-#         mydates_list.append(row[0])
-#     datafile.close()
-#     return mydates_list
-
+with open(os.path.join(BASE_DIR, 'csvs/new_cases.csv'), 'r') as f:
+    for line in f.readlines():
+        row = line.strip().split(",")
+        dates_list.append(row[0])
 
 def find_cases(column: int, graph_type: str):
     '''
@@ -50,33 +43,28 @@ def find_cases(column: int, graph_type: str):
     :param graph_type: string of graph type
     :return: a list of total cases (or deaths) for inputted location
     '''
-    datafile = urllib.request.urlopen(
-        'https://covid.ourworldindata.org/data/ecdc/' + graph_type)
-    num_cases = []
 
-    for line in datafile.readlines():
-        line = line.decode('utf-8').strip()
-        row = line.split(",")
-        num_cases.append(row[column])
-    datafile.close()
+    num_cases = []
+    with open(os.path.join(BASE_DIR, 'csvs/{}'.format(graph_type)), 'r') as f:
+        for line in f.readlines():
+            row = line.strip().split(",")
+            num_cases.append(row[column])
+        f.close()
     return num_cases
 
 
 def find_index(country: str, graph_type: str):
-    global datafile_total_cases, datafile_total_deaths, datafile_new_cases, datafile_new_deaths
     '''
     finds index of country in csv file
     :param country: string of inputted country
     :param graph_type: string of graph type
     :return: index (column) that the country is located in the csv file
     '''
-    datafile = urllib.request.urlopen(
-        'https://covid.ourworldindata.org/data/ecdc/' + graph_type)
-    line = datafile.readline()
-    line = line.decode('utf-8').strip()
-    countries_list = line.split(",")
-    index = countries_list.index(country)
-    datafile.close()
+    with open(os.path.join(BASE_DIR, 'csvs/{}'.format(graph_type)), 'r') as f:
+        line = f.readline()
+        countries_list = line.strip().split(",")
+        index = countries_list.index(country)
+        f.close()
     return index
 
 
@@ -118,25 +106,13 @@ def plot_single(country: str, graph_type: str):
     cases_strs = find_cases(index, csv)
 
     # if country is china, set x-axis dates to be earlier for they're data occurring earlier
-    if (country.lower() == "china"):
-        # make China graph start from Jan 15
-        cases_strs = cases_strs[15:]
-        mydates_list = mydates_list[15:]
-    else:
-        # make all other country graphs start on ~march 4
-        cases_strs = cases_strs[64:]
-        mydates_list = mydates_list[64:]
+    cases_strs = cases_strs[15:] if country.lower() == 'china' else cases_strs[64:]
+    mydates_list = mydates_list[15:] if country.lower() == 'china' else mydates_list[64:]
 
-    total_cases_ints = []
-    for i in cases_strs:
-        # check for when csv file has empty string instead of 0
-        if (i == ""):
-            i = 0
-        total_cases_ints.append(int(i))
+    total_cases_ints = [0 if i=="" else int(i) for i in cases_strs]
 
     # check if today's (most recent) data was not published
-    if (total_cases_ints[-1] == 0):
-        total_cases_ints[-1] = total_cases_ints[-2]
+    total_cases_ints[-1] = total_cases_ints[-2] if total_cases_ints[-1] == 0 else total_cases_ints[-1]
 
     # most recent case/death/date number, aot = as of today
     cases_aot = total_cases_ints[-1]
@@ -301,24 +277,13 @@ def plot_four(country: str):
     total_cases_strs = find_cases(total_cases_index, total_cases)
 
     # if country is china, set x-axis dates to be earlier for they're data occurring earlier
-    if (country.lower() == "china"):
-        # make china start on jan 15
-        total_cases_strs = total_cases_strs[15:]
-        total_cases_mydates_list = total_cases_mydates_list[15:]
-    else:
-        # otherwise country starts on ~march 3
-        total_cases_strs = total_cases_strs[64:]
-        total_cases_mydates_list = total_cases_mydates_list[64:]
+    total_cases_strs = total_cases_strs[15:] if country.lower() == 'china' else total_cases_strs[64:]
+    total_cases_mydates_list = total_cases_mydates_list[15:] if country.lower() == 'china' else total_cases_mydates_list[64:]
 
-    total_cases_ints = []
-    for i in total_cases_strs:
-        # check for when csv file has empty string instead of 0
-        if (i == ""):
-            i = 0
-        total_cases_ints.append(int(i))
+    total_cases_ints = [0 if i=="" else int(i) for i in total_cases_strs]
+
     # check if today's (most recent) data was not published
-    if (total_cases_ints[-1] == 0):
-        total_cases_ints[-1] = total_cases_ints[-2]
+    total_cases_ints[-1] = total_cases_ints[-2] if total_cases_ints[-1] == 0 else total_cases_ints[-1]
 
     # graph the data as total cases vs. dates, label in blue
     my_graph.plot(total_cases_mydates_list, total_cases_ints, color='blue', label="Total Cases " +
@@ -334,24 +299,13 @@ def plot_four(country: str):
     total_deaths_strs = find_cases(total_deaths_index, total_deaths)
 
     # if country is china, set x-axis dates to be earlier for they're data occurring earlier
-    if (country.lower() == "china"):
-        # make china start on jan 15
-        total_deaths_strs = total_deaths_strs[15:]
-        total_deaths_mydates_list = total_deaths_mydates_list[15:]
-    else:
-        # otherwise country starts on ~march 3
-        total_deaths_strs = total_deaths_strs[64:]
-        total_deaths_mydates_list = total_deaths_mydates_list[64:]
+    total_deaths_strs = total_deaths_strs[15:] if country.lower() == 'china' else total_deaths_strs[64:]
+    total_deaths_mydates_list = total_deaths_mydates_list[15:] if country.lower() == 'china' else total_deaths_mydates_list[64:]
 
-    total_deaths_ints = []
-    for i in total_deaths_strs:
-        # check for when csv file has empty string instead of 0
-        if (i == ""):
-            i = 0
-        total_deaths_ints.append(int(i))
+    total_deaths_ints = [0 if i == "" else int(i) for i in total_deaths_strs]
+
     # check if today's (most recent) data was not published
-    if (total_deaths_ints[-1] == 0):
-        total_deaths_ints[-1] = total_deaths_ints[-2]
+    total_deaths_ints[-1] = total_deaths_ints[-2] if total_deaths_ints[-1] == 0 else total_deaths_ints[-1]
 
     # graph the data as total deaths vs. dates, label in red
     my_graph.plot(total_deaths_mydates_list, total_deaths_ints, color='red', label="Total Deaths " +
@@ -367,24 +321,13 @@ def plot_four(country: str):
     new_cases_strs = find_cases(new_cases_index, new_cases)
 
     # if country is china, set x-axis dates to be earlier for they're data occurring earlier
-    if (country.lower() == "china"):
-        # make china start on jan 15
-        new_cases_strs = new_cases_strs[15:]
-        new_cases_mydates_list = new_cases_mydates_list[15:]
-    else:
-        # otherwise country starts on ~march 3
-        new_cases_strs = new_cases_strs[64:]
-        new_cases_mydates_list = new_cases_mydates_list[64:]
+    new_cases_strs = new_cases_strs[15:] if country.lower() == 'china' else new_cases_strs[64:]
+    new_cases_mydates_list = new_cases_mydates_list[15:] if country.lower() == 'china' else new_cases_mydates_list[64:]
 
-    new_cases_ints = []
-    for i in new_cases_strs:
-        # check for when csv file has empty string instead of 0
-        if (i == ""):
-            i = 0
-        new_cases_ints.append(int(i))
+    new_cases_ints = [0 if i == "" else int(i) for i in new_cases_strs]
+
     # check if today's (most recent) data was not published
-    if (new_cases_ints[-1] == 0):
-        new_cases_ints[-1] = new_cases_ints[-2]
+    new_cases_ints[-1] = new_cases_ints[-2] if new_cases_ints[-1] == 0 else new_cases_ints[-1]
 
     # graph the data as new cases vs. dates, label in green
     my_graph.plot(new_cases_mydates_list, new_cases_ints, color='green', label="New Cases " +
@@ -400,24 +343,13 @@ def plot_four(country: str):
     new_deaths_strs = find_cases(new_deaths_index, new_deaths)
 
     # if country is china, set x-axis dates to be earlier for they're data occurring earlier
-    if (country.lower() == "china"):
-        # make china start on jan 15
-        new_deaths_strs = new_deaths_strs[15:]
-        new_deaths_mydates_list = new_deaths_mydates_list[15:]
-    else:
-        # make all other country graphs start on ~march 3
-        new_deaths_strs = new_deaths_strs[64:]
-        new_deaths_mydates_list = new_deaths_mydates_list[64:]
+    new_deaths_strs = new_deaths_strs[15:] if country.lower() == 'china' else new_deaths_strs[64:]
+    new_deaths_mydates_list = new_deaths_mydates_list[15:] if country.lower() == 'china' else new_deaths_mydates_list[64:]
 
-    new_deaths_ints = []
-    for i in new_deaths_strs:
-        # check for when csv file has empty string instead of 0
-        if (i == ""):
-            i = 0
-        new_deaths_ints.append(int(i))
+    new_deaths_ints = [0 if i == "" else int(i) for i in new_deaths_strs]
+
     # check if today's (most recent) data was not published
-    if (new_deaths_ints[-1] == 0):
-        new_deaths_ints[-1] = new_deaths_ints[-2]
+    new_deaths_ints[-1] = new_deaths_ints[-2] if new_deaths_ints[-1] == 0 else new_deaths_ints[-1]
 
     # graph the data as new deaths vs. dates, label in orange
     my_graph.plot(new_deaths_mydates_list, new_deaths_ints, color='orange', label="New Deaths " +
@@ -740,31 +672,40 @@ countries = [
     'Zambia',
     'Zimbabwe']
 
-for country in countries:
-    try:
-        plot_single(country.title(), "total confirmed cases")
-        plot_single(country.title(), "total deaths")
-        plot_single(country.title(), "new confirmed cases")
-        plot_single(country.title(), "new deaths")
-        plot_four(country)
-        index = str(countries.index(country) + 1)
-        # see progress of updating graphs
-        print(country + ": " + index + "/" + str(len(countries)))
+def main():
+    if sys.argv[1] is not None:
+        if isinstance(sys.argv[1], str):
+            start = int(sys.argv[1])
+    else:
+        start = 0
 
-        # delete png files of graphs older than 1 day in each country folder to avoid overcrowding after updating
-        dir_path = os.path.dirname(os.path.realpath(
-            __file__)) + "/graphs/" + country.lower().replace(" ", "_")  # get working directory
-        current_time = time.time()
-        for f in os.listdir(dir_path):
-            f = dir_path + "/" + f
-            creation_time = os.path.getmtime(f)
-            if ((current_time - creation_time) / (86400)) >= 1:
-                os.remove(f)
-    except ValueError:
-        print(country, "not in list")
+    for i in range(start, len(countries)):
+        country = countries[i]
+        try:
+            plot_single(country.title(), "total confirmed cases")
+            plot_single(country.title(), "total deaths")
+            plot_single(country.title(), "new confirmed cases")
+            plot_single(country.title(), "new deaths")
+            plot_four(country)
+            index = str(countries.index(country) + 1)
+            # see progress of updating graphs
+            print(country + ": " + index + "/" + str(len(countries)))
 
-    except ConnectionResetError:
-        print(country, "connection reset error")
+            # delete png files of graphs older than 1 day in each country folder to avoid overcrowding after updating
+            dir_path = os.path.dirname(os.path.realpath(
+                __file__)) + "/graphs/" + country.lower().replace(" ", "_")  # get working directory
+            current_time = time.time()
+            for f in os.listdir(dir_path):
+                f = dir_path + "/" + f
+                creation_time = os.path.getmtime(f)
+                if ((current_time - creation_time) / (86400)) >= 1:
+                    os.remove(f)
+        except ValueError:
+            print(country, "not in list")
+
+        except ConnectionResetError:
+            print(country, "connection reset error")
 
 
-
+if __name__ == "__main__":
+    main()
