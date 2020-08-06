@@ -9,19 +9,19 @@ else
    CP=$1
 fi
 
-python3 graphScript.py $CP
+python3 graphScript.py $CP caffeneite
 EXIT_CODE=$?
 while [ $EXIT_CODE != 0 ]
 do
-    python3 graphScript.py $CP
+    python3 graphScript.py $CP caffeneite
     EXIT_CODE=$?
 done
 
-python3 write_to_html.py
+python3 write_to_html.py caffeneite
 EXIT_CODE=$?
 while [ $EXIT_CODE != 0 ]
 do
-    python3 write_to_html.py
+    python3 write_to_html.py caffeneite
     EXIT_CODE=$?
 done
 
