@@ -36,4 +36,4 @@ git push
 
 END_TIME=$(date +%s)
 RUNTIME=$((END_TIME-START_TIME))
-echo "Ran graphScript.py, write_to_html.py and pushed to respository in $RUNTIME seconds."
+echo $'\nRan graphScript.py, write_to_html.py and pushed to respository in $RUNTIME seconds.'
