@@ -2,7 +2,7 @@
 	<html>
 		<ul class="navigation">
 			<div class="scroll">
-				<li class="nav-item"><input type="type" placeholder="Search for a country..." name="search" id="search"> </form> </li>
+				<li><input id="searchbar" onkeyup="search_country()" type="type" placeholder="Search for a country..." name="search" id="searchbar"> </form> </li>
 				<li class="nav-item"><a href="src/htmls/world.html">World</a></li>
 				<li class="nav-item"><a href="src/htmls/afghanistan.html">Afghanistan</a></li>
 				<li class="nav-item"><a href="src/htmls/albania.html">Albania</a></li>
@@ -240,13 +240,14 @@
 				</nav>
 				<!-- link to main stylesheet -->
 				<link rel="stylesheet" type="text/css" href="src/main.css">
+				<script src="src/countries.js"></script>
 			</head>
 			<body class="site-wrap">
 
 				<h1>COVID-19 Analysis Project </h1>
 				<div class="updates">
-					<h3>World Cases: <span style="color: blue;">20,592,533</span> &emsp; &emsp; &emsp; Deaths: <span style="color: red;">747,224</span> &emsp; &emsp; &emsp; Recovered: <span style="color: rgb(15, 146, 15);">13,504,305</span></h3>
-                    <img src="src/graphs/world/world_allfour_2020-08-12.png" width="1100"/> <br><br><br>
+					<h3>World Cases: <span style="color: blue;">21,959,792</span> &emsp; &emsp; &emsp; Deaths: <span style="color: red;">775,544</span> &emsp; &emsp; &emsp; Recovered: <span style="color: rgb(15, 146, 15);">14,686,711</span></h3>
+                    <img src="src/graphs/world/world_allfour_2020-08-17.png" width="1100"/> <br><br><br>
 
 					<table class="tg">
 						<caption><b>Table of 25 Most Affected Countries</b></caption>
@@ -268,341 +269,341 @@
 						<tbody>
 						  <tr>
 							<td class="tg-0pky" id="country"><b><a href="src/htmls/world.html">World</a></b></td>
-							<td class="tg-0lax" id="totalcases">20,592,533</td>
-							<td class="tg-0lax" id="newcases">+80,747</td>
-							<td class="tg-0lax" id="casespermil">2,642</td>
-							<td class="tg-0lax" id="totaldeaths">747,224</td>
-							<td class="tg-0lax" id="newdeaths">+2,310</td>
-							<td class="tg-0lax" id="deathspermil">95.9</td>
-							<td class="tg-0lax" id="totalrecovered">13,504,305</td>
+							<td class="tg-0lax" id="totalcases">21,959,259</td>
+							<td class="tg-0lax" id="newcases">+141,062</td>
+							<td class="tg-0lax" id="casespermil">2,817</td>
+							<td class="tg-0lax" id="totaldeaths">775,542</td>
+							<td class="tg-0lax" id="newdeaths">+2,790</td>
+							<td class="tg-0lax" id="deathspermil">99.5</td>
+							<td class="tg-0lax" id="totalrecovered">14,686,560</td>
 							<td class="tg-0lax" id="totaltests"></td>
 							<td class="tg-0lax" id="testspermil"></td>
 							<td class="tg-0lax" id="population">7,785,879,495</td>
 						  </tr>
 						  <tr>
 							<td class="tg-0pky" id="country"><b><a href="src/htmls/unitedstates.html">United States</a></b></td>
-							<td class="tg-0lax" id="totalcases">5,309,685</td>
-							<td class="tg-0lax" id="newcases">+3,728</td>
-							<td class="tg-0lax" id="casespermil">16,030</td>
-							<td class="tg-0lax" id="totaldeaths">167,789</td>
-							<td class="tg-0lax" id="newdeaths">+40</td>
-							<td class="tg-0lax" id="deathspermil">507</td>
-							<td class="tg-0lax" id="totalrecovered">2,757,478</td>
-							<td class="tg-0lax" id="totaltests">66,964,405</td>
-							<td class="tg-0lax" id="testspermil">202,172</td>
-							<td class="tg-0lax" id="population">331,224,597</td>
+							<td class="tg-0lax" id="totalcases">5,595,332</td>
+							<td class="tg-0lax" id="newcases">+29,278</td>
+							<td class="tg-0lax" id="casespermil">16,892</td>
+							<td class="tg-0lax" id="totaldeaths">173,477</td>
+							<td class="tg-0lax" id="newdeaths">+350</td>
+							<td class="tg-0lax" id="deathspermil">524</td>
+							<td class="tg-0lax" id="totalrecovered">2,948,102</td>
+							<td class="tg-0lax" id="totaltests">71,470,330</td>
+							<td class="tg-0lax" id="testspermil">215,759</td>
+							<td class="tg-0lax" id="population">331,251,064</td>
 						  </tr>
 						  <tr>
 							<td class="tg-0pky" id="country"><b><a href="src/htmls/brazil.html">Brazil</a></b></td>
-							<td class="tg-0lax" id="totalcases">3,112,393</td>
-							<td class="tg-0lax" id="newcases">+</td>
-							<td class="tg-0lax" id="casespermil">14,631</td>
-							<td class="tg-0lax" id="totaldeaths">103,099</td>
-							<td class="tg-0lax" id="newdeaths">+</td>
-							<td class="tg-0lax" id="deathspermil">485</td>
-							<td class="tg-0lax" id="totalrecovered">2,243,124</td>
-							<td class="tg-0lax" id="totaltests">13,231,548</td>
-							<td class="tg-0lax" id="testspermil">62,198</td>
-							<td class="tg-0lax" id="population">212,731,302</td>
-						  </tr>
-						  <tr>
-							<td class="tg-0pky" id="country"><b><a href="src/htmls/russia.html">Russia</a></b></td>
-							<td class="tg-0lax" id="totalcases">902,701</td>
-							<td class="tg-0lax" id="newcases">+5,102</td>
-							<td class="tg-0lax" id="casespermil">6,185</td>
-							<td class="tg-0lax" id="totaldeaths">15,260</td>
-							<td class="tg-0lax" id="newdeaths">+129</td>
-							<td class="tg-0lax" id="deathspermil">105</td>
-							<td class="tg-0lax" id="totalrecovered">710,298</td>
-							<td class="tg-0lax" id="totaltests">31,307,764</td>
-							<td class="tg-0lax" id="testspermil">214,522</td>
-							<td class="tg-0lax" id="population">145,941,776</td>
-						  </tr>
-						  <tr>
-							<td class="tg-0pky" id="country"><b><a href="src/htmls/spain.html">Spain</a></b></td>
-							<td class="tg-0lax" id="totalcases">373,692</td>
-							<td class="tg-0lax" id="newcases">+</td>
-							<td class="tg-0lax" id="casespermil">7,992</td>
-							<td class="tg-0lax" id="totaldeaths">28,581</td>
-							<td class="tg-0lax" id="newdeaths">+</td>
-							<td class="tg-0lax" id="deathspermil">611</td>
-							<td class="tg-0lax" id="totalrecovered"></td>
-							<td class="tg-0lax" id="totaltests">7,472,031</td>
-							<td class="tg-0lax" id="testspermil">159,806</td>
-							<td class="tg-0lax" id="population">46,756,895</td>
-						  </tr>
-						  <tr>
-							<td class="tg-0pky" id="country"><b><a href="src/htmls/unitedkingdom.html">United Kingdom</a></b></td>
-							<td class="tg-0lax" id="totalcases">312,789</td>
-							<td class="tg-0lax" id="newcases">+</td>
-							<td class="tg-0lax" id="casespermil">4,605</td>
-							<td class="tg-0lax" id="totaldeaths">46,628</td>
-							<td class="tg-0lax" id="newdeaths">+</td>
-							<td class="tg-0lax" id="deathspermil">686</td>
-							<td class="tg-0lax" id="totalrecovered"></td>
-							<td class="tg-0lax" id="totaltests">18,868,566</td>
-							<td class="tg-0lax" id="testspermil">277,778</td>
-							<td class="tg-0lax" id="population">67,926,890</td>
-						  </tr>
-						  <tr>
-							<td class="tg-0pky" id="country"><b><a href="src/htmls/italy.html">Italy</a></b></td>
-							<td class="tg-0lax" id="totalcases">251,237</td>
-							<td class="tg-0lax" id="newcases">+</td>
-							<td class="tg-0lax" id="casespermil">4,156</td>
-							<td class="tg-0lax" id="totaldeaths">35,215</td>
-							<td class="tg-0lax" id="newdeaths">+</td>
-							<td class="tg-0lax" id="deathspermil">583</td>
-							<td class="tg-0lax" id="totalrecovered">202,461</td>
-							<td class="tg-0lax" id="totaltests">7,316,918</td>
-							<td class="tg-0lax" id="testspermil">121,038</td>
-							<td class="tg-0lax" id="population">60,451,358</td>
+							<td class="tg-0lax" id="totalcases">3,343,925</td>
+							<td class="tg-0lax" id="newcases">+3,728</td>
+							<td class="tg-0lax" id="casespermil">15,717</td>
+							<td class="tg-0lax" id="totaldeaths">108,054</td>
+							<td class="tg-0lax" id="newdeaths">+175</td>
+							<td class="tg-0lax" id="deathspermil">508</td>
+							<td class="tg-0lax" id="totalrecovered">2,432,456</td>
+							<td class="tg-0lax" id="totaltests">13,464,336</td>
+							<td class="tg-0lax" id="testspermil">63,287</td>
+							<td class="tg-0lax" id="population">212,751,912</td>
 						  </tr>
 						  <tr>
 							<td class="tg-0pky" id="country"><b><a href="src/htmls/india.html">India</a></b></td>
-							<td class="tg-0lax" id="totalcases">2,360,358</td>
-							<td class="tg-0lax" id="newcases">+31,953</td>
-							<td class="tg-0lax" id="casespermil">1,709</td>
-							<td class="tg-0lax" id="totaldeaths">46,536</td>
-							<td class="tg-0lax" id="newdeaths">+348</td>
-							<td class="tg-0lax" id="deathspermil">34</td>
-							<td class="tg-0lax" id="totalrecovered">1,662,457</td>
-							<td class="tg-0lax" id="totaltests">26,015,297</td>
-							<td class="tg-0lax" id="testspermil">18,831</td>
-							<td class="tg-0lax" id="population">1,381,530,198</td>
+							<td class="tg-0lax" id="totalcases">2,701,604</td>
+							<td class="tg-0lax" id="newcases">+54,288</td>
+							<td class="tg-0lax" id="casespermil">1,955</td>
+							<td class="tg-0lax" id="totaldeaths">51,925</td>
+							<td class="tg-0lax" id="newdeaths">+880</td>
+							<td class="tg-0lax" id="deathspermil">38</td>
+							<td class="tg-0lax" id="totalrecovered">1,976,248</td>
+							<td class="tg-0lax" id="totaltests">30,041,400</td>
+							<td class="tg-0lax" id="testspermil">21,742</td>
+							<td class="tg-0lax" id="population">1,381,715,400</td>
 						  </tr>
 						  <tr>
-							<td class="tg-0pky" id="country"><b><a href="src/htmls/france.html">France</a></b></td>
-							<td class="tg-0lax" id="totalcases">204,172</td>
-							<td class="tg-0lax" id="newcases">+</td>
-							<td class="tg-0lax" id="casespermil">3,127</td>
-							<td class="tg-0lax" id="totaldeaths">30,354</td>
-							<td class="tg-0lax" id="newdeaths">+</td>
-							<td class="tg-0lax" id="deathspermil">465</td>
-							<td class="tg-0lax" id="totalrecovered">83,237</td>
-							<td class="tg-0lax" id="totaltests">5,500,000</td>
-							<td class="tg-0lax" id="testspermil">84,239</td>
-							<td class="tg-0lax" id="population">65,290,273</td>
-						  </tr>
-						  <tr>
-							<td class="tg-0pky" id="country"><b><a href="src/htmls/germany.html">Germany</a></b></td>
-							<td class="tg-0lax" id="totalcases">219,614</td>
-							<td class="tg-0lax" id="newcases">+84</td>
-							<td class="tg-0lax" id="casespermil">2,620</td>
-							<td class="tg-0lax" id="totaldeaths">9,268</td>
-							<td class="tg-0lax" id="newdeaths">+</td>
-							<td class="tg-0lax" id="deathspermil">111</td>
-							<td class="tg-0lax" id="totalrecovered">199,900</td>
-							<td class="tg-0lax" id="totaltests">8,586,648</td>
-							<td class="tg-0lax" id="testspermil">102,448</td>
-							<td class="tg-0lax" id="population">83,814,910</td>
-						  </tr>
-						  <tr>
-							<td class="tg-0pky" id="country"><b><a href="src/htmls/peru.html">Peru</a></b></td>
-							<td class="tg-0lax" id="totalcases">489,680</td>
-							<td class="tg-0lax" id="newcases">+</td>
-							<td class="tg-0lax" id="casespermil">14,829</td>
-							<td class="tg-0lax" id="totaldeaths">21,501</td>
-							<td class="tg-0lax" id="newdeaths">+</td>
-							<td class="tg-0lax" id="deathspermil">651</td>
-							<td class="tg-0lax" id="totalrecovered">335,756</td>
-							<td class="tg-0lax" id="totaltests">2,612,599</td>
-							<td class="tg-0lax" id="testspermil">79,115</td>
-							<td class="tg-0lax" id="population">33,022,595</td>
-						  </tr>
-						  <tr>
-							<td class="tg-0pky" id="country"><b><a href="src/htmls/turkey.html">Turkey</a></b></td>
-							<td class="tg-0lax" id="totalcases">243,180</td>
-							<td class="tg-0lax" id="newcases">+</td>
-							<td class="tg-0lax" id="casespermil">2,880</td>
-							<td class="tg-0lax" id="totaldeaths">5,873</td>
-							<td class="tg-0lax" id="newdeaths">+</td>
-							<td class="tg-0lax" id="deathspermil">70</td>
-							<td class="tg-0lax" id="totalrecovered">226,155</td>
-							<td class="tg-0lax" id="totaltests">5,387,751</td>
-							<td class="tg-0lax" id="testspermil">63,805</td>
-							<td class="tg-0lax" id="population">84,440,722</td>
-						  </tr>
-						  <tr>
-							<td class="tg-0pky" id="country"><b><a href="src/htmls/iran.html">Iran</a></b></td>
-							<td class="tg-0lax" id="totalcases">333,699</td>
-							<td class="tg-0lax" id="newcases">+2,510</td>
-							<td class="tg-0lax" id="casespermil">3,967</td>
-							<td class="tg-0lax" id="totaldeaths">18,988</td>
-							<td class="tg-0lax" id="newdeaths">+188</td>
-							<td class="tg-0lax" id="deathspermil">226</td>
-							<td class="tg-0lax" id="totalrecovered">290,244</td>
-							<td class="tg-0lax" id="totaltests">2,763,225</td>
-							<td class="tg-0lax" id="testspermil">32,852</td>
-							<td class="tg-0lax" id="population">84,112,309</td>
-						  </tr>
-						  <tr>
-							<td class="tg-0pky" id="country"><b><a href="src/htmls/chile.html">Chile</a></b></td>
-							<td class="tg-0lax" id="totalcases">376,616</td>
-							<td class="tg-0lax" id="newcases">+</td>
-							<td class="tg-0lax" id="casespermil">19,682</td>
-							<td class="tg-0lax" id="totaldeaths">10,178</td>
-							<td class="tg-0lax" id="newdeaths">+</td>
-							<td class="tg-0lax" id="deathspermil">532</td>
-							<td class="tg-0lax" id="totalrecovered">349,541</td>
-							<td class="tg-0lax" id="totaltests">1,889,616</td>
-							<td class="tg-0lax" id="testspermil">98,753</td>
-							<td class="tg-0lax" id="population">19,134,753</td>
+							<td class="tg-0pky" id="country"><b><a href="src/htmls/russia.html">Russia</a></b></td>
+							<td class="tg-0lax" id="totalcases">927,745</td>
+							<td class="tg-0lax" id="newcases">+4,892</td>
+							<td class="tg-0lax" id="casespermil">6,357</td>
+							<td class="tg-0lax" id="totaldeaths">15,740</td>
+							<td class="tg-0lax" id="newdeaths">+55</td>
+							<td class="tg-0lax" id="deathspermil">108</td>
+							<td class="tg-0lax" id="totalrecovered">736,101</td>
+							<td class="tg-0lax" id="totaltests">32,700,000</td>
+							<td class="tg-0lax" id="testspermil">224,061</td>
+							<td class="tg-0lax" id="population">145,942,628</td>
 						  </tr>
 						  <tr>
 							<td class="tg-0pky" id="country"><b><a href="src/htmls/mexico.html">Mexico</a></b></td>
-							<td class="tg-0lax" id="totalcases">492,522</td>
-							<td class="tg-0lax" id="newcases">+6,686</td>
-							<td class="tg-0lax" id="casespermil">3,815</td>
-							<td class="tg-0lax" id="totaldeaths">53,929</td>
-							<td class="tg-0lax" id="newdeaths">+926</td>
-							<td class="tg-0lax" id="deathspermil">418</td>
-							<td class="tg-0lax" id="totalrecovered">332,800</td>
-							<td class="tg-0lax" id="totaltests">1,112,114</td>
-							<td class="tg-0lax" id="testspermil">8,615</td>
-							<td class="tg-0lax" id="population">129,084,654</td>
+							<td class="tg-0lax" id="totalcases">522,162</td>
+							<td class="tg-0lax" id="newcases">+4,448</td>
+							<td class="tg-0lax" id="casespermil">4,045</td>
+							<td class="tg-0lax" id="totaldeaths">56,757</td>
+							<td class="tg-0lax" id="newdeaths">+214</td>
+							<td class="tg-0lax" id="deathspermil">440</td>
+							<td class="tg-0lax" id="totalrecovered">355,101</td>
+							<td class="tg-0lax" id="totaltests">1,176,931</td>
+							<td class="tg-0lax" id="testspermil">9,116</td>
+							<td class="tg-0lax" id="population">129,103,148</td>
 						  </tr>
 						  <tr>
-							<td class="tg-0pky" id="country"><b><a href="src/htmls/canada.html">Canada</a></b></td>
-							<td class="tg-0lax" id="totalcases">120,421</td>
+							<td class="tg-0pky" id="country"><b><a href="src/htmls/peru.html">Peru</a></b></td>
+							<td class="tg-0lax" id="totalcases">535,946</td>
 							<td class="tg-0lax" id="newcases">+</td>
-							<td class="tg-0lax" id="casespermil">3,187</td>
-							<td class="tg-0lax" id="totaldeaths">8,991</td>
+							<td class="tg-0lax" id="casespermil">16,227</td>
+							<td class="tg-0lax" id="totaldeaths">26,281</td>
 							<td class="tg-0lax" id="newdeaths">+</td>
-							<td class="tg-0lax" id="deathspermil">238</td>
-							<td class="tg-0lax" id="totalrecovered">106,746</td>
-							<td class="tg-0lax" id="totaltests">4,541,747</td>
-							<td class="tg-0lax" id="testspermil">120,217</td>
-							<td class="tg-0lax" id="population">37,779,537</td>
+							<td class="tg-0lax" id="deathspermil">796</td>
+							<td class="tg-0lax" id="totalrecovered">365,367</td>
+							<td class="tg-0lax" id="totaltests">2,773,412</td>
+							<td class="tg-0lax" id="testspermil">83,969</td>
+							<td class="tg-0lax" id="population">33,028,871</td>
+						  </tr>
+						  <tr>
+							<td class="tg-0pky" id="country"><b><a href="src/htmls/spain.html">Spain</a></b></td>
+							<td class="tg-0lax" id="totalcases">358,843</td>
+							<td class="tg-0lax" id="newcases">+</td>
+							<td class="tg-0lax" id="casespermil">7,675</td>
+							<td class="tg-0lax" id="totaldeaths">28,617</td>
+							<td class="tg-0lax" id="newdeaths">+</td>
+							<td class="tg-0lax" id="deathspermil">612</td>
+							<td class="tg-0lax" id="totalrecovered"></td>
+							<td class="tg-0lax" id="totaltests">7,955,615</td>
+							<td class="tg-0lax" id="testspermil">170,148</td>
+							<td class="tg-0lax" id="population">46,757,141</td>
+						  </tr>
+						  <tr>
+							<td class="tg-0pky" id="country"><b><a href="src/htmls/chile.html">Chile</a></b></td>
+							<td class="tg-0lax" id="totalcases">387,502</td>
+							<td class="tg-0lax" id="newcases">+1,556</td>
+							<td class="tg-0lax" id="casespermil">20,249</td>
+							<td class="tg-0lax" id="totaldeaths">10,513</td>
+							<td class="tg-0lax" id="newdeaths">+61</td>
+							<td class="tg-0lax" id="deathspermil">549</td>
+							<td class="tg-0lax" id="totalrecovered">360,385</td>
+							<td class="tg-0lax" id="totaltests">2,044,880</td>
+							<td class="tg-0lax" id="testspermil">106,855</td>
+							<td class="tg-0lax" id="population">19,136,992</td>
+						  </tr>
+						  <tr>
+							<td class="tg-0pky" id="country"><b><a href="src/htmls/iran.html">Iran</a></b></td>
+							<td class="tg-0lax" id="totalcases">345,450</td>
+							<td class="tg-0lax" id="newcases">+2,247</td>
+							<td class="tg-0lax" id="casespermil">4,106</td>
+							<td class="tg-0lax" id="totaldeaths">19,804</td>
+							<td class="tg-0lax" id="newdeaths">+165</td>
+							<td class="tg-0lax" id="deathspermil">235</td>
+							<td class="tg-0lax" id="totalrecovered">299,157</td>
+							<td class="tg-0lax" id="totaltests">2,887,938</td>
+							<td class="tg-0lax" id="testspermil">34,328</td>
+							<td class="tg-0lax" id="population">84,126,996</td>
+						  </tr>
+						  <tr>
+							<td class="tg-0pky" id="country"><b><a href="src/htmls/unitedkingdom.html">United Kingdom</a></b></td>
+							<td class="tg-0lax" id="totalcases">319,197</td>
+							<td class="tg-0lax" id="newcases">+713</td>
+							<td class="tg-0lax" id="casespermil">4,699</td>
+							<td class="tg-0lax" id="totaldeaths">41,369</td>
+							<td class="tg-0lax" id="newdeaths">+3</td>
+							<td class="tg-0lax" id="deathspermil">609</td>
+							<td class="tg-0lax" id="totalrecovered"></td>
+							<td class="tg-0lax" id="totaltests">14,674,841</td>
+							<td class="tg-0lax" id="testspermil">216,023</td>
+							<td class="tg-0lax" id="population">67,931,752</td>
 						  </tr>
 						  <tr>
 							<td class="tg-0pky" id="country"><b><a href="src/htmls/saudiarabia.html">Saudi Arabia</a></b></td>
-							<td class="tg-0lax" id="totalcases">293,037</td>
-							<td class="tg-0lax" id="newcases">+1,569</td>
-							<td class="tg-0lax" id="casespermil">8,403</td>
-							<td class="tg-0lax" id="totaldeaths">3,269</td>
-							<td class="tg-0lax" id="newdeaths">+36</td>
-							<td class="tg-0lax" id="deathspermil">94</td>
-							<td class="tg-0lax" id="totalrecovered">257,269</td>
-							<td class="tg-0lax" id="totaltests">3,933,427</td>
-							<td class="tg-0lax" id="testspermil">112,792</td>
-							<td class="tg-0lax" id="population">34,873,330</td>
+							<td class="tg-0lax" id="totalcases">299,914</td>
+							<td class="tg-0lax" id="newcases">+1,372</td>
+							<td class="tg-0lax" id="casespermil">8,598</td>
+							<td class="tg-0lax" id="totaldeaths">3,436</td>
+							<td class="tg-0lax" id="newdeaths">+28</td>
+							<td class="tg-0lax" id="deathspermil">99</td>
+							<td class="tg-0lax" id="totalrecovered">268,385</td>
+							<td class="tg-0lax" id="totaltests">4,317,705</td>
+							<td class="tg-0lax" id="testspermil">123,785</td>
+							<td class="tg-0lax" id="population">34,880,742</td>
+						  </tr>
+						  <tr>
+							<td class="tg-0pky" id="country"><b><a href="src/htmls/pakistan.html">Pakistan</a></b></td>
+							<td class="tg-0lax" id="totalcases">289,215</td>
+							<td class="tg-0lax" id="newcases">+498</td>
+							<td class="tg-0lax" id="casespermil">1,306</td>
+							<td class="tg-0lax" id="totaldeaths">6,175</td>
+							<td class="tg-0lax" id="newdeaths">+7</td>
+							<td class="tg-0lax" id="deathspermil">28</td>
+							<td class="tg-0lax" id="totalrecovered">269,087</td>
+							<td class="tg-0lax" id="totaltests">2,299,601</td>
+							<td class="tg-0lax" id="testspermil">10,386</td>
+							<td class="tg-0lax" id="population">221,413,234</td>
+						  </tr>
+						  <tr>
+							<td class="tg-0pky" id="country"><b><a href="src/htmls/italy.html">Italy</a></b></td>
+							<td class="tg-0lax" id="totalcases">254,235</td>
+							<td class="tg-0lax" id="newcases">+320</td>
+							<td class="tg-0lax" id="casespermil">4,206</td>
+							<td class="tg-0lax" id="totaldeaths">35,400</td>
+							<td class="tg-0lax" id="newdeaths">+4</td>
+							<td class="tg-0lax" id="deathspermil">586</td>
+							<td class="tg-0lax" id="totalrecovered">203,968</td>
+							<td class="tg-0lax" id="totaltests">7,588,083</td>
+							<td class="tg-0lax" id="testspermil">125,526</td>
+							<td class="tg-0lax" id="population">60,450,148</td>
+						  </tr>
+						  <tr>
+							<td class="tg-0pky" id="country"><b><a href="src/htmls/turkey.html">Turkey</a></b></td>
+							<td class="tg-0lax" id="totalcases">250,542</td>
+							<td class="tg-0lax" id="newcases">+1,233</td>
+							<td class="tg-0lax" id="casespermil">2,967</td>
+							<td class="tg-0lax" id="totaldeaths">5,996</td>
+							<td class="tg-0lax" id="newdeaths">+22</td>
+							<td class="tg-0lax" id="deathspermil">71</td>
+							<td class="tg-0lax" id="totalrecovered">231,971</td>
+							<td class="tg-0lax" id="totaltests">5,800,088</td>
+							<td class="tg-0lax" id="testspermil">68,678</td>
+							<td class="tg-0lax" id="population">84,453,113</td>
+						  </tr>
+						  <tr>
+							<td class="tg-0pky" id="country"><b><a href="src/htmls/germany.html">Germany</a></b></td>
+							<td class="tg-0lax" id="totalcases">226,537</td>
+							<td class="tg-0lax" id="newcases">+1,540</td>
+							<td class="tg-0lax" id="casespermil">2,703</td>
+							<td class="tg-0lax" id="totaldeaths">9,296</td>
+							<td class="tg-0lax" id="newdeaths">+6</td>
+							<td class="tg-0lax" id="deathspermil">111</td>
+							<td class="tg-0lax" id="totalrecovered">202,900</td>
+							<td class="tg-0lax" id="totaltests">9,265,361</td>
+							<td class="tg-0lax" id="testspermil">110,541</td>
+							<td class="tg-0lax" id="population">83,818,561</td>
+						  </tr>
+						  <tr>
+							<td class="tg-0pky" id="country"><b><a href="src/htmls/france.html">France</a></b></td>
+							<td class="tg-0lax" id="totalcases">219,029</td>
+							<td class="tg-0lax" id="newcases">+493</td>
+							<td class="tg-0lax" id="casespermil">3,355</td>
+							<td class="tg-0lax" id="totaldeaths">30,429</td>
+							<td class="tg-0lax" id="newdeaths">+19</td>
+							<td class="tg-0lax" id="deathspermil">466</td>
+							<td class="tg-0lax" id="totalrecovered">83,848</td>
+							<td class="tg-0lax" id="totaltests">6,000,000</td>
+							<td class="tg-0lax" id="testspermil">91,895</td>
+							<td class="tg-0lax" id="population">65,292,241</td>
+						  </tr>
+						  <tr>
+							<td class="tg-0pky" id="country"><b><a href="src/htmls/canada.html">Canada</a></b></td>
+							<td class="tg-0lax" id="totalcases">122,276</td>
+							<td class="tg-0lax" id="newcases">+189</td>
+							<td class="tg-0lax" id="casespermil">3,236</td>
+							<td class="tg-0lax" id="totaldeaths">9,027</td>
+							<td class="tg-0lax" id="newdeaths">+1</td>
+							<td class="tg-0lax" id="deathspermil">239</td>
+							<td class="tg-0lax" id="totalrecovered">108,657</td>
+							<td class="tg-0lax" id="totaltests">4,778,360</td>
+							<td class="tg-0lax" id="testspermil">126,465</td>
+							<td class="tg-0lax" id="population">37,784,053</td>
+						  </tr>
+						  <tr>
+							<td class="tg-0pky" id="country"><b><a href="src/htmls/qatar.html">Qatar</a></b></td>
+							<td class="tg-0lax" id="totalcases">115,368</td>
+							<td class="tg-0lax" id="newcases">+288</td>
+							<td class="tg-0lax" id="casespermil">41,088</td>
+							<td class="tg-0lax" id="totaldeaths">193</td>
+							<td class="tg-0lax" id="newdeaths">+</td>
+							<td class="tg-0lax" id="deathspermil">69</td>
+							<td class="tg-0lax" id="totalrecovered">112,088</td>
+							<td class="tg-0lax" id="totaltests">555,970</td>
+							<td class="tg-0lax" id="testspermil">198,009</td>
+							<td class="tg-0lax" id="population">2,807,805</td>
+						  </tr>
+						  <tr>
+							<td class="tg-0pky" id="country"><b><a href="src/htmls/ecuador.html">Ecuador</a></b></td>
+							<td class="tg-0lax" id="totalcases">101,751</td>
+							<td class="tg-0lax" id="newcases">+209</td>
+							<td class="tg-0lax" id="casespermil">5,756</td>
+							<td class="tg-0lax" id="totaldeaths">6,083</td>
+							<td class="tg-0lax" id="newdeaths">+13</td>
+							<td class="tg-0lax" id="deathspermil">344</td>
+							<td class="tg-0lax" id="totalrecovered">87,120</td>
+							<td class="tg-0lax" id="totaltests">286,499</td>
+							<td class="tg-0lax" id="testspermil">16,208</td>
+							<td class="tg-0lax" id="population">17,676,148</td>
 						  </tr>
 						  <tr>
 							<td class="tg-0pky" id="country"><b><a href="src/htmls/china.html">China</a></b></td>
-							<td class="tg-0lax" id="totalcases">84,737</td>
-							<td class="tg-0lax" id="newcases">+25</td>
+							<td class="tg-0lax" id="totalcases">84,849</td>
+							<td class="tg-0lax" id="newcases">+22</td>
 							<td class="tg-0lax" id="casespermil">59</td>
 							<td class="tg-0lax" id="totaldeaths">4,634</td>
 							<td class="tg-0lax" id="newdeaths">+</td>
 							<td class="tg-0lax" id="deathspermil">3</td>
-							<td class="tg-0lax" id="totalrecovered">79,342</td>
+							<td class="tg-0lax" id="totalrecovered">79,603</td>
 							<td class="tg-0lax" id="totaltests">90,410,000</td>
 							<td class="tg-0lax" id="testspermil">62,814</td>
 							<td class="tg-0lax" id="population">1,439,323,776</td>
 						  </tr>
 						  <tr>
-							<td class="tg-0pky" id="country"><b><a href="src/htmls/pakistan.html">Pakistan</a></b></td>
-							<td class="tg-0lax" id="totalcases">285,921</td>
-							<td class="tg-0lax" id="newcases">+730</td>
-							<td class="tg-0lax" id="casespermil">1,292</td>
-							<td class="tg-0lax" id="totaldeaths">6,129</td>
-							<td class="tg-0lax" id="newdeaths">+17</td>
-							<td class="tg-0lax" id="deathspermil">28</td>
-							<td class="tg-0lax" id="totalrecovered">263,193</td>
-							<td class="tg-0lax" id="totaltests">2,186,442</td>
-							<td class="tg-0lax" id="testspermil">9,878</td>
-							<td class="tg-0lax" id="population">221,354,543</td>
-						  </tr>
-						  <tr>
-							<td class="tg-0pky" id="country"><b><a href="src/htmls/qatar.html">Qatar</a></b></td>
-							<td class="tg-0lax" id="totalcases">113,938</td>
-							<td class="tg-0lax" id="newcases">+292</td>
-							<td class="tg-0lax" id="casespermil">40,579</td>
-							<td class="tg-0lax" id="totaldeaths">190</td>
-							<td class="tg-0lax" id="newdeaths">+2</td>
-							<td class="tg-0lax" id="deathspermil">68</td>
-							<td class="tg-0lax" id="totalrecovered">110,627</td>
-							<td class="tg-0lax" id="totaltests">533,995</td>
-							<td class="tg-0lax" id="testspermil">190,182</td>
-							<td class="tg-0lax" id="population">2,807,805</td>
+							<td class="tg-0pky" id="country"><b><a href="src/htmls/sweden.html">Sweden</a></b></td>
+							<td class="tg-0lax" id="totalcases">85,045</td>
+							<td class="tg-0lax" id="newcases">+</td>
+							<td class="tg-0lax" id="casespermil">8,414</td>
+							<td class="tg-0lax" id="totaldeaths">5,787</td>
+							<td class="tg-0lax" id="newdeaths">+8</td>
+							<td class="tg-0lax" id="deathspermil">573</td>
+							<td class="tg-0lax" id="totalrecovered"></td>
+							<td class="tg-0lax" id="totaltests">917,036</td>
+							<td class="tg-0lax" id="testspermil">90,730</td>
+							<td class="tg-0lax" id="population">10,107,314</td>
 						  </tr>
 						  <tr>
 							<td class="tg-0pky" id="country"><b><a href="src/htmls/belgium.html">Belgium</a></b></td>
-							<td class="tg-0lax" id="totalcases">75,008</td>
-							<td class="tg-0lax" id="newcases">+388</td>
-							<td class="tg-0lax" id="casespermil">6,469</td>
-							<td class="tg-0lax" id="totaldeaths">9,885</td>
-							<td class="tg-0lax" id="newdeaths">+6</td>
-							<td class="tg-0lax" id="deathspermil">852</td>
-							<td class="tg-0lax" id="totalrecovered">17,841</td>
-							<td class="tg-0lax" id="totaltests">1,888,690</td>
-							<td class="tg-0lax" id="testspermil">162,882</td>
-							<td class="tg-0lax" id="population">11,595,426</td>
-						  </tr>
-						  <tr>
-							<td class="tg-0pky" id="country"><b><a href="src/htmls/netherlands.html">Netherlands</a></b></td>
-							<td class="tg-0lax" id="totalcases">60,627</td>
-							<td class="tg-0lax" id="newcases">+654</td>
-							<td class="tg-0lax" id="casespermil">3,537</td>
-							<td class="tg-0lax" id="totaldeaths">6,161</td>
-							<td class="tg-0lax" id="newdeaths">+2</td>
-							<td class="tg-0lax" id="deathspermil">359</td>
-							<td class="tg-0lax" id="totalrecovered"></td>
-							<td class="tg-0lax" id="totaltests">1,195,475</td>
-							<td class="tg-0lax" id="testspermil">69,751</td>
-							<td class="tg-0lax" id="population">17,139,272</td>
+							<td class="tg-0lax" id="totalcases">78,323</td>
+							<td class="tg-0lax" id="newcases">+454</td>
+							<td class="tg-0lax" id="casespermil">6,754</td>
+							<td class="tg-0lax" id="totaldeaths">9,939</td>
+							<td class="tg-0lax" id="newdeaths">+4</td>
+							<td class="tg-0lax" id="deathspermil">857</td>
+							<td class="tg-0lax" id="totalrecovered">17,994</td>
+							<td class="tg-0lax" id="totaltests">1,999,543</td>
+							<td class="tg-0lax" id="testspermil">172,432</td>
+							<td class="tg-0lax" id="population">11,596,114</td>
 						  </tr>
 						  <tr>
 							<td class="tg-0pky" id="country"><b><a href="src/htmls/belarus.html">Belarus</a></b></td>
-							<td class="tg-0lax" id="totalcases">69,102</td>
-							<td class="tg-0lax" id="newcases">+97</td>
-							<td class="tg-0lax" id="casespermil">7,313</td>
-							<td class="tg-0lax" id="totaldeaths">595</td>
+							<td class="tg-0lax" id="totalcases">69,589</td>
+							<td class="tg-0lax" id="newcases">+73</td>
+							<td class="tg-0lax" id="casespermil">7,365</td>
+							<td class="tg-0lax" id="totaldeaths">613</td>
 							<td class="tg-0lax" id="newdeaths">+3</td>
-							<td class="tg-0lax" id="deathspermil">63</td>
-							<td class="tg-0lax" id="totalrecovered">65,893</td>
-							<td class="tg-0lax" id="totaltests">1,384,026</td>
-							<td class="tg-0lax" id="testspermil">146,474</td>
-							<td class="tg-0lax" id="population">9,448,959</td>
+							<td class="tg-0lax" id="deathspermil">65</td>
+							<td class="tg-0lax" id="totalrecovered">67,149</td>
+							<td class="tg-0lax" id="totaltests">1,422,158</td>
+							<td class="tg-0lax" id="testspermil">150,510</td>
+							<td class="tg-0lax" id="population">9,448,916</td>
 						  </tr>
 						  <tr>
-							<td class="tg-0pky" id="country"><b><a href="src/htmls/ecuador.html">Ecuador</a></b></td>
-							<td class="tg-0lax" id="totalcases">95,563</td>
-							<td class="tg-0lax" id="newcases">+</td>
-							<td class="tg-0lax" id="casespermil">5,407</td>
-							<td class="tg-0lax" id="totaldeaths">5,951</td>
+							<td class="tg-0pky" id="country"><b><a href="src/htmls/netherlands.html">Netherlands</a></b></td>
+							<td class="tg-0lax" id="totalcases">63,484</td>
+							<td class="tg-0lax" id="newcases">+482</td>
+							<td class="tg-0lax" id="casespermil">3,704</td>
+							<td class="tg-0lax" id="totaldeaths">6,172</td>
 							<td class="tg-0lax" id="newdeaths">+</td>
-							<td class="tg-0lax" id="deathspermil">337</td>
-							<td class="tg-0lax" id="totalrecovered">78,610</td>
-							<td class="tg-0lax" id="totaltests">268,726</td>
-							<td class="tg-0lax" id="testspermil">15,206</td>
-							<td class="tg-0lax" id="population">17,672,486</td>
-						  </tr>
-						  <tr>
-							<td class="tg-0pky" id="country"><b><a href="src/htmls/sweden.html">Sweden</a></b></td>
-							<td class="tg-0lax" id="totalcases">83,455</td>
-							<td class="tg-0lax" id="newcases">+</td>
-							<td class="tg-0lax" id="casespermil">8,258</td>
-							<td class="tg-0lax" id="totaldeaths">5,774</td>
-							<td class="tg-0lax" id="newdeaths">+5</td>
-							<td class="tg-0lax" id="deathspermil">571</td>
+							<td class="tg-0lax" id="deathspermil">360</td>
 							<td class="tg-0lax" id="totalrecovered"></td>
-							<td class="tg-0lax" id="totaltests">917,036</td>
-							<td class="tg-0lax" id="testspermil">90,738</td>
-							<td class="tg-0lax" id="population">10,106,455</td>
+							<td class="tg-0lax" id="totaltests">1,195,475</td>
+							<td class="tg-0lax" id="testspermil">69,749</td>
+							<td class="tg-0lax" id="population">17,139,788</td>
 						  </tr>
 						  <tr>
 							<td class="tg-0pky" id="country"><b><a href="src/htmls/singapore.html">Singapore</a></b></td>
-							<td class="tg-0lax" id="totalcases">55,395</td>
-							<td class="tg-0lax" id="newcases">+42</td>
-							<td class="tg-0lax" id="casespermil">9,460</td>
+							<td class="tg-0lax" id="totalcases">55,838</td>
+							<td class="tg-0lax" id="newcases">+91</td>
+							<td class="tg-0lax" id="casespermil">9,535</td>
 							<td class="tg-0lax" id="totaldeaths">27</td>
 							<td class="tg-0lax" id="newdeaths">+</td>
 							<td class="tg-0lax" id="deathspermil">5</td>
-							<td class="tg-0lax" id="totalrecovered">50,128</td>
+							<td class="tg-0lax" id="totalrecovered">52,350</td>
 							<td class="tg-0lax" id="totaltests">1,610,906</td>
-							<td class="tg-0lax" id="testspermil">275,107</td>
-							<td class="tg-0lax" id="population">5,855,560</td>
+							<td class="tg-0lax" id="testspermil">275,078</td>
+							<td class="tg-0lax" id="population">5,856,187</td>
 						  </tr>
 
 						</tbody>
