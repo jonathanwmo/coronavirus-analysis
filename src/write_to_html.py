@@ -186,14 +186,8 @@ def update_country_html(country: str):
                 newstr += line.replace(date_ao6, date_aot)
             # update the values on html page as scraped from worldometer.info
             # site
-            elif '<li><a href="https://github.com/jonathanwmo">github</a></li>' in line:
-                newstr += '						<li><a href="https://github.com/jonathanwmo">GitHub</a></li>\n'
-            elif '<li><a href="https://github.com/jonathanwmo">GitHub</a></li>						<li><a href="https://www.linkedin.com/in/jonathan-mo-897276173/">LinkedIn</a></li>' in line:
-                newstr += '						<li><a href="https://github.com/jonathanwmo">GitHub</a></li>\n						<li><a href="https://www.linkedin.com/in/jonathan-mo-897276173/">LinkedIn</a></li>\n'
-            elif '                <li><input id="searchbar" onkeyup="search_country()" type="type" placeholder="Search for a country..." name="search" id="searchbar"> </form> </li>' in line:
-                newstr += '             <li><input id="searchbar" onkeyup="search_country()" type="type" placeholder="Search for a country..." name="search" id="searchbar"> </form> </li>\n'
-            elif '				<link rel="stylesheet" type="text/css" href="../main.css">' in line:
-                newstr += line + '\n                <script src="../countries.js"></script>\n'
+            elif '<li class="nav-item"><input type="type" placeholder="Search for a country..." name="search" id="search"> </form> </li>' in line:
+                newstr += '                <li><input id="searchbar" onkeyup="search_country()" type="type" placeholder="Search for a country..." name="search" id="searchbar"> </form> </li>\n'
 
             elif '<p><b><u>Total Cases</u></b><br><br> ' in line:
                 newstr += '                    <p><b><u>Total Cases</u></b><br><br> ' + \

@@ -25,6 +25,10 @@ h1 {
     display: block;
 }
 
+h2 {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+
 h3 {
     font-size: 30px;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
