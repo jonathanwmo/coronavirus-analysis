@@ -673,13 +673,7 @@ countries = [
     'Zimbabwe']
 
 def main():
-    if sys.argv[1] is not None:
-        if isinstance(sys.argv[1], str):
-            start = int(sys.argv[1])
-    else:
-        start = 0
-
-    for i in range(start, len(countries)):
+    for i in range(len(countries)):
         country = countries[i]
         try:
             plot_single(country.title(), "total confirmed cases")

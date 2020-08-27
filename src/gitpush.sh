@@ -1,27 +1,20 @@
 #!/bin/bash
-
+echo "IN 'GITPUSH.SH'"
 START_TIME=$(date +%s)
 
-if [ $# -eq 0 ]
-then
-   CP=0
-else
-   CP=$1
-fi
-
-python3 graphScript.py $CP caffeneite
+python3 graphScript.py
 EXIT_CODE=$?
 while [ $EXIT_CODE != 0 ]
 do
-    python3 graphScript.py $CP caffeneite
+    python3 graphScript.py
     EXIT_CODE=$?
 done
 
-python3 write_to_html.py caffeneite
+python3 write_to_html.py
 EXIT_CODE=$?
 while [ $EXIT_CODE != 0 ]
 do
-    python3 write_to_html.py caffeneite
+    python3 write_to_html.py
     EXIT_CODE=$?
 done
 
